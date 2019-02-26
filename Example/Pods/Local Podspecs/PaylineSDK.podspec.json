@@ -1,0 +1,22 @@
+{
+  "name": "PaylineSDK",
+  "version": "0.1.0",
+  "summary": "A short description of PaylineSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/therealmyluckyday/PaylineSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "therealmyluckyday": "jpierce@myluckyday.fr"
+  },
+  "source": {
+    "git": "https://github.com/therealmyluckyday/PaylineSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PaylineSDK/Classes/**/*"
+}

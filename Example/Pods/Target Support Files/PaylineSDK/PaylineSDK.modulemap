@@ -1,0 +1,6 @@
+framework module PaylineSDK {
+  umbrella header "PaylineSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
