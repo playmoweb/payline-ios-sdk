@@ -42,10 +42,14 @@
 		607FACE51AFB9204008FA782 /* PaylineSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylineSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		64D3C2DDFFDB68349E6D7461 /* PaylineSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PaylineSDK.podspec; path = ../PaylineSDK.podspec; sourceTree = "<group>"; };
+		64D3C2DDFFDB68349E6D7461 /* PaylineSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PaylineSDK.podspec; path = ../PaylineSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73F7B8A0453FD8DC4255A156 /* Pods_PaylineSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaylineSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E86A30EA143FFC12E40C94E /* Pods-PaylineSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8221E754C664D9EAE677F886 /* Pods-PaylineSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8AD70C048CCFD54F4A166EE5 /* Pods-PaylineSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B21903A1A9869862CA7E413D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CB8DFE5B6EB1997932E55F86 /* Pods-PaylineSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +159,10 @@
 				94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */,
 				09EA519CD235492761F96CF5 /* Pods-PaylineSDK_Tests.debug.xcconfig */,
 				E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */,
+				CB8DFE5B6EB1997932E55F86 /* Pods-PaylineSDK_Example.debug.xcconfig */,
+				8221E754C664D9EAE677F886 /* Pods-PaylineSDK_Example.release.xcconfig */,
+				8AD70C048CCFD54F4A166EE5 /* Pods-PaylineSDK_Tests.debug.xcconfig */,
+				7E86A30EA143FFC12E40C94E /* Pods-PaylineSDK_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";

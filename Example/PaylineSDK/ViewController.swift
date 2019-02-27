@@ -7,18 +7,157 @@
 //
 
 import UIKit
+import PaylineSDK
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+struct FetchTokenParams: Encodable {
+    let orderRef: String
+    let amount: Int
+    let currencyCode: String
+    //    let buyer: Buyer
+    //    let items: [CartItem]
 }
 
+//struct Buyer: Encodable {
+//    let firstname: String
+//    let lastname: String
+//    let email: String
+//    let mobilePhone: String
+//    let shippingAddress: Address
+//}
+//
+//struct Address: Encodable {
+//    let firstname: String
+//    let lastname: String
+//    let street1: String
+//    let street2: String
+//    let city: String
+//    let zipCode: String
+//    let country: String
+//    let phone: String
+//}
+//
+//struct CartItem: Encodable {
+//    let ref: String
+//    let price: Int
+//    let quantity: Int
+//    let brand: String
+//    let category: String
+//}
+
+//curl https://demo-sdk-merchant-server.ext.dev.payline.com/init-web-pay \
+//    -H "Content-Type:application/json" \
+//    -X POST \
+//    --data '{"orderRef": "00001", "amount":987, "currencyCode":"EUR","buyer": {"firstname": "John", "lastname": "Doe", "email": "john.doe@gmail.com", "mobilePhone":"0612345678", "shippingAddress": {"firstname":"Jane", "lastname":"Smith", "street1": "S1", "street2": "S2", "city":"Aix-en-Provence", "zipCode":"13100", "country":"France", "phone": "0412341234"}}, "items":[{"ref": "i1"}, {"ref": "i2", "price": 15, "quantity": 3, "brand":"Nike", "category":"Shoes"}]}'
+
+struct FetchTokenResponse: Decodable {
+    let code: String
+    let message: String
+    let redirectUrl: String
+    let token: String
+}
+
+//{
+//    "code": "00000",
+//    "message": "Transaction approved",
+//    "redirectUrl": "https://homologation-webpayment.payline.com/v2/?token=18YkZVGoRGONz6uk32631550756437639",
+//    "token": "18YkZVGoRGONz6uk32631550756437639"
+//}
+
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var payButton: UIButton!
+    
+    private var testData: (String,URL)?
+    
+    private lazy var paymentController: PaymentController = {
+        return PaymentController(presentingViewController: self, delegate: self)
+    }()
+    
+//    private lazy var walletController: WalletController = {
+//        return WalletController(presentingViewController: self, delegate: self)
+//    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        payButton.isEnabled = false
+        
+        let params = FetchTokenParams(orderRef: "00001", amount: 5, currencyCode: "EUR")
+        
+        let url = URL(string: "https://demo-sdk-merchant-server.ext.dev.payline.com/init-web-pay")!
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(params)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let jsonData = data else {
+                if let err = error {
+                    debugPrint(err.localizedDescription)
+                }
+                return
+            }
+            
+            if let json = try? JSONDecoder().decode(FetchTokenResponse.self, from: jsonData) {
+                DispatchQueue.main.async { [weak self] in
+                    self?.testData = (json.token, URL(string: json.redirectUrl)!)
+                    self?.payButton.isEnabled = true
+                }
+            }
+            }.resume()
+    }
+    
+    @IBAction func clickedPay(_ sender: Any?) {
+        if let data = testData {
+            paymentController.showPaymentForm(token: data.0, environment: data.1)
+        }
+    }
+    
+    @IBAction func clickedManageWallet(_ sender: Any?) {
+        //        walletController.manageWebWallet(token: "", environment: "")
+    }
+    
+}
+
+extension ViewController: PaymentControllerDelegate {
+    
+    func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
+        // TODO:
+        DispatchQueue.global(qos: .default).async {
+            Thread.sleep(forTimeInterval: 5)
+            DispatchQueue.main.async {
+                self.paymentController.getLanguage()
+            }
+        }
+    }
+    
+    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
+        //
+    }
+    
+    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
+        //
+    }
+    
+    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
+        //
+    }
+    
+    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
+        debugPrint(didGetLanguage)
+    }
+    
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: String) {
+        //
+    }
+    
+}
+
+//extension ViewController: WalletControllerDelegate {
+//    
+//    func walletControllerDidFinishManagingWebWallet(_ walletController: WalletController) {
+//        //
+//    }
+//    
+//}
