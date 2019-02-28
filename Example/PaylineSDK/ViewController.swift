@@ -82,7 +82,22 @@ class ViewController: UIViewController {
         
         payButton.isEnabled = false
         
-        let params = FetchTokenParams(orderRef: "00001", amount: 5, currencyCode: "EUR")
+       
+    }
+    
+    @IBAction func clickedPay(_ sender: Any?) {
+        if let data = testData {
+            paymentController.showPaymentForm(token: data.0, environment: data.1)
+        }
+    }
+    
+    @IBAction func clickedManageWallet(_ sender: Any?) {
+        //        walletController.manageWebWallet(token: "", environment: "")
+    }
+    
+    @IBAction func clickedGenerateToken(_ sender: Any) {
+        let orderRef = Int.random(in: 00000 ... 99999)
+        let params = FetchTokenParams(orderRef: "\(orderRef)", amount: 5, currencyCode: "EUR")
         
         let url = URL(string: "https://demo-sdk-merchant-server.ext.dev.payline.com/init-web-pay")!
         
@@ -108,15 +123,6 @@ class ViewController: UIViewController {
             }.resume()
     }
     
-    @IBAction func clickedPay(_ sender: Any?) {
-        if let data = testData {
-            paymentController.showPaymentForm(token: data.0, environment: data.1)
-        }
-    }
-    
-    @IBAction func clickedManageWallet(_ sender: Any?) {
-        //        walletController.manageWebWallet(token: "", environment: "")
-    }
     
 }
 
