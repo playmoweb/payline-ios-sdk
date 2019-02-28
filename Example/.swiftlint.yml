@@ -1,0 +1,13 @@
+excluded:
+  - Pods
+included:
+  - ../PaylineSDK
+disabled_rules:
+ - trailing_whitespace
+ - trailing_newline
+line_length:
+ warning: 200
+ error: 400
+identifier_name:
+ min_length:
+   warning: 3
