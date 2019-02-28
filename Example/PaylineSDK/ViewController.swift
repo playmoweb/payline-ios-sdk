@@ -96,8 +96,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedGenerateToken(_ sender: Any) {
-        let orderRef = Int.random(in: 00000 ... 99999)
-        let params = FetchTokenParams(orderRef: "\(orderRef)", amount: 5, currencyCode: "EUR")
+        let orderRef = UUID.init().uuidString
+        let params = FetchTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR")
         
         let url = URL(string: "https://demo-sdk-merchant-server.ext.dev.payline.com/init-web-pay")!
         
@@ -144,7 +144,7 @@ extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
         //
-        dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
