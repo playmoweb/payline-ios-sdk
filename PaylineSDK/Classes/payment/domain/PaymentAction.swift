@@ -20,26 +20,26 @@ enum PaymentAction: ScriptAction {
     
     var command: String {
         
-        let c: String
+        let com: String
         
         switch self {
         case .updateWebPaymentData(let data):
-            c = "updateWebPaymentData(\(data))"
+            com = "updateWebPaymentData(\(data))"
         case .isSandbox:
-            c = "isSandbox()"
+            com = "isSandbox()"
         case .endToken:
-            c = "endToken()"
+            com = "endToken()"
         case .getLanguage:
-            c = "getLanguage()"
+            com = "getLanguage()"
         case .getContextInfo(let key):
-            c = "getContextInfo(\(key))"
+            com = "getContextInfo(\(key))"
         case .finalizeShortCut:
-            c = "finalizeShortCut()"
+            com = "finalizeShortCut()"
         case .getBuyerShortCut:
-            c = "getBuyerShortCut()"
+            com = "getBuyerShortCut()"
         }
         
-        return "Payline.Api.\(c);"
+        return "Payline.Api.\(com);"
     }
     
 }

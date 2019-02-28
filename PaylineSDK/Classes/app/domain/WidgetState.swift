@@ -32,7 +32,7 @@ enum WidgetState: String {
 extension WidgetState: Codable {
     // TODO: make encodable
     
-    enum key: CodingKey {
+    enum Key: CodingKey {
         case rawValue
     }
     
@@ -42,7 +42,7 @@ extension WidgetState: Codable {
     
     
     func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: key.self)
+        var container = encoder.container(keyedBy: Key.self)
         switch self {
         case .paymentMethodsList:
             try container.encode(0, forKey: .rawValue)
