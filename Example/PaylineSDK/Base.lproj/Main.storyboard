@@ -21,8 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-wo-n8Q">
+                                <rect key="frame" x="133.5" y="203" width="108" height="30"/>
+                                <state key="normal" title="Generate Token"/>
+                                <connections>
+                                    <action selector="clickedGenerateToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c4D-Q6-SKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-uq-Y3f">
+                                <rect key="frame" x="166" y="363" width="43" height="30"/>
+                                <state key="normal" title="Wallet"/>
+                                <connections>
+                                    <action selector="clickedManageWallet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xur-8i-tSE"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-4A-HSt">
-                                <rect key="frame" x="172.5" y="210" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="283" width="30" height="30"/>
                                 <state key="normal" title="Pay"/>
                                 <connections>
                                     <action selector="clickedPay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pN3-BN-dP7"/>
@@ -31,8 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="190" id="Fqv-hX-H6J"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="top" secondItem="Kic-4A-HSt" secondAttribute="bottom" constant="50" id="AxP-vX-Xal"/>
                             <constraint firstItem="Kic-4A-HSt" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="P8D-qz-azh"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="XLV-qj-psc"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="kiO-x8-u4v"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="bottom" constant="50" id="s4E-PQ-N2X"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="183" id="xq5-xq-fup"/>
                         </constraints>
                     </view>
                     <connections>
