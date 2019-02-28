@@ -63,7 +63,9 @@ public final class PaymentController: WebController {
     }
     
     public func finalizeShortCut() {
-        
+        scriptHandler.execute(action: PaymentAction.finalizeShortCut, in: webViewController.webView) { [weak self] (result, error) in
+            self?.presentingViewController.dismiss(animated: true, completion: nil)
+        }
     }
     
     public func getBuyerShortCut() {
@@ -82,9 +84,57 @@ public final class PaymentController: WebController {
         switch event {
         case .didShowState(let state):
             // TODO: ?
+            switch state {
+            case .paymentMethodsList:
+                print(state.rawValue)
+            case .paymentFailureWithRetry:
+                print(state.rawValue)
+            case .paymentMethodNeedsMoreInfo:
+                print(state.rawValue)
+            case .paymentRedirectNoResponse:
+                print(state.rawValue)
+            case .manageWebWallet:
+                print(state.rawValue)
+            case .activeWaiting:
+                print(state.rawValue)
+            case .paymentCanceledWithRetry:
+                print(state.rawValue)
+            case .paymentMethodsListShortcut:
+                print(state.rawValue)
+            case .paymentTransitionalShortcut:
+                print(state.rawValue)
+                
+            default:
+                break
+            }
+            
             break
         case .finalStateHasBeenReached(let state):
-            delegate?.paymentControllerDidFinishPaymentForm(self)
+            switch state{
+                
+            case .paymentCanceled:
+                print(state.rawValue)
+            case .paymentSuccess:
+                print(state.rawValue)
+                delegate?.paymentControllerDidFinishPaymentForm(self)
+                //      presentingViewController.dismiss(animated: true, completion: nil)
+            case .paymentFailure:
+                print(state.rawValue)
+            case .tokenExpired:
+                print(state.rawValue)
+            case .browserNotSupported:
+                print(state.rawValue)
+            case .paymentOnHoldPartner:
+                print(state.rawValue)
+            case .paymentSuccessForceTicketDisplay:
+                print(state.rawValue)
+                
+            default:
+                break
+
+            }
+            
+            
         }
     }
     

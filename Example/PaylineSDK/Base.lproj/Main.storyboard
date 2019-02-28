@@ -21,16 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-4A-HSt">
-                                <rect key="frame" x="157" y="209" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-4A-HSt">
+                                <rect key="frame" x="172.5" y="210" width="30" height="30"/>
+                                <state key="normal" title="Pay"/>
                                 <connections>
                                     <action selector="clickedPay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pN3-BN-dP7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="190" id="Fqv-hX-H6J"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="P8D-qz-azh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="payButton" destination="Kic-4A-HSt" id="afl-VP-wMA"/>

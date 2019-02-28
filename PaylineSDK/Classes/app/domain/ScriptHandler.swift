@@ -16,19 +16,19 @@ struct ScriptHandler {
     let handledEvents = ScriptEvent.Name.allCases
     
     func handle(message: WKScriptMessage, callback: EventCallback) {
-        
         guard let eventName = ScriptEvent.Name(rawValue: message.name) else { return }
         
         // TODO: parse eventBody to WidgetState
-        guard let eventBody = message.body as? NSDictionary else { return }
-        let test = WidgetState.paymentMethodsList
+        guard let eventBody = message.body as? [String: String] else { return }
+        guard let event = eventBody["state"] else { return }
+        guard let state = WidgetState(rawValue: event) else { return }
         
         switch eventName {
         case .didShowState:
             // TODO: extract values?
-            callback(ScriptEvent.didShowState(test))
+            callback(ScriptEvent.didShowState(state))
         case .finalStateHasBeenReached:
-            callback(ScriptEvent.finalStateHasBeenReached(test))
+            callback(ScriptEvent.finalStateHasBeenReached(state))
         }
     }
     

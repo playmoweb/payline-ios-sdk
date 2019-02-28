@@ -138,6 +138,7 @@ extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
         //
+        dismiss(animated: true, completion: nil)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
