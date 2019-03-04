@@ -17,24 +17,25 @@ struct FetchTokenParams: Encodable {
     //    let items: [CartItem]
 }
 
-//struct Buyer: Encodable {
-//    let firstname: String
-//    let lastname: String
-//    let email: String
-//    let mobilePhone: String
-//    let shippingAddress: Address
-//}
+struct Buyer: Encodable {
+    let firstname: String
+    let lastname: String
+    let email: String
+    let mobilePhone: String
+    let shippingAddress: Address
+    let walletId: String
+}
 //
-//struct Address: Encodable {
-//    let firstname: String
-//    let lastname: String
-//    let street1: String
-//    let street2: String
-//    let city: String
-//    let zipCode: String
-//    let country: String
-//    let phone: String
-//}
+struct Address: Encodable {
+    let firstname: String
+    let lastname: String
+    let street1: String
+    let street2: String
+    let city: String
+    let zipCode: Int
+    let country: String
+    let phone: String
+}
 //
 //struct CartItem: Encodable {
 //    let ref: String
@@ -67,7 +68,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var payButton: UIButton!
     
+    @IBOutlet weak var walletButton: UIButton!
+    
+    
     private var testData: (String,URL)?
+    private var walletData: (String,URL)?
     
     private lazy var paymentController: PaymentController = {
         return PaymentController(presentingViewController: self, delegate: self)
@@ -81,6 +86,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         payButton.isEnabled = false
+        walletButton.isEnabled = false
         
        
     }
@@ -92,7 +98,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedManageWallet(_ sender: Any?) {
-        //        walletController.manageWebWallet(token: "", environment: "")
+        if let data = walletData{
+            paymentController.showPaymentForm(token: data.0, environment: data.1)
+        }
     }
     
     @IBAction func clickedGenerateToken(_ sender: Any) {
@@ -121,6 +129,32 @@ class ViewController: UIViewController {
                 }
             }
             }.resume()
+        
+//        let buyer = Buyer(firstname: "John.Doe@gmail.com", lastname: "John", email: "Doe", mobilePhone: "string", shippingAddress: Address(firstname: "John", lastname: "Doe", street1: "string", street2: "string", city: "Aix-en-Provence", zipCode: 13100, country: "FR", phone: "string"), walletId: "12342414-DFD-13434141")
+//        
+//        let walletUrl = URL(string: "https://demo-sdk-merchant-server.ext.dev.payline.com/init-manage-wallet")!
+//        
+//        
+//        var walletRequest = URLRequest(url: walletUrl)
+//        walletRequest.httpMethod = "POST"
+//        walletRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        walletRequest.httpBody = try? JSONEncoder().encode(buyer)
+//        
+//        URLSession.shared.dataTask(with: walletRequest) { (data, response, error) in
+//            guard let jsonData = data else {
+//                if let err = error {
+//                    debugPrint(err.localizedDescription)
+//                }
+//                return
+//            }
+//            
+//            if let json = try? JSONDecoder().decode(FetchTokenResponse.self, from: jsonData) {
+//                DispatchQueue.main.async { [weak self] in
+//                    self?.walletData = (json.token, URL(string: json.redirectUrl)!)
+//                    self?.walletButton.isEnabled = true
+//                }
+//            }
+//            }.resume()
     }
     
     
@@ -129,26 +163,29 @@ class ViewController: UIViewController {
 extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
-        // TODO:
-        DispatchQueue.global(qos: .default).async {
-            Thread.sleep(forTimeInterval: 5)
-            DispatchQueue.main.async {
-                self.paymentController.getLanguage()
-            }
-        }
+        self.paymentController.getLanguage()
+        self.paymentController.getIsSandbox()
+        self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
+        self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
+//        DispatchQueue.global(qos: .default).async {
+//            Thread.sleep(forTimeInterval: 1)
+//            DispatchQueue.main.async {
+//               
+//            }
+//        }
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        //
+         paymentController.endToken()
     }
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
-        //
+        paymentController.endToken()
        // dismiss(animated: true, completion: nil)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
-        //
+        print(didGetIsSandbox)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
@@ -156,7 +193,7 @@ extension ViewController: PaymentControllerDelegate {
     }
     
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: String) {
-        //
+        print(didGetContextInfo)
     }
     
 }

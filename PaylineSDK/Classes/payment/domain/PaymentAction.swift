@@ -14,7 +14,7 @@ enum PaymentAction: ScriptAction {
     case isSandbox
     case endToken
     case getLanguage
-    case getContextInfo(key: String)
+    case getContextInfo(key: ContextInfoKeys)
     case finalizeShortCut
     case getBuyerShortCut
     
@@ -32,7 +32,7 @@ enum PaymentAction: ScriptAction {
         case .getLanguage:
             com = "getLanguage()"
         case .getContextInfo(let key):
-            com = "getContextInfo(\(key))"
+            com = "getContextInfo('\(key.rawValue)')"
         case .finalizeShortCut:
             com = "finalizeShortCut()"
         case .getBuyerShortCut:

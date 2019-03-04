@@ -30,7 +30,6 @@ enum WidgetState: String {
     case paymentTransitionalShortcut = "PAYMENT_TRANSITIONAL_SHORTCUT"
 }
 extension WidgetState: Codable {
-    // TODO: make encodable
     
     enum Key: CodingKey {
         case rawValue
@@ -39,8 +38,7 @@ extension WidgetState: Codable {
     enum CodingError: Error {
         case unknownValue
     }
-    
-    
+ 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Key.self)
         switch self {
