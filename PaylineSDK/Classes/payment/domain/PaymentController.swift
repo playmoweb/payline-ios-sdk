@@ -119,23 +119,17 @@ public final class PaymentController: WebController {
         switch state {
         case .paymentMethodsList:
             delegate?.paymentControllerDidShowPaymentForm(self)
-        case .paymentFailureWithRetry:
-            print(state.rawValue)
-        case .paymentMethodNeedsMoreInfo:
-            print(state.rawValue)
         case .paymentRedirectNoResponse:
             print(state.rawValue)
+            //TODO
         case .manageWebWallet:
             print(state.rawValue)
-        case .activeWaiting:
-            print(state.rawValue)
-        case .paymentCanceledWithRetry:
-            print(state.rawValue)
-        case .paymentMethodsListShortcut:
-            print(state.rawValue)
-        case .paymentTransitionalShortcut:
-            print(state.rawValue)
-            
+        case .paymentFailureWithRetry,
+             .paymentMethodNeedsMoreInfo,
+             .activeWaiting,
+             .paymentCanceledWithRetry:
+            break
+
         default:
             break
         }
@@ -145,22 +139,14 @@ public final class PaymentController: WebController {
         switch state {
         case .paymentCanceled:
             delegate?.paymentControllerDidCancelPaymentForm(self)
-        case .paymentSuccess:
+        case .paymentSuccess,
+             .paymentFailure,
+             .tokenExpired,
+             .browserNotSupported,
+             .paymentOnHoldPartner,
+             .paymentSuccessForceTicketDisplay:
             print(state.rawValue)
             delegate?.paymentControllerDidFinishPaymentForm(self)
-        case .paymentFailure:
-            print(state.rawValue)
-            delegate?.paymentControllerDidFinishPaymentForm(self)
-        case .tokenExpired:
-            print(state.rawValue)
-            delegate?.paymentControllerDidFinishPaymentForm(self)
-        case .browserNotSupported:
-            print(state.rawValue)
-        case .paymentOnHoldPartner:
-            print(state.rawValue)
-        case .paymentSuccessForceTicketDisplay:
-            print(state.rawValue)
-            
         default:
             break
         }

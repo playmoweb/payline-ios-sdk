@@ -171,10 +171,11 @@ extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
         debugPrint("cancel")
+        self.paymentController.doEndToken(additionalData: nil, isHandledByMerchant: true)
     }
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {

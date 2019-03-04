@@ -26,8 +26,8 @@ enum WidgetState: String {
     case paymentCanceledWithRetry = "PAYMENT_CANCELED_WITH_RETRY"
     case paymentOnHoldPartner = "PAYMENT_ONHOLD_PARTNER"
     case paymentSuccessForceTicketDisplay = "PAYMENT_SUCCESS_FORCE_TICKET_DISPLAY"
-    case paymentMethodsListShortcut = "PAYMENT_METHODS_LIST_SHORTCUT"
-    case paymentTransitionalShortcut = "PAYMENT_TRANSITIONAL_SHORTCUT"
+//    case paymentMethodsListShortcut = "PAYMENT_METHODS_LIST_SHORTCUT"
+//    case paymentTransitionalShortcut = "PAYMENT_TRANSITIONAL_SHORTCUT"
 }
 extension WidgetState: Codable {
     
@@ -70,10 +70,10 @@ extension WidgetState: Codable {
             try container.encode(12, forKey: .rawValue)
         case .paymentSuccessForceTicketDisplay:
             try container.encode(13, forKey: .rawValue)
-        case .paymentMethodsListShortcut:
-            try container.encode(14, forKey: .rawValue)
-        case .paymentTransitionalShortcut:
-            try container.encode(15, forKey: .rawValue)
+//        case .paymentMethodsListShortcut:
+//            try container.encode(14, forKey: .rawValue)
+//        case .paymentTransitionalShortcut:
+//            try container.encode(15, forKey: .rawValue)
 
         }
     }
