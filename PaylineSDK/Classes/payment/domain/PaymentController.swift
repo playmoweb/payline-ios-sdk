@@ -38,11 +38,8 @@ public final class PaymentController: WebController {
         })
     }
     
-    public func endToken() {
-        scriptHandler.execute(action: PaymentAction.endToken, in: webViewController.webView) { [weak self] (result, error) in
-            // TODO: handle result / error
-            self?.presentingViewController.dismiss(animated: true, completion: nil)
-        }
+    public func doEndToken(additionalData: Encodable?, isHandledByMerchant: Bool) {
+        scriptHandler.execute(action: PaymentAction.endToken(additionalData: additionalData, isHandledByMerchant: isHandledByMerchant), in: webViewController.webView, callback: nil)
     }
     
     public func getLanguage() {
@@ -72,59 +69,67 @@ public final class PaymentController: WebController {
     
     override func handleReceivedEvent(_ event: ScriptEvent) {
         switch event {
+            
         case .didShowState(let state):
-            switch state {
-            case .paymentMethodsList:
-                delegate?.paymentControllerDidShowPaymentForm(self)
-            case .paymentFailureWithRetry:
-                print(state.rawValue)
-            case .paymentMethodNeedsMoreInfo:
-                print(state.rawValue)
-            case .paymentRedirectNoResponse:
-                print(state.rawValue)
-            case .manageWebWallet:
-                print(state.rawValue)
-            case .activeWaiting:
-                print(state.rawValue)
-            case .paymentCanceledWithRetry:
-                print(state.rawValue)
-            case .paymentMethodsListShortcut:
-                print(state.rawValue)
-            case .paymentTransitionalShortcut:
-                print(state.rawValue)
-                
-            default:
-                break
-            }
+            handleDidShowState(state: state)
             
-            break
         case .finalStateHasBeenReached(let state):
-            switch state {
-                
-            case .paymentCanceled:
-                delegate?.paymentControllerDidCancelPaymentForm(self)
-            case .paymentSuccess:
-                print(state.rawValue)
-                delegate?.paymentControllerDidFinishPaymentForm(self)
-            case .paymentFailure:
-                print(state.rawValue)
-                delegate?.paymentControllerDidFinishPaymentForm(self)
-            case .tokenExpired:
-                print(state.rawValue)
-                delegate?.paymentControllerDidFinishPaymentForm(self)
-            case .browserNotSupported:
-                print(state.rawValue)
-            case .paymentOnHoldPartner:
-                print(state.rawValue)
-            case .paymentSuccessForceTicketDisplay:
-                print(state.rawValue)
-                
-            default:
-                break
-
-            }
+            handleFinalStateHasBeenReached(state: state)
             
+        case .didEndToken:
+            delegate?.paymentControllerDidCancelPaymentForm(self)
+            presentingViewController.dismiss(animated: true, completion: nil)
         }
     }
     
+    private func handleDidShowState(state: WidgetState) {
+        switch state {
+        case .paymentMethodsList:
+            delegate?.paymentControllerDidShowPaymentForm(self)
+        case .paymentFailureWithRetry:
+            print(state.rawValue)
+        case .paymentMethodNeedsMoreInfo:
+            print(state.rawValue)
+        case .paymentRedirectNoResponse:
+            print(state.rawValue)
+        case .manageWebWallet:
+            print(state.rawValue)
+        case .activeWaiting:
+            print(state.rawValue)
+        case .paymentCanceledWithRetry:
+            print(state.rawValue)
+        case .paymentMethodsListShortcut:
+            print(state.rawValue)
+        case .paymentTransitionalShortcut:
+            print(state.rawValue)
+            
+        default:
+            break
+        }
+    }
+    
+    private func handleFinalStateHasBeenReached(state: WidgetState) {
+        switch state {
+        case .paymentCanceled:
+            delegate?.paymentControllerDidCancelPaymentForm(self)
+        case .paymentSuccess:
+            print(state.rawValue)
+            delegate?.paymentControllerDidFinishPaymentForm(self)
+        case .paymentFailure:
+            print(state.rawValue)
+            delegate?.paymentControllerDidFinishPaymentForm(self)
+        case .tokenExpired:
+            print(state.rawValue)
+            delegate?.paymentControllerDidFinishPaymentForm(self)
+        case .browserNotSupported:
+            print(state.rawValue)
+        case .paymentOnHoldPartner:
+            print(state.rawValue)
+        case .paymentSuccessForceTicketDisplay:
+            print(state.rawValue)
+            
+        default:
+            break
+        }
+    }
 }

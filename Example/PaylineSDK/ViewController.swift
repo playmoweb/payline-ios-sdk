@@ -167,21 +167,14 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
-//        DispatchQueue.global(qos: .default).async {
-//            Thread.sleep(forTimeInterval: 1)
-//            DispatchQueue.main.async {
-//               
-//            }
-//        }
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-         paymentController.endToken()
+        debugPrint("cancel")
     }
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
-        paymentController.endToken()
-       // dismiss(animated: true, completion: nil)
+        
     }
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
