@@ -44,7 +44,6 @@
 		4AEAB6E35C5D3C704C9A55CFC315C982 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC475D9663CE2E77E282D5F368683D /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4B5D5841285803935270BB284548DCBA /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FFC64E3F88C2F78EDA00E2C9D7A051 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FB199E7CBC75AFBC578F65D437366D3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B4AFEBB10F88BE4BBD616C6B77EFB /* Filter.swift */; };
-		4FF27799FE97D52F024908745AB0458A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469336382B254FA989B05BDBC6A7A3B /* ReplaceMe.swift */; };
 		51D822E3615B158048411AD97501AEB4 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E27404590AC30B338603729AEA62A /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		55F0D512EE0320AB90253B2A0F149614 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A575AF1A5F7B87E382D07F8D0AEC0 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		56775B822D73E8E27D53C4A8F93593AB /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31775746CD50D61600776277E6D010D5 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -311,7 +310,6 @@
 		D2E5C234CD222E1355BCC9AFAE96B2C5 /* SatisfyAllOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAllOf.swift; path = Sources/Nimble/Matchers/SatisfyAllOf.swift; sourceTree = "<group>"; };
 		D3EBF0406220E298F89D44D86F6DE683 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
 		D40A67C30DC1FE32DAE0639BC955DD29 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
-		D469336382B254FA989B05BDBC6A7A3B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = PaylineSDK/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		D62FFAF35A682FB3BD6901A281F65212 /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Sources/Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
 		D8EA70AA2E9E671BEF03F55482373A2D /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Sources/Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
 		E307FAA6BBCF427EA0CB2D8C34D8702F /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
@@ -473,7 +471,6 @@
 		5BD3918298300F57561860580ECAC1A1 /* PaylineSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D469336382B254FA989B05BDBC6A7A3B /* ReplaceMe.swift */,
 				5BE5265B876FB2618401F15B93DB1EF0 /* app */,
 				9F9148678982F73B7E6E34EC1F7F590A /* payment */,
 				1317981F34F31F2448AE96A638BDD5F7 /* Pod */,
@@ -987,7 +984,6 @@
 				EFEC7D573906616AF28EDD43D4C67597 /* PaymentControllerDelegate.swift in Sources */,
 				421ACCA1F1A79C0FFF5473E804FCD4B0 /* PLWebViewController.swift in Sources */,
 				C2B5B6B2AB654B1A36AA527704470BE4 /* PLWebViewControllerDelegate.swift in Sources */,
-				4FF27799FE97D52F024908745AB0458A /* ReplaceMe.swift in Sources */,
 				80CFD715169E6EAE957D2F809FA8D0B0 /* ScriptAction.swift in Sources */,
 				3BCA04A125691BAE54B2A298EC0A3CE5 /* ScriptEvent.swift in Sources */,
 				03FFCE130AE93CCC50FB6B20B5909579 /* ScriptHandler.swift in Sources */,
