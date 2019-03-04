@@ -42,7 +42,7 @@ public class WebController: PLWebViewControllerDelegate {
     }
     
     func plWebViewControllerDidRequestClose(_ plWebViewController: PLWebViewController) {
-        // TODO:
+        self.presentingViewController.dismiss(animated: true, completion: nil)
     }
     
     func handleReceivedEvent(_ event: ScriptEvent) {

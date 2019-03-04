@@ -174,8 +174,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PaylineSDK_Example" */;
 			buildPhases = (
-				FA9C7BEE2228157F00FE8BB2 /* SwiftLint */,
 				60AFB642FB87501B557B5063 /* [CP] Check Pods Manifest.lock */,
+				FA9C7BEE2228157F00FE8BB2 /* SwiftLint */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,

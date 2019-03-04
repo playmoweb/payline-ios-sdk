@@ -26,20 +26,15 @@ public final class PaymentController: WebController {
         webViewController.loadUrl(environment)
     }
     
-    public func cancelPaymentForm(token: String) {
-        endToken()
-        presentingViewController.dismiss(animated: true, completion: nil)
-    }
-    
     public func updateWebPaymentData(_ webPaymentData: String) {
         
     }
     
     public func getIsSandbox() {
-        scriptHandler.execute(action: PaymentAction.getLanguage, in: webViewController.webView, callback: { [weak self] (result, error) in
+        scriptHandler.execute(action: PaymentAction.isSandbox, in: webViewController.webView, callback: { [weak self] (result, error) in
             guard let strongSelf = self else { return }
-            guard let language = result as? String else { return }
-            self?.delegate?.paymentController(strongSelf, didGetLanguage: language)
+            guard let isSandbox = result as? Bool else { return }
+            self?.delegate?.paymentController(strongSelf, didGetIsSandbox: isSandbox)
         })
     }
     
@@ -58,17 +53,14 @@ public final class PaymentController: WebController {
         }
     }
     
-    public func getContextInfo() {
-        
-    }
-    
-    public func finalizeShortCut() {
-        scriptHandler.execute(action: PaymentAction.finalizeShortCut, in: webViewController.webView) { [weak self] (result, error) in
-            self?.presentingViewController.dismiss(animated: true, completion: nil)
+    public func getContextInfo(key: ContextInfoKeys) {
+        scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, error) in
+            guard let strongSelf = self else { return }
+           // guard let 
+            
+            
+
         }
-    }
-    
-    public func getBuyerShortCut() {
         
     }
     
@@ -77,16 +69,15 @@ public final class PaymentController: WebController {
     weak var delegate: PaymentControllerDelegate?
     
     override func plWebViewControllerDidFinishLoadingWithSuccess(_ plWebViewController: PLWebViewController) {
-        delegate?.paymentControllerDidShowPaymentForm(self)
+      //  delegate?.paymentControllerDidShowPaymentForm(self)
     }
     
     override func handleReceivedEvent(_ event: ScriptEvent) {
         switch event {
         case .didShowState(let state):
-            // TODO: ?
             switch state {
             case .paymentMethodsList:
-                print(state.rawValue)
+                delegate?.paymentControllerDidShowPaymentForm(self)
             case .paymentFailureWithRetry:
                 print(state.rawValue)
             case .paymentMethodNeedsMoreInfo:
@@ -110,18 +101,19 @@ public final class PaymentController: WebController {
             
             break
         case .finalStateHasBeenReached(let state):
-            switch state{
+            switch state {
                 
             case .paymentCanceled:
-                print(state.rawValue)
+                delegate?.paymentControllerDidCancelPaymentForm(self)
             case .paymentSuccess:
                 print(state.rawValue)
                 delegate?.paymentControllerDidFinishPaymentForm(self)
-                //      presentingViewController.dismiss(animated: true, completion: nil)
             case .paymentFailure:
                 print(state.rawValue)
+                delegate?.paymentControllerDidFinishPaymentForm(self)
             case .tokenExpired:
                 print(state.rawValue)
+                delegate?.paymentControllerDidFinishPaymentForm(self)
             case .browserNotSupported:
                 print(state.rawValue)
             case .paymentOnHoldPartner:
@@ -135,7 +127,6 @@ public final class PaymentController: WebController {
             }
             
         }
-        
     }
     
 }
