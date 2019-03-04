@@ -1,7 +1,7 @@
 PODS:
-  - Nimble (7.3.4)
+  - Nimble (8.0.0)
   - PaylineSDK (0.1.0)
-  - Quick (1.3.4)
+  - Quick (2.0.0)
 
 DEPENDENCIES:
   - Nimble
@@ -18,9 +18,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Nimble: a0e6f95b4b91a4f66b6da3512b6bebc07c9cbf49
   PaylineSDK: 291efaeac1ec27a4aa513283145919ec255d423f
-  Quick: f4f7f063c524394c73ed93ac70983c609805d481
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
 
 PODFILE CHECKSUM: f305cc08413ebfbf52db7bd724559411ada1fa01
 

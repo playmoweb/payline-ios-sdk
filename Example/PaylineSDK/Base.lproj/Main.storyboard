@@ -55,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="payButton" destination="Kic-4A-HSt" id="afl-VP-wMA"/>
+                        <outlet property="walletButton" destination="cAm-uq-Y3f" id="AL9-aH-Lx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

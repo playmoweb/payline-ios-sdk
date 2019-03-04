@@ -12,7 +12,6 @@ public protocol PaymentControllerDelegate: class {
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController)
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController)
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController)
-    // TODO: do we need didEndToken separately from DidFinishPaymentForm?
 }
 extension PaymentControllerDelegate {
     // NOTE: optional interface
