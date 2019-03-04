@@ -8,7 +8,7 @@
 import Foundation
 
 enum ContextInfoResult {
-    case contextInfoResultInt(Int)
-    case contextInfoResultString(String)
-    case contextInfoResultArray([[String:String]])
+    case int(ContextInfoKeys, Int)
+    case string(ContextInfoKeys, String)
+    case object(ContextInfoKeys, [[String:String]])
 }
