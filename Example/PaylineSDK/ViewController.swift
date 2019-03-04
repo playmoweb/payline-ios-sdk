@@ -167,6 +167,7 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
+        self.paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderDetails)
 //        DispatchQueue.global(qos: .default).async {
 //            Thread.sleep(forTimeInterval: 1)
 //            DispatchQueue.main.async {
@@ -192,7 +193,8 @@ extension ViewController: PaymentControllerDelegate {
         debugPrint(didGetLanguage)
     }
     
-    func paymentController(_ paymentController: PaymentController, didGetContextInfo: String) {
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {
+        print("DIDGETINFOCONTEXT")
         print(didGetContextInfo)
     }
     

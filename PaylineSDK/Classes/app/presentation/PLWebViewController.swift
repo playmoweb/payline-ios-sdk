@@ -15,7 +15,7 @@ class PLWebViewController : UIViewController {
     
     weak var delegate: PLWebViewControllerDelegate?
     
-    private let mldTransitioningDelegate = MLDTransitioningDelegate()
+   // private let mldTransitioningDelegate = MLDTransitioningDelegate()
     
     lazy var webView: WKWebView = {
         let wv = WKWebView()
@@ -52,7 +52,7 @@ class PLWebViewController : UIViewController {
     
     private func setup() {
         modalPresentationStyle = .custom
-        transitioningDelegate = mldTransitioningDelegate
+     //   transitioningDelegate = mldTransitioningDelegate
     }
     
     override func loadView() {

@@ -17,5 +17,5 @@ extension PaymentControllerDelegate {
     // NOTE: optional interface
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {}
     func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {}
-    func paymentController(_ paymentController: PaymentController, didGetContextInfo: String) {}
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {}
 }

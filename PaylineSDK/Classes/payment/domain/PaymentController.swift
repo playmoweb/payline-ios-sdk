@@ -56,7 +56,40 @@ public final class PaymentController: WebController {
     public func getContextInfo(key: ContextInfoKeys) {
         scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, error) in
             guard let strongSelf = self else { return }
-           // guard let 
+            switch key{
+                
+            case .paylineAmountSmallestUnit,
+                 .paylineCurrencyDigits:
+                guard let contextResult = result as? Int else { return }
+                let contextInfoResult = ContextInfoResult.int(key, contextResult)
+                debugPrint("test")
+                strongSelf.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
+                debugPrint("test2")
+            case .paylineCurrencyCode,
+                 .paylineBuyerFirstName,
+                 .paylineBuyerLastName,
+                 .paylineBuyerShippingAddressStreet2,
+                 .paylineBuyerShippingAddressCountry,
+                 .paylineBuyerShippingAddressName,
+                 .paylineBuyerShippingAddressStreet1,
+                 .paylineBuyerShippingAddressCityName,
+                 .paylineBuyerShippingAddressZipCode,
+                 .paylineBuyerMobilePhone,
+                 .paylineBuyerShippingAddressPhone,
+                 .paylineBuyerIp,
+                 .paylineFormattedAmount,
+                 .paylineOrderDate,
+                 .paylineOrderRef,
+                 .paylineOrderDeliveryMode,
+                 .paylineOrderDeliveryTime:
+                guard let contextResult = result as? String else { return }
+                let contextInfoResult = ContextInfoResult.string(key, contextResult)
+                strongSelf.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
+            case .paylineOrderDetails:
+                guard let contextResult = result as? [[String: Any]] else { return }
+                let contextInfoResult = ContextInfoResult.object(key, contextResult)
+                self?.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
+            }
 
         }
         
@@ -77,9 +110,9 @@ public final class PaymentController: WebController {
             case .paymentMethodsList:
                 delegate?.paymentControllerDidShowPaymentForm(self)
             case .paymentFailureWithRetry:
-                print(state.rawValue)
+                 delegate?.paymentControllerDidShowPaymentForm(self)
             case .paymentMethodNeedsMoreInfo:
-                print(state.rawValue)
+                 delegate?.paymentControllerDidShowPaymentForm(self)
             case .paymentRedirectNoResponse:
                 print(state.rawValue)
             case .manageWebWallet:
@@ -97,7 +130,6 @@ public final class PaymentController: WebController {
                 break
             }
             
-            break
         case .finalStateHasBeenReached(let state):
             switch state {
                 
@@ -110,15 +142,11 @@ public final class PaymentController: WebController {
                 print(state.rawValue)
                 delegate?.paymentControllerDidFinishPaymentForm(self)
             case .tokenExpired:
-                print(state.rawValue)
                 delegate?.paymentControllerDidFinishPaymentForm(self)
-            case .browserNotSupported:
-                print(state.rawValue)
-            case .paymentOnHoldPartner:
-                print(state.rawValue)
-            case .paymentSuccessForceTicketDisplay:
-                print(state.rawValue)
-                
+            case .browserNotSupported,
+                 .paymentOnHoldPartner,
+                 .paymentSuccessForceTicketDisplay:
+                print(" ")
             default:
                 break
 
