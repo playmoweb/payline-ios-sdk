@@ -25,8 +25,6 @@ public class WebController: PLWebViewControllerDelegate {
     
     init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
-        
-        // TODO: Appearance ?
     }
     
     func plWebViewControllerDidFinishLoadingWithSuccess(_ plWebViewController: PLWebViewController) {}
@@ -46,6 +44,6 @@ public class WebController: PLWebViewControllerDelegate {
     }
     
     func handleReceivedEvent(_ event: ScriptEvent) {
-        // TODO: subclasses override this
+        // NOTE: subclasses override this
     }
 }
