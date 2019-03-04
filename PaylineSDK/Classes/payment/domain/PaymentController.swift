@@ -57,8 +57,6 @@ public final class PaymentController: WebController {
         scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, error) in
             guard let strongSelf = self else { return }
            // guard let 
-            
-            
 
         }
         
