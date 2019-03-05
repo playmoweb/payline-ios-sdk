@@ -63,12 +63,23 @@ class PLWebViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        closeButton!.setTitle("X", for: .normal)
-        closeButton!.tintColor = UIColor.black
+        closeButton!.setTitle("Close", for: .normal)
        // button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         self.view.addSubview(closeButton!)
-        
+        closeButton?.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 9.0, *) {
+            closeButton?.topAnchor.constraint(equalTo: self.view.topAnchor, constant:30).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            closeButton?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        self.view.bringSubviewToFront(closeButton!)
+        self.view.sendSubviewToBack(webView)
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: &myContext)
     }
     
