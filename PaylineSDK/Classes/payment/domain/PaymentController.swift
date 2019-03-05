@@ -100,6 +100,10 @@ public final class PaymentController: WebController {
       //  delegate?.paymentControllerDidShowPaymentForm(self)
     }
     
+    override func plWebViewControllerDidRequestClose(_ plWebViewController: PLWebViewController) {
+        self.endToken(additionalData: nil, isHandledByMerchant: true)
+    }
+    
     override func handleReceivedEvent(_ event: ScriptEvent) {
         switch event {
             
@@ -123,7 +127,9 @@ public final class PaymentController: WebController {
             delegate?.paymentControllerDidShowPaymentForm(self)
             
         case .paymentRedirectNoResponse:
+            
             // TODO: disable exit
+            
             print(state.rawValue)
             
         case .paymentFailureWithRetry,

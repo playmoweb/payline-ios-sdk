@@ -64,7 +64,8 @@ class PLWebViewController : UIViewController {
         super.viewDidLoad()
         closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         closeButton!.setTitle("Close", for: .normal)
-       // button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        closeButton?.setTitleColor(.black, for: .normal)
+        closeButton!.addTarget(self, action: #selector(close), for: .touchUpInside)
         
         self.view.addSubview(closeButton!)
         closeButton?.translatesAutoresizingMaskIntoConstraints = false
@@ -105,6 +106,10 @@ class PLWebViewController : UIViewController {
     deinit {
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
         progressView.removeFromSuperview()
+    }
+    
+    @objc func close() {
+        delegate?.plWebViewControllerDidRequestClose(self)
     }
     
     // TODO: add close button action and call delegate
