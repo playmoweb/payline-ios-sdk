@@ -14,6 +14,7 @@ var myContext = 0
 class PLWebViewController : UIViewController {
     
     weak var delegate: PLWebViewControllerDelegate?
+    var closeButton: UIButton?
     
    // private let mldTransitioningDelegate = MLDTransitioningDelegate()
     
@@ -61,6 +62,12 @@ class PLWebViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        closeButton!.setTitle("X", for: .normal)
+        closeButton!.tintColor = UIColor.black
+       // button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        self.view.addSubview(closeButton!)
         
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: &myContext)
     }
