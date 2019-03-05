@@ -27,6 +27,7 @@ struct TokenFetcher {
         request.httpBody = params.jsonData()!
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
             guard let jsonData = data else {
                 if let err = error {
                     debugPrint(err.localizedDescription)
@@ -39,7 +40,7 @@ struct TokenFetcher {
                     callback(response)
                 }
             }
-            }.resume()
+        }.resume()
     }
 }
 
