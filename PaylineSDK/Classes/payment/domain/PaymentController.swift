@@ -144,24 +144,9 @@ public final class PaymentController: WebController {
     }
     
     private func handleFinalStateHasBeenReached(state: WidgetState) {
-        
-        switch state {
 
-        case .paymentCanceled:
-            cancelPayment()
-            self.webViewController.closeButton?.isHidden = false
-        case .paymentSuccess,
-             .paymentFailure,
-             .tokenExpired,
-             .browserNotSupported,
-             .paymentOnHoldPartner,
-             .paymentSuccessForceTicketDisplay:
             finishPayment()
             self.webViewController.closeButton?.isHidden = false
-
-        default:
-            break
-        }
     }
     
     private func cancelPayment() {
