@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ScriptEvent {
+enum ScriptEvent: Equatable {
     
     case didShowState(WidgetState)
     case finalStateHasBeenReached(WidgetState)
