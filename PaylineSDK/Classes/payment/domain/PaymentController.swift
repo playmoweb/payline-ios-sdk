@@ -38,7 +38,7 @@ public final class PaymentController: WebController {
         })
     }
     
-    public func doEndToken(additionalData: Encodable?, isHandledByMerchant: Bool) {
+    public func endToken(additionalData: Encodable?, isHandledByMerchant: Bool) {
         scriptHandler.execute(action: PaymentAction.endToken(additionalData: additionalData, isHandledByMerchant: isHandledByMerchant), in: webViewController.webView, callback: nil)
     }
     
@@ -52,16 +52,17 @@ public final class PaymentController: WebController {
     
     public func getContextInfo(key: ContextInfoKeys) {
         scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, error) in
+            
             guard let strongSelf = self else { return }
-            switch key{
+            
+            switch key {
                 
             case .paylineAmountSmallestUnit,
                  .paylineCurrencyDigits:
                 guard let contextResult = result as? Int else { return }
                 let contextInfoResult = ContextInfoResult.int(key, contextResult)
-                debugPrint("test")
                 strongSelf.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
-                debugPrint("test2")
+                
             case .paylineCurrencyCode,
                  .paylineBuyerFirstName,
                  .paylineBuyerLastName,
@@ -82,14 +83,13 @@ public final class PaymentController: WebController {
                 guard let contextResult = result as? String else { return }
                 let contextInfoResult = ContextInfoResult.string(key, contextResult)
                 strongSelf.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
+                
             case .paylineOrderDetails:
                 guard let contextResult = result as? [[String: Any]] else { return }
                 let contextInfoResult = ContextInfoResult.object(key, contextResult)
                 self?.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
             }
-
         }
-        
     }
     
     // MARK: - Internal Interface
@@ -110,24 +110,27 @@ public final class PaymentController: WebController {
             handleFinalStateHasBeenReached(state: state)
             
         case .didEndToken:
-            delegate?.paymentControllerDidCancelPaymentForm(self)
-            presentingViewController.dismiss(animated: true, completion: nil)
+            cancelPayment()
         }
     }
     
     private func handleDidShowState(state: WidgetState) {
+        
         switch state {
-        case .paymentMethodsList:
+            
+        case .paymentMethodsList,
+             .manageWebWallet:
             delegate?.paymentControllerDidShowPaymentForm(self)
+            
         case .paymentRedirectNoResponse:
+            // TODO: disable exit
             print(state.rawValue)
-            //TODO
-        case .manageWebWallet:
-            print(state.rawValue)
+            
         case .paymentFailureWithRetry,
              .paymentMethodNeedsMoreInfo,
              .activeWaiting,
              .paymentCanceledWithRetry:
+            // ignored
             break
 
         default:
@@ -136,19 +139,32 @@ public final class PaymentController: WebController {
     }
     
     private func handleFinalStateHasBeenReached(state: WidgetState) {
+        
         switch state {
+
         case .paymentCanceled:
-            delegate?.paymentControllerDidCancelPaymentForm(self)
+            cancelPayment()
+            
         case .paymentSuccess,
              .paymentFailure,
              .tokenExpired,
              .browserNotSupported,
              .paymentOnHoldPartner,
              .paymentSuccessForceTicketDisplay:
-            print(state.rawValue)
-            delegate?.paymentControllerDidFinishPaymentForm(self)
+            finishPayment()
+
         default:
             break
         }
+    }
+    
+    private func cancelPayment() {
+        delegate?.paymentControllerDidCancelPaymentForm(self)
+        presentingViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    private func finishPayment() {
+        delegate?.paymentControllerDidFinishPaymentForm(self)
+        presentingViewController.dismiss(animated: true, completion: nil)
     }
 }
