@@ -92,7 +92,6 @@ class PLWebViewController: UIViewController {
         delegate?.plWebViewControllerDidRequestClose(self)
     }
     
-    // TODO: add close button action and call delegate
 }
 
 //// MARK: - KVO
