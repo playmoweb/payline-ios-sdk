@@ -21,36 +21,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-wo-n8Q">
-                                <rect key="frame" x="133.5" y="203" width="108" height="30"/>
-                                <state key="normal" title="Generate Token"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-wo-n8Q">
+                                <rect key="frame" x="16" y="278.5" width="258" height="30"/>
+                                <state key="normal" title="Generate Payment Token"/>
                                 <connections>
-                                    <action selector="clickedGenerateToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c4D-Q6-SKO"/>
+                                    <action selector="clickedGeneratePaymentToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dmL-fG-Xdq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-uq-Y3f">
-                                <rect key="frame" x="166" y="363" width="43" height="30"/>
+                                <rect key="frame" x="276" y="358.5" width="83" height="30"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="Wallet"/>
                                 <connections>
                                     <action selector="clickedManageWallet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xur-8i-tSE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-4A-HSt">
-                                <rect key="frame" x="172.5" y="283" width="30" height="30"/>
+                                <rect key="frame" x="294" y="278.5" width="65" height="30"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="Pay"/>
                                 <connections>
                                     <action selector="clickedPay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pN3-BN-dP7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-cz-x6y">
+                                <rect key="frame" x="16" y="308.5" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MlO-h6-4oz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WF-Ae-KDe">
+                                <rect key="frame" x="16" y="358.5" width="240" height="30"/>
+                                <state key="normal" title="Generate Wallet Token"/>
+                                <connections>
+                                    <action selector="clickedGenerateWalletToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IZQ-du-b4B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="top" secondItem="Kic-4A-HSt" secondAttribute="bottom" constant="50" id="AxP-vX-Xal"/>
-                            <constraint firstItem="Kic-4A-HSt" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="P8D-qz-azh"/>
-                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="XLV-qj-psc"/>
-                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="kiO-x8-u4v"/>
-                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="bottom" constant="50" id="s4E-PQ-N2X"/>
-                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="183" id="xq5-xq-fup"/>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0Oa-YL-DGL"/>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="221-Sr-MAV"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="top" secondItem="5WF-Ae-KDe" secondAttribute="top" id="776-gQ-d3t"/>
+                            <constraint firstItem="5WF-Ae-KDe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="K0X-kz-7Qk"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="leading" secondItem="5WF-Ae-KDe" secondAttribute="trailing" constant="20" id="PEt-pk-cNw"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="leading" secondItem="ePR-wo-n8Q" secondAttribute="trailing" constant="20" id="aBu-Ft-xjQ"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="bottom" secondItem="5WF-Ae-KDe" secondAttribute="bottom" id="aXx-Lm-2pC"/>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="bottom" id="b2p-Tx-kzc"/>
+                            <constraint firstItem="5WF-Ae-KDe" firstAttribute="top" secondItem="uEB-cz-x6y" secondAttribute="bottom" id="bDd-gY-3vn"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="bottom" secondItem="ePR-wo-n8Q" secondAttribute="bottom" id="dCT-MS-MYS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kic-4A-HSt" secondAttribute="trailing" id="gjd-qp-vNh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEB-cz-x6y" secondAttribute="trailing" id="ogU-22-Mae"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rBO-Q3-4iZ"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="top" id="zMa-IX-vvc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAm-uq-Y3f" secondAttribute="trailing" id="zt8-4D-MqN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -60,6 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

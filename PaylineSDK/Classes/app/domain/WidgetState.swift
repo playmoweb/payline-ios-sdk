@@ -40,6 +40,7 @@ extension WidgetState: Codable {
     }
  
     func encode(to encoder: Encoder) throws {
+        
         var container = encoder.container(keyedBy: Key.self)
         switch self {
         case .paymentMethodsList:

@@ -20,16 +20,19 @@ struct ScriptHandler {
         guard let eventName = ScriptEvent.Name(rawValue: message.name) else { return }
         
         switch eventName {
+            
         case .didShowState:
             guard let eventBody = message.body as? [String: String] else { return }
             guard let event = eventBody["state"] else { return }
             guard let state = WidgetState(rawValue: event) else { return }
             callback(ScriptEvent.didShowState(state))
+            
         case .finalStateHasBeenReached:
             guard let eventBody = message.body as? [String: String] else { return }
             guard let event = eventBody["state"] else { return }
             guard let state = WidgetState(rawValue: event) else { return }
             callback(ScriptEvent.finalStateHasBeenReached(state))
+            
         case .didEndToken:
             callback(ScriptEvent.didEndToken)
         }
