@@ -78,9 +78,9 @@ class ViewController: UIViewController {
         return PaymentController(presentingViewController: self, delegate: self)
     }()
     
-//    private lazy var walletController: WalletController = {
-//        return WalletController(presentingViewController: self, delegate: self)
-//    }()
+    private lazy var walletController: WalletController = {
+        return WalletController(presentingViewController: self, delegate: self)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,7 +137,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickedManageWallet(_ sender: Any?) {
         if let data = walletData {
-            paymentController.showPaymentForm(token: data.0, environment: data.1)
+            walletController.manageWebWallet(token: data.0, environment: data.1)
         }
     }
     
@@ -150,7 +150,7 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
-        self.paymentController.endToken(additionalData: nil, isHandledByMerchant: false)
+      //  self.paymentController.endToken(additionalData: nil, isHandledByMerchant: false)
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
@@ -175,9 +175,9 @@ extension ViewController: PaymentControllerDelegate {
     
 }
 
-//extension ViewController: WalletControllerDelegate {
-//
-//    func walletControllerDidFinishManagingWebWallet(_ walletController: WalletController) {
-//        //
-//    }
-//}
+extension ViewController: WalletControllerDelegate {
+
+    func walletControllerDidFinishManagingWebWallet(_ walletController: WalletController) {
+        //
+    }
+}

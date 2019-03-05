@@ -54,7 +54,7 @@
                                 <rect key="frame" x="16" y="358.5" width="240" height="30"/>
                                 <state key="normal" title="Generate Wallet Token"/>
                                 <connections>
-                                    <action selector="clickedGenerateWalletToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IZQ-du-b4B"/>
+                                    <action selector="clickedGenerateWalletToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITv-OI-WwC"/>
                                 </connections>
                             </button>
                         </subviews>

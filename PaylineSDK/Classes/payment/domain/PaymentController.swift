@@ -100,6 +100,10 @@ public final class PaymentController: WebController {
       //  delegate?.paymentControllerDidShowPaymentForm(self)
     }
     
+    override func plWebViewControllerDidRequestClose(_ plWebViewController: PLWebViewController) {
+        self.endToken(additionalData: nil, isHandledByMerchant: true)
+    }
+    
     override func handleReceivedEvent(_ event: ScriptEvent) {
         switch event {
             
@@ -121,9 +125,10 @@ public final class PaymentController: WebController {
         case .paymentMethodsList,
              .manageWebWallet:
             delegate?.paymentControllerDidShowPaymentForm(self)
+             self.webViewController.closeButton?.isHidden = false
             
         case .paymentRedirectNoResponse:
-            // TODO: disable exit
+            self.webViewController.closeButton?.isHidden = true
             print(state.rawValue)
             
         case .paymentFailureWithRetry,
@@ -144,7 +149,7 @@ public final class PaymentController: WebController {
 
         case .paymentCanceled:
             cancelPayment()
-            
+            self.webViewController.closeButton?.isHidden = false
         case .paymentSuccess,
              .paymentFailure,
              .tokenExpired,
@@ -152,6 +157,7 @@ public final class PaymentController: WebController {
              .paymentOnHoldPartner,
              .paymentSuccessForceTicketDisplay:
             finishPayment()
+            self.webViewController.closeButton?.isHidden = false
 
         default:
             break

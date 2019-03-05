@@ -38,11 +38,24 @@ class PLWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        closeButton!.setTitle("X", for: .normal)
-        closeButton!.tintColor = UIColor.black
-       // button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        closeButton!.setTitle("Close", for: .normal)
+        closeButton?.setTitleColor(.black, for: .normal)
+        closeButton!.addTarget(self, action: #selector(close), for: .touchUpInside)
         
-        view.addSubview(closeButton!)
+        self.view.addSubview(closeButton!)
+        closeButton?.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 9.0, *) {
+            closeButton?.topAnchor.constraint(equalTo: self.view.topAnchor, constant:30).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            closeButton?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        self.view.bringSubviewToFront(closeButton!)
+        self.view.sendSubviewToBack(webView)
         
         estimatedProgressObservation = webView.observe(\WKWebView.estimatedProgress, options: [NSKeyValueObservingOptions.new]) { [weak self] (_, change) in
             if let progress = change.newValue {
@@ -75,7 +88,10 @@ class PLWebViewController: UIViewController {
         progressView.removeFromSuperview()
     }
     
-    // TODO: add close button action and call delegate
+    @objc func close() {
+        delegate?.plWebViewControllerDidRequestClose(self)
+    }
+    
 }
 
 //// MARK: - KVO
