@@ -21,6 +21,10 @@ public final class WalletController: WebController {
         webViewController.loadUrl(environment)
     }
     
+    override func plWebViewControllerDidRequestClose(_ plWebViewController: PLWebViewController) {
+        presentingViewController.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Internal Interface
     
     weak var delegate: WalletControllerDelegate?

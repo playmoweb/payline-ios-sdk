@@ -9,12 +9,21 @@
 import UIKit
 import PaylineSDK
 
-struct FetchTokenParams: Encodable {
+protocol FetchTokenParams: Encodable {}
+
+struct FetchPaymentTokenParams: FetchTokenParams {
     let orderRef: String
     let amount: Int
     let currencyCode: String
+    let languageCode: String
 //    let buyer: Buyer
 //    let items: [CartItem]
+}
+
+struct FetchWalletTokenParams: FetchTokenParams {
+    let buyer: Buyer
+    let updatePersonalDetails: Bool
+    let languageCode: String
 }
 
 struct Buyer: Encodable {
@@ -30,7 +39,7 @@ struct Address: Encodable {
     let firstname: String
     let lastname: String
     let street1: String
-    let street2: String
+//    let street2: String
     let city: String
     let zipCode: Int
     let country: String
@@ -83,7 +92,7 @@ class ViewController: UIViewController {
     @IBAction func clickedGeneratePaymentToken(_ sender: Any?) {
         
         let orderRef = UUID.init().uuidString
-        let params = FetchTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR")
+        let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
         
         TokenFetcher(path: "/init-web-pay", params: params).execute() { [weak self] response in
             self?.testData = (response.token, URL(string: response.redirectUrl)!)
@@ -93,25 +102,28 @@ class ViewController: UIViewController {
     
     @IBAction func clickedGenerateWalletToken(_ sender: Any) {
         
-        let buyer = Buyer(
-            firstname: "John.Doe@gmail.com",
-            lastname: "John",
-            email: "Doe",
-            mobilePhone: "string",
-            shippingAddress: Address(
+        let params = FetchWalletTokenParams(
+            buyer: Buyer(
                 firstname: "John",
                 lastname: "Doe",
-                street1: "string",
-                street2: "string",
-                city: "Aix-en-Provence",
-                zipCode: 13100,
-                country: "FR",
-                phone: "string"
+                email: "John.Doe@gmail.com",
+                mobilePhone: "0123456789",
+                shippingAddress: Address(
+                    firstname: "John",
+                    lastname: "Doe",
+                    street1: "1 rue de Rue",
+                    city: "Aix-en-Provence",
+                    zipCode: 13100,
+                    country: "FR",
+                    phone: "0123456789"
+                ),
+                walletId: "12342414-DFD-13434141"
             ),
-            walletId: "12342414-DFD-13434141"
+            updatePersonalDetails: false,
+            languageCode: "EN"
         )
         
-        TokenFetcher(path: "/init-manage-wallet", params: buyer).execute() { [weak self] response in
+        TokenFetcher(path: "/init-manage-wallet", params: params).execute() { [weak self] response in
             self?.walletData = (response.token, URL(string: response.redirectUrl)!)
             self?.walletButton.isEnabled = true
         }
@@ -125,7 +137,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickedManageWallet(_ sender: Any?) {
         if let data = walletData {
-            paymentController.showPaymentForm(token: data.0, environment: data.1)
+            walletController.manageWebWallet(token: data.0, environment: data.1)
         }
     }
     

@@ -9,52 +9,27 @@ import Foundation
 import UIKit
 import WebKit
 
-var myContext = 0
-
-class PLWebViewController : UIViewController {
+class PLWebViewController: UIViewController {
     
     weak var delegate: PLWebViewControllerDelegate?
     var closeButton: UIButton?
     
-   // private let mldTransitioningDelegate = MLDTransitioningDelegate()
-    
     lazy var webView: WKWebView = {
-        let wv = WKWebView()
-        wv.navigationDelegate = self
-        return wv
+        let wkwv = WKWebView()
+        wkwv.navigationDelegate = self
+        return wkwv
     }()
     
-    // TODO: change progressView to spinner?
+    // TODO: remove progressview?
     private lazy var progressView: UIProgressView = {
-        let pv = UIProgressView(progressViewStyle: .default)
-        pv.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-        //        pv.tintColor = UIColor.appButtonPrimary
-        view.addSubview(pv)
-        return pv
+        let prv = UIProgressView(progressViewStyle: .default)
+        prv.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+//        prv = UIColor.appButtonPrimary
+        view.addSubview(prv)
+        return prv
     }()
     
-    override var preferredContentSize: CGSize {
-        get {
-            let presentingSize = presentingViewController?.view.frame.size ?? .zero
-            return CGSize(width: presentingSize.width, height: presentingSize.height * 0.75)
-        }
-        set(newValue) { super.preferredContentSize = newValue }
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup() {
-        modalPresentationStyle = .custom
-     //   transitioningDelegate = mldTransitioningDelegate
-    }
+    private var estimatedProgressObservation: NSKeyValueObservation?
     
     override func loadView() {
         view = webView
@@ -81,7 +56,12 @@ class PLWebViewController : UIViewController {
         }
         self.view.bringSubviewToFront(closeButton!)
         self.view.sendSubviewToBack(webView)
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: &myContext)
+        
+        estimatedProgressObservation = webView.observe(\WKWebView.estimatedProgress, options: [NSKeyValueObservingOptions.new]) { [weak self] (_, change) in
+            if let progress = change.newValue {
+                self?.progressView.progress = Float(progress)
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -115,35 +95,35 @@ class PLWebViewController : UIViewController {
     // TODO: add close button action and call delegate
 }
 
-// MARK: - KVO
-extension PLWebViewController {
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        
-        guard let change = change else { return }
-        if context != &myContext {
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-            return
-        }
-        
-        //        if keyPath == "title" {
-        //            if let title = change[NSKeyValueChangeKey.newKey] as? String {
-        //                self.navigationItem.title = title
-        //            }
-        //            return
-        //        }
-        
-        if keyPath == "estimatedProgress" {
-            if let progress = (change[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
-                progressView.progress = progress;
-            }
-            return
-        }
-    }
-}
+//// MARK: - KVO
+//extension PLWebViewController {
+//
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//
+//        guard let change = change else { return }
+//        if context != &myContext {
+//            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+//            return
+//        }
+//
+//        //        if keyPath == "title" {
+//        //            if let title = change[NSKeyValueChangeKey.newKey] as? String {
+//        //                self.navigationItem.title = title
+//        //            }
+//        //            return
+//        //        }
+//
+//        if keyPath == "estimatedProgress" {
+//            if let progress = (change[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
+//                progressView.progress = progress;
+//            }
+//            return
+//        }
+//    }
+//}
 
 // MARK: - WKWebView
-extension PLWebViewController : WKNavigationDelegate {
+extension PLWebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         progressView.isHidden = true
@@ -159,10 +139,9 @@ extension PLWebViewController : WKNavigationDelegate {
         progressView.isHidden = false
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        debugPrint("TEST NAV -> \(navigationAction.request.url)")
-        decisionHandler(.allow)
-    }
+//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+//        decisionHandler(.allow)
+//    }
 }
 
 // MARK: - WKScriptMessageHandler
@@ -171,5 +150,4 @@ extension PLWebViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         delegate?.plWebViewController(self, didReceive: message)
     }
-    
 }
