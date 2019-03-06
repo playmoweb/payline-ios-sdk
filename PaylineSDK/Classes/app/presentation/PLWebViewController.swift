@@ -45,7 +45,7 @@ class PLWebViewController: UIViewController {
         self.view.addSubview(closeButton!)
         closeButton?.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 9.0, *) {
-            closeButton?.topAnchor.constraint(equalTo: self.view.topAnchor, constant:30).isActive = true
+            closeButton?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
         } else {
             // Fallback on earlier versions
         }

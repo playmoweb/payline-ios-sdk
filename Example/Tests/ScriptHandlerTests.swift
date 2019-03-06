@@ -68,7 +68,7 @@ class ScriptHandlerTest: QuickSpec {
                 
                 waitUntil { done in
                     scriptHandler.handle(message: m) { event in
-                        expect(event).to(equal(ScriptEvent.didShowState(WidgetState.paymentMethodsList)))
+                        expect(event).to(equal(ScriptEvent.didShowState(WidgetState.manageWebWallet)))
                         done()
                     }
                 }
@@ -89,7 +89,89 @@ class ScriptHandlerTest: QuickSpec {
         
         describe("finalStateHasBeenReached") {
             
+            it("paymentSuccess") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.paymentSuccess.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.paymentSuccess)))
+                        done()
+                    }
+                }
+            }
             
+            it("paymentFailure") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.paymentFailure.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.paymentFailure)))
+                        done()
+                    }
+                }
+            }
+            
+            it("paymentCanceled") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.paymentCanceled.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.paymentCanceled)))
+                        done()
+                    }
+                }
+            }
+            
+            it("tokenExpired") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.tokenExpired.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.tokenExpired)))
+                        done()
+                    }
+                }
+            }
+            
+            it("browserNotSupported") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.browserNotSupported.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.browserNotSupported)))
+                        done()
+                    }
+                }
+            }
+            
+            it("paymentOnHoldPartner") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.paymentOnHoldPartner.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.paymentOnHoldPartner)))
+                        done()
+                    }
+                }
+            }
+            
+            it("paymentSuccessForceTicketDisplay") {
+                
+                let m = TestScriptMessage(name: ScriptEvent.Name.finalStateHasBeenReached.rawValue, body: ["state": WidgetState.paymentSuccessForceTicketDisplay.rawValue])
+                
+                waitUntil { done in
+                    scriptHandler.handle(message: m) { event in
+                        expect(event).to(equal(ScriptEvent.finalStateHasBeenReached(WidgetState.paymentSuccessForceTicketDisplay)))
+                        done()
+                    }
+                }
+            }
             
         }
     }
