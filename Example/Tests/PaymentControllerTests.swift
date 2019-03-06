@@ -17,6 +17,7 @@ class TestDelegate: PaymentControllerDelegate {
     var didCancelPaymentForm = false
     var didFinishPaymentForm = false
     var didGetSandbox: Bool? = nil
+    var didGetLanguage: String? = nil
     var didGetContextInfo: ContextInfoResult? = nil
     
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
@@ -31,9 +32,15 @@ class TestDelegate: PaymentControllerDelegate {
         didFinishPaymentForm = true
     }
     
-//    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {}
-//    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {}
-//    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {}
+    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
+        self.didGetSandbox = didGetIsSandbox
+    }
+    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
+        self.didGetLanguage = didGetLanguage
+    }
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {
+        self.didGetContextInfo = didGetContextInfo
+    }
 }
 
 class PaymentControllerTests: QuickSpec {
@@ -77,6 +84,82 @@ class PaymentControllerTests: QuickSpec {
             paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
             
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+        }
+        
+        it("cancelPaymentForm") {
+            
+            let orderRef = UUID.init().uuidString
+            let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
+            
+            var tokenResponse: FetchTokenResponse? = nil
+            
+            waitUntil(timeout: 5) { done in
+                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                    tokenResponse = response
+                    done()
+                }
+            }
+            
+            expect(tokenResponse).toNot(be(nil))
+            let url = URL(string: tokenResponse!.redirectUrl)
+            expect(url).toNot(be(nil))
+            
+            paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
+            
+            
+            expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            paymentController.endToken(additionalData: nil, isHandledByMerchant: true)
+             expect(testDelegate.didCancelPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+        }
+        
+        it("didGetIsSandbox") {
+            
+            let orderRef = UUID.init().uuidString
+            let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
+            
+            var tokenResponse: FetchTokenResponse? = nil
+            
+            waitUntil(timeout: 5) { done in
+                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                    tokenResponse = response
+                    done()
+                }
+            }
+            
+            expect(tokenResponse).toNot(be(nil))
+            let url = URL(string: tokenResponse!.redirectUrl)
+            expect(url).toNot(be(nil))
+            
+            paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
+            expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            paymentController.getIsSandbox()
+            
+            expect(testDelegate.didGetSandbox).toNotEventually(beNil(), timeout: 20, pollInterval: 1, description: nil)
+        }
+        
+        it("didGetLanguage") {
+            
+            let orderRef = UUID.init().uuidString
+            let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
+            
+            var tokenResponse: FetchTokenResponse? = nil
+            
+            waitUntil(timeout: 5) { done in
+                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                    tokenResponse = response
+                    done()
+                }
+            }
+            
+            expect(tokenResponse).toNot(be(nil))
+            let url = URL(string: tokenResponse!.redirectUrl)
+            expect(url).toNot(be(nil))
+            
+            paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
+             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            paymentController.getLanguage()
+            
+            expect(testDelegate.didGetLanguage).toNotEventually(beNil(), timeout: 20, pollInterval: 1, description: nil)
         }
     }
     
