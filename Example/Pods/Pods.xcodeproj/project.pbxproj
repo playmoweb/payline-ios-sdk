@@ -427,15 +427,15 @@
 			path = PaylineSDK/Classes/payment;
 			sourceTree = "<group>";
 		};
-		6E9275562AABDF5BE4FA386E89CD0E66 /* app */ = {
+		6E9275562AABDF5BE4FA386E89CD0E66 /* core */ = {
 			isa = PBXGroup;
 			children = (
 				71ADFE0B46CC2D9079886114A8876D1A /* domain */,
 				AE7C1526DB0401949434BBAD8EFCE8A1 /* presentation */,
 				A424DA1513CB150D4C675166DC4B7AE9 /* util */,
 			);
-			name = app;
-			path = PaylineSDK/Classes/app;
+			name = core;
+			path = PaylineSDK/Classes/core;
 			sourceTree = "<group>";
 		};
 		71ADFE0B46CC2D9079886114A8876D1A /* domain */ = {
@@ -547,9 +547,9 @@
 		B5B70618AC638F73E5C8B1551B33BB90 /* PaylineSDK */ = {
 			isa = PBXGroup;
 			children = (
-				84951BB2D8DAB82D894625BAD58C2559 /* wallet */,
-				6E9275562AABDF5BE4FA386E89CD0E66 /* app */,
+				6E9275562AABDF5BE4FA386E89CD0E66 /* core */,
 				6AB168C65A361FA4C049CA592C5A52F2 /* payment */,
+				84951BB2D8DAB82D894625BAD58C2559 /* wallet */,
 				72DA7BE13D11C9C217A99CB35CB4AB6F /* Pod */,
 				B990F075CF4864AECDB6C10A54CB7434 /* Support Files */,
 			);

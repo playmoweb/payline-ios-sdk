@@ -71,14 +71,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var walletButton: UIButton!
     
-    private var testData: (String,URL)?
-    private var walletData: (String,URL)?
+    var testData: (String,URL)?
+    var walletData: (String,URL)?
     
-    private lazy var paymentController: PaymentController = {
+    lazy var paymentController: PaymentController = {
         return PaymentController(presentingViewController: self, delegate: self)
     }()
     
-    private lazy var walletController: WalletController = {
+    lazy var walletController: WalletController = {
         return WalletController(presentingViewController: self, delegate: self)
     }()
     

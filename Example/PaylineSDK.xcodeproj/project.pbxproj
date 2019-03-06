@@ -15,6 +15,8 @@
 		7713DCC32425C11CBF96F211 /* Pods_PaylineSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F7B8A0453FD8DC4255A156 /* Pods_PaylineSDK_Tests.framework */; };
 		F79692EEC298FA295C22FC2B /* Pods_PaylineSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B7EAE6E0AA5F4A1356340E /* Pods_PaylineSDK_Example.framework */; };
 		FA589812222ECBBB00D9CD5C /* ScriptHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */; };
+		FA589814222ECF2D00D9CD5C /* PaymentControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */; };
+		FA589816222ED8FD00D9CD5C /* TokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589815222ED8FD00D9CD5C /* TokenFetcher.swift */; };
 		FAEA2C26222E7A0500DD02FD /* TokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA2C25222E7A0500DD02FD /* TokenFetcher.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		CB8DFE5B6EB1997932E55F86 /* Pods-PaylineSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptHandlerTests.swift; sourceTree = "<group>"; };
+		FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentControllerTests.swift; sourceTree = "<group>"; };
+		FA589815222ED8FD00D9CD5C /* TokenFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFetcher.swift; sourceTree = "<group>"; };
 		FAEA2C25222E7A0500DD02FD /* TokenFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */,
+				FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				FA589815222ED8FD00D9CD5C /* TokenFetcher.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -393,6 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA589816222ED8FD00D9CD5C /* TokenFetcher.swift in Sources */,
+				FA589814222ECF2D00D9CD5C /* PaymentControllerTests.swift in Sources */,
 				FA589812222ECBBB00D9CD5C /* ScriptHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

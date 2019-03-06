@@ -1,12 +1,30 @@
 //
 //  TokenFetcher.swift
-//  PaylineSDK_Example
+//  PaylineSDK_Tests
 //
 //  Created by MacBook on 3/5/19.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import Foundation
+
+protocol FetchTokenParams: Encodable {}
+
+struct FetchPaymentTokenParams: FetchTokenParams {
+    let orderRef: String
+    let amount: Int
+    let currencyCode: String
+    let languageCode: String
+    //    let buyer: Buyer
+    //    let items: [CartItem]
+}
+
+struct FetchTokenResponse: Decodable {
+    let code: String
+    let message: String
+    let redirectUrl: String
+    let token: String
+}
 
 struct TokenFetcher {
     
@@ -40,7 +58,7 @@ struct TokenFetcher {
                     callback(response)
                 }
             }
-        }.resume()
+            }.resume()
     }
 }
 
