@@ -8,15 +8,13 @@
 import Foundation
 
 public protocol PaymentControllerDelegate: class {
-    // NOTE: required interface
+    
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController)
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController)
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController)
-}
-extension PaymentControllerDelegate {
-    // NOTE: optional interface
-    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {}
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {}
-    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {}
+    
+    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool)
+    func paymentController(_ paymentController: PaymentController, didGetLanguage: String)
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult)
 }
  
