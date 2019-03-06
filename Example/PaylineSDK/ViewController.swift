@@ -150,7 +150,7 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
-      //  self.paymentController.endToken(additionalData: nil, isHandledByMerchant: false)
+//        self.paymentController.endToken(additionalData: nil, isHandledByMerchant: false)
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
