@@ -144,7 +144,6 @@ public final class PaymentController: WebController {
     }
     
     private func handleFinalStateHasBeenReached(state: WidgetState) {
-
             finishPayment()
             self.webViewController.closeButton?.isHidden = false
     }
