@@ -95,13 +95,27 @@ class PaymentControllerTests: QuickSpec {
             paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
-        
+
         it("cancelPaymentForm") {
             paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-            
+
             paymentController.webViewController.closeButton?.sendActions(for: .touchUpInside)
             expect(testDelegate.didCancelPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+        }
+        
+        it("finishPaymentForm_success") {
+            paymentController.showPaymentForm(token: tokenResponse!.token, environment: url!)
+            expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            
+            paymentController.plWebViewController(
+                paymentController.webViewController,
+                didReceive: TestScriptMessage(
+                    name: "finalStateHasBeenReached",
+                    body: ["state":WidgetState.paymentSuccess.rawValue]
+                )
+            )
+            expect(testDelegate.didFinishPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
         
         it("endToken") {
