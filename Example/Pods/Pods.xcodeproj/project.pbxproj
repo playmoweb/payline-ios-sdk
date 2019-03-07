@@ -1515,6 +1515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.PaylineSDK;
 				PRODUCT_MODULE_NAME = PaylineSDK;
 				PRODUCT_NAME = PaylineSDK;
 				SDKROOT = iphoneos;
@@ -1583,6 +1584,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.PaylineSDK;
 				PRODUCT_MODULE_NAME = PaylineSDK;
 				PRODUCT_NAME = PaylineSDK;
 				SDKROOT = iphoneos;

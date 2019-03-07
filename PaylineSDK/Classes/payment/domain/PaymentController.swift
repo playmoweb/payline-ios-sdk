@@ -26,7 +26,7 @@ public final class PaymentController: WebController {
         webViewController.loadUrl(environment)
     }
     
-    public func updateWebPaymentData(_ webPaymentData: String) {
+    public func updateWebPaymentData(_ webPaymentData: Encodable) {
         
     }
     
