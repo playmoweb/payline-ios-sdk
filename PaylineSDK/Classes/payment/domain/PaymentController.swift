@@ -26,8 +26,8 @@ public final class PaymentController: WebController {
         webViewController.loadUrl(environment)
     }
     
-    public func updateWebPaymentData(_ webPaymentData: Encodable) {
-        
+    public func updateWebPaymentData(_ webPaymentData: String) {
+        scriptHandler.execute(action: PaymentAction.updateWebPaymentData(data: webPaymentData), in: webViewController.webView, callback: nil)
     }
     
     public func getIsSandbox() {

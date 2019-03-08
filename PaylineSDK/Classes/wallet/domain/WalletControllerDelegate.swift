@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol WalletControllerDelegate: class {
-    func walletControllerDidFinishManagingWebWallet(_ walletController: WalletController)
+    func walletControllerDidShowWebWebWallet(_ walletController: WalletController)
 }

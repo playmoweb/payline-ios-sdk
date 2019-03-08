@@ -8,11 +8,36 @@
 
 import Foundation
 
+struct Buyer: Encodable {
+    let firstname: String
+    let lastname: String
+    let email: String
+    let mobilePhone: String
+    let shippingAddress: Address
+    let walletId: String
+}
+
+struct Address: Encodable {
+    let firstname: String
+    let lastname: String
+    let street1: String
+    //    let street2: String
+    let city: String
+    let zipCode: Int
+    let country: String
+    let phone: String
+}
 protocol FetchTokenParams: Encodable {}
+
+struct FetchWalletTokenParams: FetchTokenParams {
+    let buyer: Buyer
+    let updatePersonalDetails: Bool
+    let languageCode: String
+}
 
 struct FetchPaymentTokenParams: FetchTokenParams {
     let orderRef: String
-    let amount: Int
+    let amount: Double
     let currencyCode: String
     let languageCode: String
     //    let buyer: Buyer

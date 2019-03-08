@@ -31,7 +31,8 @@ public final class WalletController: WebController {
     
     override func handleReceivedEvent(_ event: ScriptEvent) {
         switch event {
-        // TODO:
+        case .didShowState(let state):
+            delegate?.walletControllerDidShowWebWebWallet(self)
         default:
             break
         }

@@ -13,7 +13,7 @@ protocol FetchTokenParams: Encodable {}
 
 struct FetchPaymentTokenParams: FetchTokenParams {
     let orderRef: String
-    let amount: Int
+    let amount: Double
     let currencyCode: String
     let languageCode: String
 //    let buyer: Buyer
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
     @IBAction func clickedGeneratePaymentToken(_ sender: Any?) {
         
         let orderRef = UUID.init().uuidString
-        let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
+        let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5 , currencyCode: "EUR", languageCode: "FR")
         
         TokenFetcher(path: "/init-web-pay", params: params).execute() { [weak self] response in
             self?.testData = (response.token, URL(string: response.redirectUrl)!)
@@ -176,8 +176,9 @@ extension ViewController: PaymentControllerDelegate {
 }
 
 extension ViewController: WalletControllerDelegate {
-
-    func walletControllerDidFinishManagingWebWallet(_ walletController: WalletController) {
-        //
+    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+        debugPrint("didShowManageWallet")
     }
+    
+
 }
