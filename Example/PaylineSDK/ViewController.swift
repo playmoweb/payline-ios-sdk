@@ -150,16 +150,16 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
-//        self.paymentController.endToken(additionalData: nil, isHandledByMerchant: false)
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
         debugPrint("didCancel")
     }
     
-    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController) {
+    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
         debugPrint("didFinish")
     }
+    
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
         debugPrint(didGetIsSandbox)

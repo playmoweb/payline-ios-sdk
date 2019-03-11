@@ -113,8 +113,8 @@ public final class PaymentController: WebController {
         case .finalStateHasBeenReached(let state):
             handleFinalStateHasBeenReached(state: state)
             
-        case .didEndToken:
-            cancelPayment()
+        case .didEndToken(let state):
+            finishPayment(state: state)
         }
     }
     
@@ -144,17 +144,12 @@ public final class PaymentController: WebController {
     }
     
     private func handleFinalStateHasBeenReached(state: WidgetState) {
-            finishPayment()
+            finishPayment(state: state)
             self.webViewController.closeButton?.isHidden = false
     }
     
-    private func cancelPayment() {
-        delegate?.paymentControllerDidCancelPaymentForm(self)
-        presentingViewController.dismiss(animated: true, completion: nil)
-    }
-    
-    private func finishPayment() {
-        delegate?.paymentControllerDidFinishPaymentForm(self)
+    private func finishPayment(state: WidgetState) {
+        delegate?.paymentControllerDidFinishPaymentForm(self, withState: state)
         presentingViewController.dismiss(animated: true, completion: nil)
     }
 }

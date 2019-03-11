@@ -11,7 +11,7 @@ enum ScriptEvent: Equatable {
     
     case didShowState(WidgetState)
     case finalStateHasBeenReached(WidgetState)
-    case didEndToken
+    case didEndToken(WidgetState)
     
     enum Name: String, CaseIterable {
         case didShowState

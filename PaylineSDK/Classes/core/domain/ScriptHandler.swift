@@ -34,7 +34,8 @@ struct ScriptHandler {
             callback(ScriptEvent.finalStateHasBeenReached(state))
             
         case .didEndToken:
-            callback(ScriptEvent.didEndToken)
+            let state = WidgetState.paymentCanceled
+            callback(ScriptEvent.didEndToken(state))
         }
     }
     

@@ -11,7 +11,7 @@ import Foundation
  These are possible values for the "Payline JS Widget" state and is transmitted by the widget's callback mechanisms.
  It is used by the SDK to determine certain callback possibilities
  */
-enum WidgetState: String {
+public enum WidgetState: String {
     case paymentMethodsList = "PAYMENT_METHODS_LIST"
     case paymentCanceled = "PAYMENT_CANCELED"
     case paymentSuccess = "PAYMENT_SUCCESS"
@@ -26,8 +26,6 @@ enum WidgetState: String {
     case paymentCanceledWithRetry = "PAYMENT_CANCELED_WITH_RETRY"
     case paymentOnHoldPartner = "PAYMENT_ONHOLD_PARTNER"
     case paymentSuccessForceTicketDisplay = "PAYMENT_SUCCESS_FORCE_TICKET_DISPLAY"
-//    case paymentMethodsListShortcut = "PAYMENT_METHODS_LIST_SHORTCUT"
-//    case paymentTransitionalShortcut = "PAYMENT_TRANSITIONAL_SHORTCUT"
 }
 extension WidgetState: Codable {
     
@@ -39,7 +37,7 @@ extension WidgetState: Codable {
         case unknownValue
     }
  
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy: Key.self)
         switch self {
@@ -71,10 +69,6 @@ extension WidgetState: Codable {
             try container.encode(12, forKey: .rawValue)
         case .paymentSuccessForceTicketDisplay:
             try container.encode(13, forKey: .rawValue)
-//        case .paymentMethodsListShortcut:
-//            try container.encode(14, forKey: .rawValue)
-//        case .paymentTransitionalShortcut:
-//            try container.encode(15, forKey: .rawValue)
 
         }
     }
