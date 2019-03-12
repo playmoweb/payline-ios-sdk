@@ -27,49 +27,49 @@ public enum WidgetState: String {
     case paymentOnHoldPartner = "PAYMENT_ONHOLD_PARTNER"
     case paymentSuccessForceTicketDisplay = "PAYMENT_SUCCESS_FORCE_TICKET_DISPLAY"
 }
-extension WidgetState: Codable {
-    
-    enum Key: CodingKey {
-        case rawValue
-    }
-    
-    enum CodingError: Error {
-        case unknownValue
-    }
- 
-    public func encode(to encoder: Encoder) throws {
-        
-        var container = encoder.container(keyedBy: Key.self)
-        switch self {
-        case .paymentMethodsList:
-            try container.encode(0, forKey: .rawValue)
-        case .paymentCanceled:
-            try container.encode(1, forKey: .rawValue)
-        case .paymentSuccess:
-            try container.encode(2, forKey: .rawValue)
-        case .paymentFailure:
-            try container.encode(3, forKey: .rawValue)
-        case .paymentFailureWithRetry:
-            try container.encode(4, forKey: .rawValue)
-        case .tokenExpired:
-            try container.encode(5, forKey: .rawValue)
-        case .browserNotSupported:
-            try container.encode(6, forKey: .rawValue)
-        case .paymentMethodNeedsMoreInfo:
-            try container.encode(7, forKey: .rawValue)
-        case .paymentRedirectNoResponse:
-            try container.encode(8, forKey: .rawValue)
-        case .manageWebWallet:
-            try container.encode(9, forKey: .rawValue)
-        case .activeWaiting:
-            try container.encode(10, forKey: .rawValue)
-        case .paymentCanceledWithRetry:
-            try container.encode(11, forKey: .rawValue)
-        case .paymentOnHoldPartner:
-            try container.encode(12, forKey: .rawValue)
-        case .paymentSuccessForceTicketDisplay:
-            try container.encode(13, forKey: .rawValue)
-
-        }
-    }
-}
+//extension WidgetState: Codable {
+//
+//    enum Key: CodingKey {
+//        case rawValue
+//    }
+//
+//    enum CodingError: Error {
+//        case unknownValue
+//    }
+//
+//    public func encode(to encoder: Encoder) throws {
+//
+//        var container = encoder.container(keyedBy: Key.self)
+//        switch self {
+//        case .paymentMethodsList:
+//            try container.encode(0, forKey: .rawValue)
+//        case .paymentCanceled:
+//            try container.encode(1, forKey: .rawValue)
+//        case .paymentSuccess:
+//            try container.encode(2, forKey: .rawValue)
+//        case .paymentFailure:
+//            try container.encode(3, forKey: .rawValue)
+//        case .paymentFailureWithRetry:
+//            try container.encode(4, forKey: .rawValue)
+//        case .tokenExpired:
+//            try container.encode(5, forKey: .rawValue)
+//        case .browserNotSupported:
+//            try container.encode(6, forKey: .rawValue)
+//        case .paymentMethodNeedsMoreInfo:
+//            try container.encode(7, forKey: .rawValue)
+//        case .paymentRedirectNoResponse:
+//            try container.encode(8, forKey: .rawValue)
+//        case .manageWebWallet:
+//            try container.encode(9, forKey: .rawValue)
+//        case .activeWaiting:
+//            try container.encode(10, forKey: .rawValue)
+//        case .paymentCanceledWithRetry:
+//            try container.encode(11, forKey: .rawValue)
+//        case .paymentOnHoldPartner:
+//            try container.encode(12, forKey: .rawValue)
+//        case .paymentSuccessForceTicketDisplay:
+//            try container.encode(13, forKey: .rawValue)
+//
+//        }
+//    }
+//}
