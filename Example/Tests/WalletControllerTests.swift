@@ -20,6 +20,7 @@ class WalletTestDelegate: WalletControllerDelegate{
 }
 
 class WalletControllerTests: QuickSpec {
+    
     override func spec() {
         
         var viewController: UIViewController!

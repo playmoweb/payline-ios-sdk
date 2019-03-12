@@ -56,7 +56,7 @@
 		5EE9A149DC17D1C91FE1F03080871B36 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95F808779B7DED9715113C718475F5 /* Behavior.swift */; };
 		5F154C985B9DE1085A993CF9AB332BF2 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62078EB525AE9E10F12E299358D2E1D6 /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		6658A72BF89DCA40DD036DF8B9C8F981 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD59DF5CA8BDE11EFAA767CDDF740B8 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		67FDDFF93E995BA208122680A5444480 /* ContextInfoKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKeys.swift */; };
+		67FDDFF93E995BA208122680A5444480 /* ContextInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKey.swift */; };
 		6B4197D2E87B5B445A7AAF18DBA22509 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34E97E55E991F5EA93EEEEAB5A6A07 /* SatisfyAnyOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		6ED749CAF781EDB557E30C69637DBC5F /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E5B3B6E4BE8908DC9DE06B22AFB2 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		6FC59CBB360B3EF8E45D151D945BCA54 /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A4820DABF98DA2647F30510AC12D7905 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -259,7 +259,7 @@
 		86071BFA01872A1E0EDCB829015FAA96 /* Predicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Predicate.swift; path = Sources/Nimble/Matchers/Predicate.swift; sourceTree = "<group>"; };
 		8A46D1A8B576811F41C7739CAABCA0C2 /* PLWebViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PLWebViewControllerDelegate.swift; sourceTree = "<group>"; };
 		8AB0359C436BCF4476926E7E8967A98E /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
-		8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoKeys.swift; sourceTree = "<group>"; };
+		8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoKey.swift; sourceTree = "<group>"; };
 		8F0D40CA10F0A34DFB9BA258273F421A /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		90E61B87640F2204D0B594D22DCAEEDA /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		9485287546D2B320DD5ACCE975E67754 /* ThrowAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowAssertion.swift; path = Sources/Nimble/Matchers/ThrowAssertion.swift; sourceTree = "<group>"; };
@@ -460,7 +460,7 @@
 		7844CEBB8E8ABFAF950C5D40A25D7398 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKeys.swift */,
+				8D1096FB2D77874F152F2A45D175F82D /* ContextInfoKey.swift */,
 				CD1AC96A25F5E9A74EF8365F2FC310AA /* ContextInfoResult.swift */,
 				D87AA6021845BF5CFA45200D920950BF /* PaymentAction.swift */,
 				CA65D7F764C21336E62F3ADB98BB9E75 /* PaymentController.swift */,
@@ -1076,7 +1076,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67FDDFF93E995BA208122680A5444480 /* ContextInfoKeys.swift in Sources */,
+				67FDDFF93E995BA208122680A5444480 /* ContextInfoKey.swift in Sources */,
 				44CCC12F572C71939EBA77168E75C1B6 /* ContextInfoResult.swift in Sources */,
 				776B17AAD137ACB3895AEAE201FDECF3 /* PaylineSDK-dummy.m in Sources */,
 				F8625E021C243A5C9B9B35C72A551F71 /* PaymentAction.swift in Sources */,

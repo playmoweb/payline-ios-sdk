@@ -31,7 +31,7 @@ public final class PaymentController: WebController {
     }
     
     public func getIsSandbox() {
-        scriptHandler.execute(action: PaymentAction.isSandbox, in: webViewController.webView, callback: { [weak self] (result, error) in
+        scriptHandler.execute(action: PaymentAction.isSandbox, in: webViewController.webView, callback: { [weak self] (result, _) in
             guard let strongSelf = self else { return }
             guard let isSandbox = result as? Bool else { return }
             self?.delegate?.paymentController(strongSelf, didGetIsSandbox: isSandbox)
@@ -43,15 +43,15 @@ public final class PaymentController: WebController {
     }
     
     public func getLanguage() {
-        scriptHandler.execute(action: PaymentAction.getLanguage, in: webViewController.webView) { [weak self] (result, error) in
+        scriptHandler.execute(action: PaymentAction.getLanguage, in: webViewController.webView) { [weak self] (result, _) in
             guard let strongSelf = self else { return }
             guard let language = result as? String else { return }
             self?.delegate?.paymentController(strongSelf, didGetLanguage: language)
         }
     }
     
-    public func getContextInfo(key: ContextInfoKeys) {
-        scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, error) in
+    public func getContextInfo(key: ContextInfoKey) {
+        scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, _) in
             
             guard let strongSelf = self else { return }
             
@@ -86,7 +86,7 @@ public final class PaymentController: WebController {
                 
             case .paylineOrderDetails:
                 guard let contextResult = result as? [[String: Any]] else { return }
-                let contextInfoResult = ContextInfoResult.object(key, contextResult)
+                let contextInfoResult = ContextInfoResult.objectArray(key, contextResult)
                 self?.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
             }
         }

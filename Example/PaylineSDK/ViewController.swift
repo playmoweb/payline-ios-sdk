@@ -148,8 +148,8 @@ extension ViewController: PaymentControllerDelegate {
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
         self.paymentController.getLanguage()
         self.paymentController.getIsSandbox()
-        self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
-        self.paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
+        self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyDigits)
+        self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyCode)
     }
     
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
