@@ -21,7 +21,7 @@ public final class PaymentController: WebController {
         self.delegate = delegate
     }
     
-    public func showPaymentForm(token: String, environment: URL) {
+    public func showPaymentForm(environment: URL) {
         presentingViewController.present(webViewController, animated: true, completion: nil)
         webViewController.loadUrl(environment)
     }

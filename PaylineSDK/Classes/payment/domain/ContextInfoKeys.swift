@@ -7,6 +7,10 @@
 
 import Foundation
 
+/**
+ * Enumération de la liste des clés des informations que l'on souhaite récupérer avec la méthode getContextInfo().
+ */
+
 public enum ContextInfoKeys: String {
     
     case paylineAmountSmallestUnit = "PaylineAmountSmallestUnit"

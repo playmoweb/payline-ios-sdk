@@ -20,7 +20,6 @@ class PLWebViewController: UIViewController {
         return wkwv
     }()
     
-    // TODO: remove progressview?
     private lazy var progressView: UIProgressView = {
         let prv = UIProgressView(progressViewStyle: .default)
         prv.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
@@ -94,33 +93,6 @@ class PLWebViewController: UIViewController {
     
 }
 
-//// MARK: - KVO
-//extension PLWebViewController {
-//
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//
-//        guard let change = change else { return }
-//        if context != &myContext {
-//            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-//            return
-//        }
-//
-//        //        if keyPath == "title" {
-//        //            if let title = change[NSKeyValueChangeKey.newKey] as? String {
-//        //                self.navigationItem.title = title
-//        //            }
-//        //            return
-//        //        }
-//
-//        if keyPath == "estimatedProgress" {
-//            if let progress = (change[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
-//                progressView.progress = progress;
-//            }
-//            return
-//        }
-//    }
-//}
-
 // MARK: - WKWebView
 extension PLWebViewController: WKNavigationDelegate {
     
@@ -138,9 +110,6 @@ extension PLWebViewController: WKNavigationDelegate {
         progressView.isHidden = false
     }
     
-//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        decisionHandler(.allow)
-//    }
 }
 
 // MARK: - WKScriptMessageHandler

@@ -10,7 +10,7 @@ import Foundation
 public protocol PaymentControllerDelegate: class {
     
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController)
-    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state:WidgetState)
+    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState)
     
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool)
     func paymentController(_ paymentController: PaymentController, didGetLanguage: String)

@@ -90,7 +90,6 @@
 		9EEF9E84E580920E11E06170D25F65C3 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCF41B2889793B97D1535A2BB3CBDD3 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4B6197170839BA97DE105AA9D1FAD7D /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA637E42D89BCAECE128FCF308B0EA /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A51570857887E8E40B39F91C35358E2D /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86071BFA01872A1E0EDCB829015FAA96 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		A6C2D798A0A3899FEFDA4A74484F287B /* MLDTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A156F35020147DB76A8CADA1634D899 /* MLDTransitioningDelegate.swift */; };
 		A74CEEC58BDEB1F9A37685FCA3376746 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A930A8C025F3621E6783F7FC351EA21 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A9F93A9C40771906414564A30333FDB9 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53899502077A5F034748CE793F892661 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AC26B8C4461E89CC285F1D3273A659BC /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485287546D2B320DD5ACCE975E67754 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -214,7 +213,6 @@
 		38056AF580BD37BF286B8348B194B2C7 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
 		38C03AB0F7B180D6D6164672B2FEEEF0 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		3984EB3C619E1734DD75732BFB885747 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
-		3A156F35020147DB76A8CADA1634D899 /* MLDTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MLDTransitioningDelegate.swift; sourceTree = "<group>"; };
 		3A95F808779B7DED9715113C718475F5 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Quick/Behavior.swift; sourceTree = "<group>"; };
 		3ECF7E3E58E85489E0A2924ABF5A1A99 /* PaylineSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PaylineSDK.xcconfig; sourceTree = "<group>"; };
 		3F695BFB585BF83371E415570821D805 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 			children = (
 				71ADFE0B46CC2D9079886114A8876D1A /* domain */,
 				AE7C1526DB0401949434BBAD8EFCE8A1 /* presentation */,
-				A424DA1513CB150D4C675166DC4B7AE9 /* util */,
 			);
 			name = core;
 			path = PaylineSDK/Classes/core;
@@ -516,14 +513,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
-			sourceTree = "<group>";
-		};
-		A424DA1513CB150D4C675166DC4B7AE9 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				3A156F35020147DB76A8CADA1634D899 /* MLDTransitioningDelegate.swift */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 		AE7C1526DB0401949434BBAD8EFCE8A1 /* presentation */ = {
@@ -1089,7 +1078,6 @@
 			files = (
 				67FDDFF93E995BA208122680A5444480 /* ContextInfoKeys.swift in Sources */,
 				44CCC12F572C71939EBA77168E75C1B6 /* ContextInfoResult.swift in Sources */,
-				A6C2D798A0A3899FEFDA4A74484F287B /* MLDTransitioningDelegate.swift in Sources */,
 				776B17AAD137ACB3895AEAE201FDECF3 /* PaylineSDK-dummy.m in Sources */,
 				F8625E021C243A5C9B9B35C72A551F71 /* PaymentAction.swift in Sources */,
 				333864954CF30E72674D88B41092724C /* PaymentController.swift in Sources */,

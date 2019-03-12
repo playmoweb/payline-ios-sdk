@@ -16,7 +16,7 @@ public final class WalletController: WebController {
         self.delegate = delegate
     }
     
-    public func manageWebWallet(token: String, environment: URL) {
+    public func manageWebWallet(environment: URL) {
         presentingViewController.present(webViewController, animated: true, completion: nil)
         webViewController.loadUrl(environment)
     }

@@ -74,7 +74,7 @@ class WalletControllerTests: QuickSpec {
         }
         
         it("didShowWebWallet"){
-            walletController.manageWebWallet(token: tokenResponse!.token, environment: url!)
+            walletController.manageWebWallet(environment: url!)
             expect(walletTestDelegate.didShowWebWallet).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
     }

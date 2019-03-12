@@ -71,8 +71,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var walletButton: UIButton!
     
-    var testData: (String,URL)?
-    var walletData: (String,URL)?
+    var testData: (URL)?
+    var walletData: (URL)?
     
     lazy var paymentController: PaymentController = {
         return PaymentController(presentingViewController: self, delegate: self)
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         let params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5 , currencyCode: "EUR", languageCode: "FR")
         
         TokenFetcher(path: "/init-web-pay", params: params).execute() { [weak self] response in
-            self?.testData = (response.token, URL(string: response.redirectUrl)!)
+            self?.testData = (URL(string: response.redirectUrl)!)
             self?.payButton.isEnabled = true
         }
     }
@@ -124,20 +124,20 @@ class ViewController: UIViewController {
         )
         
         TokenFetcher(path: "/init-manage-wallet", params: params).execute() { [weak self] response in
-            self?.walletData = (response.token, URL(string: response.redirectUrl)!)
+            self?.walletData = (URL(string: response.redirectUrl)!)
             self?.walletButton.isEnabled = true
         }
     }
     
     @IBAction func clickedPay(_ sender: Any?) {
         if let data = testData {
-            paymentController.showPaymentForm(token: data.0, environment: data.1)
+            paymentController.showPaymentForm(environment: data)
         }
     }
     
     @IBAction func clickedManageWallet(_ sender: Any?) {
         if let data = walletData {
-            walletController.manageWebWallet(token: data.0, environment: data.1)
+            walletController.manageWebWallet(environment: data)
         }
     }
     
