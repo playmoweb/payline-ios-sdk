@@ -172,7 +172,7 @@ class PaymentControllerTests: QuickSpec {
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineAmountSmallestUnit)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineAmountSmallestUnit)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
                 
 
@@ -183,7 +183,7 @@ class PaymentControllerTests: QuickSpec {
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyDigits)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyDigits)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -192,7 +192,7 @@ class PaymentControllerTests: QuickSpec {
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineCurrencyCode)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyCode)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -201,7 +201,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerFirstName)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerFirstName)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -210,7 +210,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerLastName)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerLastName)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -218,7 +218,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressStreet2)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressStreet2)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -226,7 +226,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressStreet1)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressStreet1)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -235,7 +235,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressCountry)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressCountry)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -243,7 +243,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressName)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressName)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -251,7 +251,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressCityName)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressCityName)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -260,7 +260,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressZipCode)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressZipCode)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -269,7 +269,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerShippingAddressPhone)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerShippingAddressPhone)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -279,7 +279,7 @@ class PaymentControllerTests: QuickSpec {
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineBuyerIp)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineBuyerIp)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -288,7 +288,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineFormattedAmount)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineFormattedAmount)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -296,7 +296,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderDate)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineOrderDate)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -304,7 +304,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderRef)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineOrderRef)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -312,7 +312,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderDeliveryMode)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineOrderDeliveryMode)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
 
@@ -320,7 +320,7 @@ class PaymentControllerTests: QuickSpec {
 
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderDeliveryTime)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineOrderDeliveryTime)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
             }
@@ -330,7 +330,7 @@ class PaymentControllerTests: QuickSpec {
                 paymentController.showPaymentForm(environment: url!)
                 expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-                paymentController.getContextInfo(key: ContextInfoKeys.paylineOrderDetails)
+                paymentController.getContextInfo(key: ContextInfoKey.paylineOrderDetails)
                 expect(testDelegate.didGetContextInfo).toNotEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
             }
         }

@@ -17,15 +17,15 @@ public enum ContextInfoResult {
     /// - Params:
     ///   - ContextInfoKeys: Correspond à la clé de l'information que l'on obtient
     ///   - Int: Correspond à l'information de type Int que l'on reçoit
-    case int(ContextInfoKeys, Int)
+    case int(ContextInfoKey, Int)
     ///Traite un résultat de type String reçu par la webView
     /// - Params:
     ///   - ContextInfoKeys: Correspond à la clé de l'information que l'on obtient
     ///   - String: Correspond à l'information de type String que l'on reçoit
-    case string(ContextInfoKeys, String)
+    case string(ContextInfoKey, String)
     ///Traite un résultat de type [[String : Any]] reçu par la webView
     /// - Params:
     ///   - ContextInfoKeys: Correspond à la clé de l'information que l'on obtient
     ///   - [[String:Any]]: Correspond à l'information de type [[String : Any]] que l'on reçoit
-    case object(ContextInfoKeys, [[String: Any]])
+    case objectArray(ContextInfoKey, [[String: Any]])
 }

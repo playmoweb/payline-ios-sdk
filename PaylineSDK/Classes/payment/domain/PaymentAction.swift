@@ -14,7 +14,7 @@ enum PaymentAction: ScriptAction {
     case isSandbox
     case endToken(additionalData: Encodable?, isHandledByMerchant: Bool)
     case getLanguage
-    case getContextInfo(key: ContextInfoKeys)
+    case getContextInfo(key: ContextInfoKey)
     
     var command: String {
         

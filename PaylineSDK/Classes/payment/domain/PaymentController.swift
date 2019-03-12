@@ -50,7 +50,7 @@ public final class PaymentController: WebController {
         }
     }
     
-    public func getContextInfo(key: ContextInfoKeys) {
+    public func getContextInfo(key: ContextInfoKey) {
         scriptHandler.execute(action: PaymentAction.getContextInfo(key: key), in: webViewController.webView) { [weak self] (result, _) in
             
             guard let strongSelf = self else { return }
@@ -86,7 +86,7 @@ public final class PaymentController: WebController {
                 
             case .paylineOrderDetails:
                 guard let contextResult = result as? [[String: Any]] else { return }
-                let contextInfoResult = ContextInfoResult.object(key, contextResult)
+                let contextInfoResult = ContextInfoResult.objectArray(key, contextResult)
                 self?.delegate?.paymentController(strongSelf, didGetContextInfo: contextInfoResult)
             }
         }

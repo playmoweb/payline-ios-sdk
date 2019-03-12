@@ -24,14 +24,14 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/therealmyluckyday/PaylineSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'therealmyluckyday' => 'jpierce@myluckyday.fr' }
+  s.author           = { 'payline' => 'support@payline.com' }
   s.source           = { :git => 'https://github.com/therealmyluckyday/PaylineSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PaylineSDK/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'PaylineSDK' => ['PaylineSDK/Assets/*.png']
   # }

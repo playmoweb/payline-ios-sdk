@@ -22,7 +22,7 @@ pod 'PaylineSDK'
 
 ## Author
 
-therealmyluckyday, jpierce@myluckyday.fr
+Payline, support@payline.com
 
 ## License
 
