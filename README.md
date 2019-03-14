@@ -71,6 +71,65 @@ walletController.manageWebWallet(environment: URL)
 ```
 Ces deux méthodes requierent l'url de la page vers laquelle nous devons êtres redirigés.
 
+## Exemple d'utilisation
+
+### Initialisation
+
+```swift
+
+class ViewController: UIViewController {
+
+lazy var paymentController: PaymentController = {
+    return PaymentController(presentingViewController: self, delegate: self)
+}()
+
+lazy var walletController: WalletController = {
+    return WalletController(presentingViewController: self, delegate: self)
+}()
+
+```
+
+### Implementation des delegates
+```swift
+
+extension ViewController: PaymentControllerDelegate {
+
+    func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
+        //handle the action
+    }
+
+    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
+        //handle the action
+    }
+
+    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
+        //handle the WidgetState 
+    }
+
+
+    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
+        //handle the action
+    }
+
+    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
+        //handle the action
+    }
+
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {  
+        //handle the action
+    }
+
+}
+
+extension ViewController: WalletControllerDelegate {
+
+    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+        //handle the action
+    }
+
+}
+```
+
 # Documentation Payline
 
 La documentation de Payline peut être trouvée [ici](https://support.payline.com/hc/fr/categories/200093147-Documentation). Elle offre une vue d'ensemble du système, des détails et des explications sur certains sujets.
