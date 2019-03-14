@@ -39,7 +39,7 @@ lazy var walletController: WalletController = {
 }()
 ```
 La méthode d'initialisation du paiement requiert deux paramètres: un "PaymentControllerDelegate" et un UIViewController
-La mÃ©méthode d'initialisation du porte-monnaie requiert deux paramètres: un "WalletControllerDelegate" et un UIViewController
+La méthode d'initialisation du porte-monnaie requiert deux paramètres: un "WalletControllerDelegate" et un UIViewController
 
 
 Pour que votre UIViewController agisse comme un delegate, vous devez implementer les protocol `PaymentControllerDelegate` et `WalletControllerDelegate`:
@@ -67,13 +67,13 @@ La méthode `showManageWallet` est utilisée pour afficher la page du porte-monn
 lazy var walletController: WalletController = {
     return WalletController(presentingViewController: self, delegate: self)
 }()
-walletController.manageWebWallet(environment: data)
+walletController.manageWebWallet(environment: URL)
 ```
 Ces deux méthodes requierent l'url de la page vers laquelle nous devons êtres redirigés.
 
 # Documentation Payline
 
-La documentation de Payline peut être trouvée [here](https://support.payline.com/hc/fr/categories/200093147-Documentation). Elle offre une vue d'ensemble du système, des détails et des explications sur certains sujets.
+La documentation de Payline peut être trouvée [ici](https://support.payline.com/hc/fr/categories/200093147-Documentation). Elle offre une vue d'ensemble du système, des détails et des explications sur certains sujets.
 
 ---
 
