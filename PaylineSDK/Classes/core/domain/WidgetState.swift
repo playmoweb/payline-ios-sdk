@@ -8,8 +8,9 @@
 import Foundation
 
 /**
- These are possible values for the "Payline JS Widget" state and is transmitted by the widget's callback mechanisms.
- It is used by the SDK to determine certain callback possibilities
+ Enum representant l'ensemble des valeur possible pour la propriété "state" retourné par les fonctions callback du widget
+ 
+ [PW - Personnalisation du widget : Fonction CallBack](https://support.payline.com/hc/fr/articles/360000844147-PW-Personnalisation-du-widget-Fonction-CallBack)
  */
 public enum WidgetState: String {
     case paymentMethodsList = "PAYMENT_METHODS_LIST"

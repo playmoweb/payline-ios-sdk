@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ * Le WalletController s'e occupe d'afficher une webview en plein écran et de charger l'URL de gestion de portefeuille. Il communique avec l'application via son delegate.
+ *
+ */
+
 public final class WalletController: WebController {
     
     // MARK: - Public Interface
@@ -15,6 +20,12 @@ public final class WalletController: WebController {
         super.init(presentingViewController: presentingViewController)
         self.delegate = delegate
     }
+    
+    /**
+     * Affiche le porte-monnaie
+     *
+     * - Parameter environment: url qui redirige la webView vers le porte-monnaie
+     */
     
     public func manageWebWallet(environment: URL) {
         presentingViewController.present(webViewController, animated: true, completion: nil)

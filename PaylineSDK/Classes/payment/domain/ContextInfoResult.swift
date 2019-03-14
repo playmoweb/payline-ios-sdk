@@ -10,7 +10,7 @@ import Foundation
  * Cette enum va être utilisée pour traiter le résultat obtenu par la wevView
  * Trois types de données pourront être reçus : Int, String, [[String : Any]]
  *
- * [PW-API JavaScript](https://payline.atlassian.net/wiki/spaces/DT/pages/1329037328/PW+-+API+JavaScript)
+ * [PW-API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
  */
 public enum ContextInfoResult {
     ///Traite un résultat de type Int reçu par la webView
