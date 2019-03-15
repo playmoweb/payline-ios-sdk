@@ -92,7 +92,7 @@ class PaymentControllerTests: QuickSpec {
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
 
-        it("cancelPaymentForm") {
+        it("buttonClickCancel") {
             paymentController.showPaymentForm(environment: url!)
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
@@ -136,6 +136,33 @@ class PaymentControllerTests: QuickSpec {
                 didReceive: TestScriptMessage(
                     name: "finalStateHasBeenReached",
                     body: ["state":WidgetState.paymentFailure.rawValue]
+                )
+            )
+            expect(testDelegate.didFinishPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+        }
+        
+        it("finishPaymentForm_cancelled") {
+            let orderRef = UUID.init().uuidString
+            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 33312, currencyCode: "EUR", languageCode: "FR")
+            
+            waitUntil(timeout: 5) { done in
+                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                    tokenResponse = response
+                    done()
+                }
+            }
+            
+            expect(tokenResponse).toNot(be(nil))
+            url = URL(string: tokenResponse!.redirectUrl)
+            expect(url).toNot(be(nil))
+            paymentController.showPaymentForm(environment: url!)
+            expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            
+            paymentController.plWebViewController(
+                paymentController.webViewController,
+                didReceive: TestScriptMessage(
+                    name: "finalStateHasBeenReached",
+                    body: ["state":WidgetState.paymentCanceled.rawValue]
                 )
             )
             expect(testDelegate.didFinishPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
