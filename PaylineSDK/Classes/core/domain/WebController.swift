@@ -8,6 +8,12 @@
 import UIKit
 import WebKit
 
+/**
+ *
+ * Classe mère de PaymentController et WalletController
+ *
+ */
+
 public class WebController: PLWebViewControllerDelegate {
     
     // MARK: - Internal Interface

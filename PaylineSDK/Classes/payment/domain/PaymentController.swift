@@ -16,6 +16,14 @@ public final class PaymentController: WebController {
     
     // MARK: - Public Interface
     
+    /**
+     * Init
+     *
+     * - Parameters:
+     *   - presentingViewController: ViewController affichant le paymentController
+     *   - delegate: Delegate du paymentController
+     */
+    
     public init(presentingViewController: UIViewController, delegate: PaymentControllerDelegate) {
         super.init(presentingViewController: presentingViewController)
         self.delegate = delegate

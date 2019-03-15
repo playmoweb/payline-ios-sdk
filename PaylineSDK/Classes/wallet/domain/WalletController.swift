@@ -16,6 +16,13 @@ public final class WalletController: WebController {
     
     // MARK: - Public Interface
     
+    /**
+     * Init
+     *
+     * - Parameters:
+     *   - presentingViewController: ViewController affichant le walletController
+     *   - delegate: Delegate walletController
+     */
     public init(presentingViewController: UIViewController, delegate: WalletControllerDelegate) {
         super.init(presentingViewController: presentingViewController)
         self.delegate = delegate
