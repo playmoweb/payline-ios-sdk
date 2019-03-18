@@ -26,10 +26,6 @@ class TestDelegate: PaymentControllerDelegate {
         didShowPaymentForm = true
     }
     
-    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        didCancelPaymentForm = true
-    }
-    
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
         if state == .paymentCanceled{
             didCancelPaymentForm = true
@@ -143,7 +139,7 @@ class PaymentControllerTests: QuickSpec {
         
         it("finishPaymentForm_cancelled") {
             let orderRef = UUID.init().uuidString
-            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 33312, currencyCode: "EUR", languageCode: "FR")
+            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
             
             waitUntil(timeout: 5) { done in
                 TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
@@ -165,7 +161,7 @@ class PaymentControllerTests: QuickSpec {
                     body: ["state":WidgetState.paymentCanceled.rawValue]
                 )
             )
-            expect(testDelegate.didFinishPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
+            expect(testDelegate.didCancelPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
         
         it("endToken") {
