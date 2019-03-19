@@ -69,7 +69,7 @@ class PaymentControllerTests: QuickSpec {
             viewController.beginAppearanceTransition(true, animated: false)
             viewController.endAppearanceTransition()
             
-            params = FetchPaymentTokenParams.testPaymentParams()
+            params = FetchPaymentTokenParams.testPaymentParams(amout: 5)
      
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
@@ -137,7 +137,7 @@ class PaymentControllerTests: QuickSpec {
         }
         
         it("finishPaymentForm_cancelled") {
-            let params = FetchPaymentTokenParams.testPaymentParams()
+            let params = FetchPaymentTokenParams.testPaymentParams(amout: 5)
             
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in

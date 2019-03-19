@@ -57,14 +57,32 @@
                                     <action selector="clickedGenerateWalletToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITv-OI-WwC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cit-7h-YlS">
+                                <rect key="frame" x="86" y="232.5" width="273" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsU-Bj-828">
+                                <rect key="frame" x="16" y="232.5" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uEB-cz-x6y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0Oa-YL-DGL"/>
                             <constraint firstItem="uEB-cz-x6y" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="221-Sr-MAV"/>
                             <constraint firstItem="cAm-uq-Y3f" firstAttribute="top" secondItem="5WF-Ae-KDe" secondAttribute="top" id="776-gQ-d3t"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="top" secondItem="lsU-Bj-828" secondAttribute="top" id="9TH-UU-XhD"/>
+                            <constraint firstItem="lsU-Bj-828" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ClQ-Ov-EHz"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="top" secondItem="Cit-7h-YlS" secondAttribute="bottom" constant="16" id="DrZ-CN-nYg"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="bottom" secondItem="lsU-Bj-828" secondAttribute="bottom" id="Ezx-7i-43Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Cit-7h-YlS" secondAttribute="trailing" constant="16" id="Jvq-Xh-9ci"/>
                             <constraint firstItem="5WF-Ae-KDe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="K0X-kz-7Qk"/>
                             <constraint firstItem="cAm-uq-Y3f" firstAttribute="leading" secondItem="5WF-Ae-KDe" secondAttribute="trailing" constant="20" id="PEt-pk-cNw"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="leading" secondItem="lsU-Bj-828" secondAttribute="trailing" constant="10" id="SwA-l1-Egq"/>
                             <constraint firstItem="Kic-4A-HSt" firstAttribute="leading" secondItem="ePR-wo-n8Q" secondAttribute="trailing" constant="20" id="aBu-Ft-xjQ"/>
                             <constraint firstItem="cAm-uq-Y3f" firstAttribute="bottom" secondItem="5WF-Ae-KDe" secondAttribute="bottom" id="aXx-Lm-2pC"/>
                             <constraint firstItem="uEB-cz-x6y" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="bottom" id="b2p-Tx-kzc"/>
@@ -78,6 +96,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amoutTextField" destination="Cit-7h-YlS" id="TNb-SD-PGG"/>
                         <outlet property="payButton" destination="Kic-4A-HSt" id="afl-VP-wMA"/>
                         <outlet property="walletButton" destination="cAm-uq-Y3f" id="AL9-aH-Lx1"/>
                     </connections>

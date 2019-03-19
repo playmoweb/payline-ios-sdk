@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var walletButton: UIButton!
+    @IBOutlet weak var amoutTextField: UITextField!
     
     var testData: (URL)?
     var walletData: (URL)?
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
         return WalletController(presentingViewController: self, delegate: self)
     }()
     
+    var alert = UIAlertController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +37,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedGeneratePaymentToken(_ sender: Any?) {
-        
-        let params = FetchPaymentTokenParams.testPaymentParams()
+        self.payButton.isEnabled = false
+        let params = FetchPaymentTokenParams.testPaymentParams(amout: Double(amoutTextField.text!) ?? 5 )
 
         TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
             self?.testData = (URL(string: response.redirectUrl )!)
@@ -78,11 +81,14 @@ extension ViewController: PaymentControllerDelegate {
         self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyCode)
     }
     
-    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        debugPrint("didCancel")
-    }
     
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
+        alert = UIAlertController(title: "Alert", message: state.rawValue, preferredStyle: .alert)
+        
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.showAlertDialog), userInfo: nil, repeats: false)
+        
+        Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
+       
         debugPrint("didFinish")
     }
     
@@ -97,6 +103,14 @@ extension ViewController: PaymentControllerDelegate {
     
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {
         print(didGetContextInfo)
+    }
+    
+    @objc func showAlertDialog(){
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+     @objc func dismissAlert(){
+        alert.dismiss(animated: true, completion: nil)
     }
     
 }

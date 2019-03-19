@@ -205,6 +205,6 @@ public final class PaymentController: WebController {
     
     private func finishPayment(state: WidgetState) {
         delegate?.paymentControllerDidFinishPaymentForm(self, withState: state)
-        presentingViewController.dismiss(animated: true, completion: nil)
+        self.presentingViewController.dismiss(animated: true, completion: nil)
     }
 }

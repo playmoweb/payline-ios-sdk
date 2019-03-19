@@ -20,9 +20,9 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
     //    let buyer: Buyer
     //    let items: [CartItem]
     
-    public static func testPaymentParams() -> FetchPaymentTokenParams {
+    public static func testPaymentParams(amout: Double) -> FetchPaymentTokenParams {
         let orderRef = UUID.init().uuidString
-        return FetchPaymentTokenParams(orderRef: orderRef, amount: 5 , currencyCode: "EUR", languageCode: "FR")
+        return FetchPaymentTokenParams(orderRef: orderRef, amount: amout , currencyCode: "EUR", languageCode: "FR")
     }
     
     public static func testPaymentFailureParams() -> FetchPaymentTokenParams {
