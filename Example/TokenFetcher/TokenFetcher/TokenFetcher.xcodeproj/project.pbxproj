@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823BBF30223F9D7300ECEFC8 /* TokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BBF2F223F9D7300ECEFC8 /* TokenFetcher.swift */; };
+		823BBF32223FA1E400ECEFC8 /* FetchTokenParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BBF31223FA1E400ECEFC8 /* FetchTokenParams.swift */; };
+		823BBF34223FA8CF00ECEFC8 /* FetchTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BBF33223FA8CF00ECEFC8 /* FetchTokenResponse.swift */; };
 		FA3D708C223BAEFA004F680B /* TokenFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3D708A223BAEFA004F680B /* TokenFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		823BBF2F223F9D7300ECEFC8 /* TokenFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFetcher.swift; sourceTree = "<group>"; };
+		823BBF31223FA1E400ECEFC8 /* FetchTokenParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTokenParams.swift; sourceTree = "<group>"; };
+		823BBF33223FA8CF00ECEFC8 /* FetchTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTokenResponse.swift; sourceTree = "<group>"; };
 		FA3D7087223BAEFA004F680B /* TokenFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TokenFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3D708A223BAEFA004F680B /* TokenFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenFetcher.h; sourceTree = "<group>"; };
 		FA3D708B223BAEFA004F680B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +54,9 @@
 			children = (
 				FA3D708A223BAEFA004F680B /* TokenFetcher.h */,
 				FA3D708B223BAEFA004F680B /* Info.plist */,
+				823BBF2F223F9D7300ECEFC8 /* TokenFetcher.swift */,
+				823BBF31223FA1E400ECEFC8 /* FetchTokenParams.swift */,
+				823BBF33223FA8CF00ECEFC8 /* FetchTokenResponse.swift */,
 			);
 			path = TokenFetcher;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					FA3D7086223BAEFA004F680B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823BBF32223FA1E400ECEFC8 /* FetchTokenParams.swift in Sources */,
+				823BBF34223FA8CF00ECEFC8 /* FetchTokenResponse.swift in Sources */,
+				823BBF30223F9D7300ECEFC8 /* TokenFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +274,7 @@
 		FA3D7090223BAEFA004F680B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +291,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.payline.mobile.TokenFetcher;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +300,7 @@
 		FA3D7091223BAEFA004F680B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

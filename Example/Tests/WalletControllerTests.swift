@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import TokenFetcher
 @testable import PaylineSDK
 import UIKit
 
@@ -41,32 +42,13 @@ class WalletControllerTests: QuickSpec {
             viewController.beginAppearanceTransition(true, animated: false)
             viewController.endAppearanceTransition()
             
-            let params = FetchWalletTokenParams(
-                buyer: Buyer(
-                    firstname: "John",
-                    lastname: "Doe",
-                    email: "John.Doe@gmail.com",
-                    mobilePhone: "0123456789",
-                    shippingAddress: Address(
-                        firstname: "John",
-                        lastname: "Doe",
-                        street1: "1 rue de Rue",
-                        city: "Aix-en-Provence",
-                        zipCode: 13100,
-                        country: "FR",
-                        phone: "0123456789"
-                    ),
-                    walletId: "12342414-DFD-13434141"
-                ),
-                updatePersonalDetails: false,
-                languageCode: "EN"
-            )
+           let params = FetchWalletTokenParams.testWalletParams()
 
             waitUntil(timeout: 5) { done in
-                TokenFetcher(path: "/init-manage-wallet", params: params).execute() { [weak self] response in
+                TokenFetcher.execute(path: "/init-manage-wallet", params: params, callback: { [weak self] response in
                     tokenResponse = response
                     done()
-                }
+                })
             }
             
             expect(tokenResponse).toNot(be(nil))
