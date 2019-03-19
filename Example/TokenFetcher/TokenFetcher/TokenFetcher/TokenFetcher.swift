@@ -1,62 +1,24 @@
 //
 //  TokenFetcher.swift
-//  PaylineSDK_Tests
+//  TokenFetcher
 //
-//  Created by MacBook on 3/5/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
+//  Created by Rayan Mehdi on 18/03/2019.
+//  Copyright © 2019 Payline. All rights reserved.
 //
 
 import Foundation
 
-struct Buyer: Encodable {
-    let firstname: String
-    let lastname: String
-    let email: String
-    let mobilePhone: String
-    let shippingAddress: Address
-    let walletId: String
-}
-
-struct Address: Encodable {
-    let firstname: String
-    let lastname: String
-    let street1: String
-    //    let street2: String
-    let city: String
-    let zipCode: Int
-    let country: String
-    let phone: String
-}
-protocol FetchTokenParams: Encodable {}
-
-struct FetchWalletTokenParams: FetchTokenParams {
-    let buyer: Buyer
-    let updatePersonalDetails: Bool
-    let languageCode: String
-}
-
-struct FetchPaymentTokenParams: FetchTokenParams {
-    let orderRef: String
-    let amount: Double
-    let currencyCode: String
-    let languageCode: String
-    //    let buyer: Buyer
-    //    let items: [CartItem]
-}
-
-struct FetchTokenResponse: Decodable {
-    let code: String
-    let message: String
-    let redirectUrl: String
-    let token: String
-}
-
-struct TokenFetcher {
+public class TokenFetcher {
     
     let path: String
     let params: Encodable
     
-    func execute(callback: @escaping (FetchTokenResponse) -> Void) {
+    init(path: String, params: Encodable) {
+        self.path = path
+        self.params = params
+    }
+    
+    public class func execute(path: String, params: Encodable, callback: @escaping (FetchTokenResponse) -> Void) {
         
         var comps = URLComponents()
         comps.scheme = "https"

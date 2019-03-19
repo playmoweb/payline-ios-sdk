@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import TokenFetcher
 @testable import PaylineSDK
 import UIKit
 
@@ -68,14 +69,13 @@ class PaymentControllerTests: QuickSpec {
             viewController.beginAppearanceTransition(true, animated: false)
             viewController.endAppearanceTransition()
             
-            let orderRef = UUID.init().uuidString
-            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
-            
+            params = FetchPaymentTokenParams.testPaymentParams()
+     
             waitUntil(timeout: 5) { done in
-                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
                     tokenResponse = response
                     done()
-                }
+                })
             }
             
             expect(tokenResponse).toNot(be(nil))
@@ -111,14 +111,13 @@ class PaymentControllerTests: QuickSpec {
         }
         
         it("finishPaymentForm_failure") {
-            let orderRef = UUID.init().uuidString
-            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 33312, currencyCode: "EUR", languageCode: "FR")
+            let params = FetchPaymentTokenParams.testPaymentFailureParams()
             
             waitUntil(timeout: 5) { done in
-                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
                     tokenResponse = response
                     done()
-                }
+                })
             }
             
             expect(tokenResponse).toNot(be(nil))
@@ -138,14 +137,13 @@ class PaymentControllerTests: QuickSpec {
         }
         
         it("finishPaymentForm_cancelled") {
-            let orderRef = UUID.init().uuidString
-            params = FetchPaymentTokenParams(orderRef: orderRef, amount: 5, currencyCode: "EUR", languageCode: "FR")
+            let params = FetchPaymentTokenParams.testPaymentParams()
             
             waitUntil(timeout: 5) { done in
-                TokenFetcher(path: "/init-web-pay", params: params).execute() { response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
                     tokenResponse = response
                     done()
-                }
+                })
             }
             
             expect(tokenResponse).toNot(be(nil))
