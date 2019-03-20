@@ -36,6 +36,7 @@ class PLWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         closeButton!.setTitle("Close", for: .normal)
         closeButton?.setTitleColor(.black, for: .normal)
@@ -65,6 +66,7 @@ class PLWebViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         var topInset = CGFloat(0)
         if #available(iOS 11, *) {
             topInset = view.safeAreaInsets.top
@@ -73,7 +75,19 @@ class PLWebViewController: UIViewController {
     }
     
     func loadUrl(_ url: URL) {
-        webView.load(URLRequest(url: url))
+//        webView.load(URLRequest(url: url))
+        tempFixLoadUrl(url)
+    }
+    
+    // TODO: Delete me when fixed
+    private func tempFixLoadUrl(_ url: URL) {
+        webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
+        DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 4)
+            DispatchQueue.main.async {
+                self.webView.load(URLRequest(url: url))
+            }
+        }
     }
     
     func listenForEventNames(_ eventNames: [ScriptEvent.Name]) {
