@@ -41,10 +41,9 @@ class ViewController: UIViewController {
         let params = FetchPaymentTokenParams.testPaymentParams(amout: Double(amoutTextField.text!) ?? 5 )
 
         TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
-            self?.testData = (URL(string: response.redirectUrl )!)
+            self?.testData = URL(string: response.redirectUrl )!
             self?.payButton.isEnabled = true
         })
-        
     }
     
     @IBAction func clickedGenerateWalletToken(_ sender: Any) {
