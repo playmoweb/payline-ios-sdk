@@ -81,9 +81,9 @@ class PLWebViewController: UIViewController {
     
     // TODO: Delete me when fixed
     private func tempFixLoadUrl(_ url: URL) {
-        webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
+        webView.load(URLRequest(url: URL(string: "about:blank")!))
         DispatchQueue.global().async {
-            Thread.sleep(forTimeInterval: 4)
+            Thread.sleep(forTimeInterval: 1)
             DispatchQueue.main.async {
                 self.webView.load(URLRequest(url: url))
             }
