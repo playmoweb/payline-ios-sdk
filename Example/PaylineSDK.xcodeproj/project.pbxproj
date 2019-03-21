@@ -250,12 +250,24 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4GKC8CC3YD;
+						DevelopmentTeam = DD449B8E32;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4GKC8CC3YD;
+						DevelopmentTeam = DD449B8E32;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -561,12 +573,15 @@
 			baseConfigurationReference = 413153BC744143B9B12E5186 /* Pods-PaylineSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				INFOPLIST_FILE = PaylineSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.PaylineSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.payline.mobile.PaylineSDK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -577,12 +592,15 @@
 			baseConfigurationReference = 94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				INFOPLIST_FILE = PaylineSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.PaylineSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.payline.mobile.PaylineSDK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -592,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09EA519CD235492761F96CF5 /* Pods-PaylineSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -615,7 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

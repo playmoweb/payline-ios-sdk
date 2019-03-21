@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "summary": "A short description of PaylineSDK.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/therealmyluckyday/PaylineSDK",
+  "homepage": "https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "therealmyluckyday": "jpierce@myluckyday.fr"
+    "payline": "support@payline.com"
   },
   "source": {
-    "git": "https://github.com/therealmyluckyday/PaylineSDK.git",
+    "git": "https://bitbucket.org/mld_mobile/paylinesdk-ios.git",
     "tag": "0.1.0"
   },
   "platforms": {
