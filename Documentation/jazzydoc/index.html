@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PaylineSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="PaylineSDK  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">PaylineSDK Docs</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">PaylineSDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        PaylineSDK  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/PaymentController.html">PaymentController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/WalletController.html">WalletController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:10PaylineSDK13WebControllerC">WebController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ContextInfoKey.html">ContextInfoKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ContextInfoResult.html">ContextInfoResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/WidgetState.html">WidgetState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/PaymentControllerDelegate.html">PaymentControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/WalletControllerDelegate.html">WalletControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='paylinesdk' class='heading'>PaylineSDK</h1>
+
+<p><a href="https://travis-ci.org/therealmyluckyday/PaylineSDK"><img src="https://img.shields.io/travis/therealmyluckyday/PaylineSDK.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/PaylineSDK"><img src="https://img.shields.io/cocoapods/v/PaylineSDK.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/PaylineSDK"><img src="https://img.shields.io/cocoapods/l/PaylineSDK.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/PaylineSDK"><img src="https://img.shields.io/cocoapods/p/PaylineSDK.svg?style=flat" alt="Platform"></a></p>
+<h1 id='description' class='heading'>Description</h1>
+
+<p>Le SDK Payline est un kit de développement qui va permettre d&#39;intéragir avec le service Payline afin d&#39;effectuer un paiement ou de voir le porte-monnaie.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>PaylineSDK is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'PaylineSDK'</span>
+</code></pre>
+<h1 id='utilisation' class='heading'>Utilisation</h1>
+<h2 id='initialisation' class='heading'>Initialisation</h2>
+
+<p>Pour l&#39;initialisation du SDK, il faut tout d&#39;abord instancier un  <code>PaymentController()</code> et un  <code>WalletController()</code> ainsi que leu delegates associés :</p>
+<pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">PaymentController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">PaymentControllerDelegate</span><span class="p">)</span>
+<span class="p">}()</span>
+
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">WalletController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">WalletControllerDelegate</span><span class="p">)</span>
+<span class="p">}()</span>
+</code></pre>
+
+<p>La méthode d&#39;initialisation du paiement requiert deux paramètres: un <q>PaymentControllerDelegate</q> et un UIViewController
+La méthode d&#39;initialisation du porte-monnaie requiert deux paramètres: un <q>WalletControllerDelegate</q> et un UIViewController</p>
+
+<p>Pour que votre UIViewController agisse comme un delegate, vous devez implementer les protocol <code><a href="Protocols/PaymentControllerDelegate.html">PaymentControllerDelegate</a></code> et <code><a href="Protocols/WalletControllerDelegate.html">WalletControllerDelegate</a></code>:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">PaymentControllerDelegate</span><span class="p">,</span> <span class="kt">WalletControllerDelegate</span>
+</code></pre>
+<h2 id='configuration' class='heading'>Configuration</h2>
+
+<p>La méthode <code>showPaymentForm</code> est utilisée pour afficher la page des moyens de paiement.</p>
+<pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">PaymentController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="p">}()</span>
+<span class="n">paymentController</span><span class="o">.</span><span class="nf">showPaymentForm</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+</code></pre>
+
+<p>OR</p>
+
+<p>La méthode <code>showManageWallet</code> est utilisée pour afficher la page du porte-monnaie.</p>
+<pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">WalletController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="p">}()</span>
+<span class="n">walletController</span><span class="o">.</span><span class="nf">manageWebWallet</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span>
+</code></pre>
+
+<p>Ces deux méthodes requierent l&#39;url de la page vers laquelle nous devons êtres redirigés.</p>
+<h2 id='exemple-d-39-utilisation' class='heading'>Exemple d&#39;utilisation</h2>
+<h3 id='initialisation' class='heading'>Initialisation</h3>
+<pre class="highlight swift"><code>
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">PaymentController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="p">}()</span>
+
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">WalletController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+<span class="p">}()</span>
+
+</code></pre>
+<h3 id='implementation-des-delegates' class='heading'>Implementation des delegates</h3>
+<pre class="highlight swift"><code>
+<span class="kd">extension</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">PaymentControllerDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">paymentControllerDidShowPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">paymentControllerDidCancelPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">paymentControllerDidFinishPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="n">withState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">WidgetState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the WidgetState </span>
+    <span class="p">}</span>
+
+
+    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetIsSandbox</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetLanguage</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetContextInfo</span><span class="p">:</span> <span class="kt">ContextInfoResult</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">WalletControllerDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">walletControllerDidShowWebWebWallet</span><span class="p">(</span><span class="n">_</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//handle the action</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h1 id='documentation-payline' class='heading'>Documentation Payline</h1>
+
+<p>La documentation de Payline peut être trouvée <a href="https://support.payline.com/hc/fr/categories/200093147-Documentation">ici</a>. Elle offre une vue d&#39;ensemble du système, des détails et des explications sur certains sujets.</p>
+
+<hr>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Payline, <a href="mailto:support@payline.com">support@payline.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>PaylineSDK is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/" target="_blank" rel="external">payline</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

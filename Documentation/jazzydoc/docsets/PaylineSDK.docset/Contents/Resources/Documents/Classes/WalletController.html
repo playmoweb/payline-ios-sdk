@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WalletController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/WalletController" class="dashAnchor"></a>
+    <a title="WalletController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">PaylineSDK Docs</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">PaylineSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        WalletController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentController.html">PaymentController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WalletController.html">WalletController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:10PaylineSDK13WebControllerC">WebController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ContextInfoKey.html">ContextInfoKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContextInfoResult.html">ContextInfoResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WidgetState.html">WidgetState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/PaymentControllerDelegate.html">PaymentControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WalletControllerDelegate.html">WalletControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>WalletController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">WalletController</span> <span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:10PaylineSDK13WebControllerC">WebController</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Le WalletController s&#39;e occupe d&#39;afficher une webview en plein écran et de charger l&#39;URL de gestion de portefeuille. Il communique avec l&#39;application via son delegate.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Interface"></a>
+                <a name="//apple_ref/swift/Section/Public Interface" class="dashAnchor"></a>
+                <a href="#/Public%20Interface">
+                  <h3 class="section-name">Public Interface</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PaylineSDK16WalletControllerC014presentingViewD08delegateACSo06UIViewD0C_AA0cD8Delegate_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(presentingViewController:delegate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PaylineSDK16WalletControllerC014presentingViewD08delegateACSo06UIViewD0C_AA0cD8Delegate_ptcfc">init(presentingViewController:delegate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/WalletControllerDelegate.html">WalletControllerDelegate</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>presentingViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ViewController affichant le walletController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Delegate walletController</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10PaylineSDK16WalletControllerC09manageWebC011environmenty10Foundation3URLV_tF"></a>
+                    <a name="//apple_ref/swift/Method/manageWebWallet(environment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10PaylineSDK16WalletControllerC09manageWebC011environmenty10Foundation3URLV_tF">manageWebWallet(environment:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Affiche le porte-monnaie</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">manageWebWallet</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>environment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>url qui redirige la webView vers le porte-monnaie</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/" target="_blank" rel="external">payline</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -2,6 +2,8 @@ platform :ios, '12.1'
 
 use_frameworks!
 
+install! 'cocoapods', :disable_input_output_paths => true
+
 target 'PaylineSDK_Example' do
   pod 'PaylineSDK', :path => '../'
 

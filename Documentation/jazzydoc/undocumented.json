@@ -1,0 +1,250 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 16,
+      "symbol": "WidgetState.paymentMethodsList",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 17,
+      "symbol": "WidgetState.paymentCanceled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 18,
+      "symbol": "WidgetState.paymentSuccess",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 19,
+      "symbol": "WidgetState.paymentFailure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 20,
+      "symbol": "WidgetState.paymentFailureWithRetry",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 21,
+      "symbol": "WidgetState.tokenExpired",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 22,
+      "symbol": "WidgetState.browserNotSupported",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 23,
+      "symbol": "WidgetState.paymentMethodNeedsMoreInfo",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 24,
+      "symbol": "WidgetState.paymentRedirectNoResponse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 25,
+      "symbol": "WidgetState.manageWebWallet",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 26,
+      "symbol": "WidgetState.activeWaiting",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 27,
+      "symbol": "WidgetState.paymentCanceledWithRetry",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 28,
+      "symbol": "WidgetState.paymentOnHoldPartner",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/core/domain/WidgetState.swift",
+      "line": 29,
+      "symbol": "WidgetState.paymentSuccessForceTicketDisplay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 16,
+      "symbol": "ContextInfoKey.paylineAmountSmallestUnit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 17,
+      "symbol": "ContextInfoKey.paylineCurrencyDigits",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 18,
+      "symbol": "ContextInfoKey.paylineCurrencyCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 19,
+      "symbol": "ContextInfoKey.paylineBuyerFirstName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 20,
+      "symbol": "ContextInfoKey.paylineBuyerLastName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 21,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressStreet2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 22,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressCountry",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 23,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 24,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressStreet1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 25,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressCityName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 26,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressZipCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 27,
+      "symbol": "ContextInfoKey.paylineBuyerMobilePhone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 28,
+      "symbol": "ContextInfoKey.paylineBuyerShippingAddressPhone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 29,
+      "symbol": "ContextInfoKey.paylineBuyerIp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 30,
+      "symbol": "ContextInfoKey.paylineFormattedAmount",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 31,
+      "symbol": "ContextInfoKey.paylineOrderDate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 32,
+      "symbol": "ContextInfoKey.paylineOrderRef",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 33,
+      "symbol": "ContextInfoKey.paylineOrderDeliveryMode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 34,
+      "symbol": "ContextInfoKey.paylineOrderDeliveryTime",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/ContextInfoKey.swift",
+      "line": 35,
+      "symbol": "ContextInfoKey.paylineOrderDetails",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/PaymentControllerDelegate.swift",
+      "line": 10,
+      "symbol": "PaymentControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios"
+}

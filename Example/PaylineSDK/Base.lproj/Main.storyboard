@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,90 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-wo-n8Q">
+                                <rect key="frame" x="16" y="278.5" width="258" height="30"/>
+                                <state key="normal" title="Generate Payment Token"/>
+                                <connections>
+                                    <action selector="clickedGeneratePaymentToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dmL-fG-Xdq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-uq-Y3f">
+                                <rect key="frame" x="276" y="358.5" width="83" height="30"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Wallet"/>
+                                <connections>
+                                    <action selector="clickedManageWallet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xur-8i-tSE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-4A-HSt">
+                                <rect key="frame" x="294" y="278.5" width="65" height="30"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="clickedPay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pN3-BN-dP7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-cz-x6y">
+                                <rect key="frame" x="16" y="308.5" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MlO-h6-4oz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WF-Ae-KDe">
+                                <rect key="frame" x="16" y="358.5" width="240" height="30"/>
+                                <state key="normal" title="Generate Wallet Token"/>
+                                <connections>
+                                    <action selector="clickedGenerateWalletToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITv-OI-WwC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cit-7h-YlS">
+                                <rect key="frame" x="86" y="232.5" width="273" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsU-Bj-828">
+                                <rect key="frame" x="16" y="232.5" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="0Oa-YL-DGL"/>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="221-Sr-MAV"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="top" secondItem="5WF-Ae-KDe" secondAttribute="top" id="776-gQ-d3t"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="top" secondItem="lsU-Bj-828" secondAttribute="top" id="9TH-UU-XhD"/>
+                            <constraint firstItem="lsU-Bj-828" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ClQ-Ov-EHz"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="top" secondItem="Cit-7h-YlS" secondAttribute="bottom" constant="16" id="DrZ-CN-nYg"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="bottom" secondItem="lsU-Bj-828" secondAttribute="bottom" id="Ezx-7i-43Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Cit-7h-YlS" secondAttribute="trailing" constant="16" id="Jvq-Xh-9ci"/>
+                            <constraint firstItem="5WF-Ae-KDe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="K0X-kz-7Qk"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="leading" secondItem="5WF-Ae-KDe" secondAttribute="trailing" constant="20" id="PEt-pk-cNw"/>
+                            <constraint firstItem="Cit-7h-YlS" firstAttribute="leading" secondItem="lsU-Bj-828" secondAttribute="trailing" constant="10" id="SwA-l1-Egq"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="leading" secondItem="ePR-wo-n8Q" secondAttribute="trailing" constant="20" id="aBu-Ft-xjQ"/>
+                            <constraint firstItem="cAm-uq-Y3f" firstAttribute="bottom" secondItem="5WF-Ae-KDe" secondAttribute="bottom" id="aXx-Lm-2pC"/>
+                            <constraint firstItem="uEB-cz-x6y" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="bottom" id="b2p-Tx-kzc"/>
+                            <constraint firstItem="5WF-Ae-KDe" firstAttribute="top" secondItem="uEB-cz-x6y" secondAttribute="bottom" id="bDd-gY-3vn"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="bottom" secondItem="ePR-wo-n8Q" secondAttribute="bottom" id="dCT-MS-MYS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kic-4A-HSt" secondAttribute="trailing" id="gjd-qp-vNh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEB-cz-x6y" secondAttribute="trailing" id="ogU-22-Mae"/>
+                            <constraint firstItem="ePR-wo-n8Q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rBO-Q3-4iZ"/>
+                            <constraint firstItem="Kic-4A-HSt" firstAttribute="top" secondItem="ePR-wo-n8Q" secondAttribute="top" id="zMa-IX-vvc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAm-uq-Y3f" secondAttribute="trailing" id="zt8-4D-MqN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amoutTextField" destination="Cit-7h-YlS" id="TNb-SD-PGG"/>
+                        <outlet property="payButton" destination="Kic-4A-HSt" id="afl-VP-wMA"/>
+                        <outlet property="walletButton" destination="cAm-uq-Y3f" id="AL9-aH-Lx1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

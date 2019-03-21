@@ -12,9 +12,14 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7713DCC32425C11CBF96F211 /* Pods_PaylineSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F7B8A0453FD8DC4255A156 /* Pods_PaylineSDK_Tests.framework */; };
+		8219B6A82232727D00E22E96 /* WalletControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8219B6A72232727D00E22E96 /* WalletControllerTests.swift */; };
+		821DB4522240E03500003791 /* TokenFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3D7092223BAF2C004F680B /* TokenFetcher.framework */; };
+		821DB4532240E03500003791 /* TokenFetcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA3D7092223BAF2C004F680B /* TokenFetcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		823BBF3D223FF25400ECEFC8 /* TokenFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3D7092223BAF2C004F680B /* TokenFetcher.framework */; };
 		F79692EEC298FA295C22FC2B /* Pods_PaylineSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B7EAE6E0AA5F4A1356340E /* Pods_PaylineSDK_Example.framework */; };
+		FA589812222ECBBB00D9CD5C /* ScriptHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */; };
+		FA589814222ECF2D00D9CD5C /* PaymentControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,20 @@
 			remoteInfo = PaylineSDK;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		821DB4542240E03500003791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				821DB4532240E03500003791 /* TokenFetcher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09EA519CD235492761F96CF5 /* Pods-PaylineSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -41,12 +60,19 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PaylineSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylineSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		64D3C2DDFFDB68349E6D7461 /* PaylineSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PaylineSDK.podspec; path = ../PaylineSDK.podspec; sourceTree = "<group>"; };
+		64D3C2DDFFDB68349E6D7461 /* PaylineSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PaylineSDK.podspec; path = ../PaylineSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73F7B8A0453FD8DC4255A156 /* Pods_PaylineSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaylineSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E86A30EA143FFC12E40C94E /* Pods-PaylineSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8219B6A72232727D00E22E96 /* WalletControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletControllerTests.swift; sourceTree = "<group>"; };
+		8221E754C664D9EAE677F886 /* Pods-PaylineSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8AD70C048CCFD54F4A166EE5 /* Pods-PaylineSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B21903A1A9869862CA7E413D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CB8DFE5B6EB1997932E55F86 /* Pods-PaylineSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylineSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FA3D7092223BAF2C004F680B /* TokenFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TokenFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptHandlerTests.swift; sourceTree = "<group>"; };
+		FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821DB4522240E03500003791 /* TokenFetcher.framework in Frameworks */,
 				F79692EEC298FA295C22FC2B /* Pods_PaylineSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823BBF3D223FF25400ECEFC8 /* TokenFetcher.framework in Frameworks */,
 				7713DCC32425C11CBF96F211 /* Pods_PaylineSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,10 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for PaylineSDK";
@@ -115,7 +143,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				8219B6A72232727D00E22E96 /* WalletControllerTests.swift */,
+				FA589811222ECBBB00D9CD5C /* ScriptHandlerTests.swift */,
+				FA589813222ECF2D00D9CD5C /* PaymentControllerTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -142,6 +172,7 @@
 		82667EF85FCDBA45144E8E07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA3D7092223BAF2C004F680B /* TokenFetcher.framework */,
 				21B7EAE6E0AA5F4A1356340E /* Pods_PaylineSDK_Example.framework */,
 				73F7B8A0453FD8DC4255A156 /* Pods_PaylineSDK_Tests.framework */,
 			);
@@ -155,6 +186,10 @@
 				94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */,
 				09EA519CD235492761F96CF5 /* Pods-PaylineSDK_Tests.debug.xcconfig */,
 				E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */,
+				CB8DFE5B6EB1997932E55F86 /* Pods-PaylineSDK_Example.debug.xcconfig */,
+				8221E754C664D9EAE677F886 /* Pods-PaylineSDK_Example.release.xcconfig */,
+				8AD70C048CCFD54F4A166EE5 /* Pods-PaylineSDK_Tests.debug.xcconfig */,
+				7E86A30EA143FFC12E40C94E /* Pods-PaylineSDK_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -167,10 +202,12 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PaylineSDK_Example" */;
 			buildPhases = (
 				60AFB642FB87501B557B5063 /* [CP] Check Pods Manifest.lock */,
+				FA9C7BEE2228157F00FE8BB2 /* SwiftLint */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				5215D2E21D352E9E1D22A98A /* [CP] Embed Pods Frameworks */,
+				821DB4542240E03500003791 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,12 +250,24 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4GKC8CC3YD;
+						DevelopmentTeam = DD449B8E32;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4GKC8CC3YD;
+						DevelopmentTeam = DD449B8E32;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -294,14 +343,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PaylineSDK_Example/Pods-PaylineSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PaylineSDK/PaylineSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaylineSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,16 +362,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PaylineSDK_Tests/Pods-PaylineSDK_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -354,6 +395,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA9C7BEE2228157F00FE8BB2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pwd\nif which swiftlint >/dev/null; then\n    cd ../PaylineSDK\n    swiftlint lint Classes\nelse\n    echo “warning: SwiftLint not installed, need to run \\“brew install swiftlint\\“”\n    exit 1\nfi\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,7 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				FA589814222ECF2D00D9CD5C /* PaymentControllerTests.swift in Sources */,
+				8219B6A82232727D00E22E96 /* WalletControllerTests.swift in Sources */,
+				FA589812222ECBBB00D9CD5C /* ScriptHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,12 +573,15 @@
 			baseConfigurationReference = 413153BC744143B9B12E5186 /* Pods-PaylineSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				INFOPLIST_FILE = PaylineSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.payline.mobile.PaylineSDK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -528,12 +592,15 @@
 			baseConfigurationReference = 94BA3A8D9FABDC6EBEC65460 /* Pods-PaylineSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				INFOPLIST_FILE = PaylineSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.payline.mobile.PaylineSDK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -543,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09EA519CD235492761F96CF5 /* Pods-PaylineSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -566,7 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E75F8A09261CAA7077F8B379 /* Pods-PaylineSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				DEVELOPMENT_TEAM = DD449B8E32;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
