@@ -11,18 +11,23 @@ Le SDK Payline est un kit de développement qui va permettre d'intéragir avec l
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+Pour lancer le projet d'exemple, il vous suffit de cloner ce repo, puis d'executer la commande  `pod install` dans le dossier Example
 
 ## Installation
 
-PaylineSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+PaylineSDK est disponible via [CocoaPods](https://cocoapods.org).
 
-```ruby
+Pour l'installer:
+
+1. Dans votre Podfile, ajoutez la ligne suivante:
+ 
+ ```ruby 
 pod 'PaylineSDK'
-```
+ ```
+ 
+ 2. Executez la commande suivante à la racine de votre projet:
+  `pod install` 
+
 # Utilisation
 
 ## Initialisation
@@ -48,18 +53,20 @@ Pour que votre UIViewController agisse comme un delegate, vous devez implementer
 class ViewController: UIViewController, PaymentControllerDelegate, WalletControllerDelegate
 ```
 
-## Configuration
+## Réaliser un paiement
 
 La méthode `showPaymentForm` est utilisée pour afficher la page des moyens de paiement.
 
 ```swift
-lazy var paymentController: PaymentController = {
-    return PaymentController(presentingViewController: self, delegate: self)
-}()
-paymentController.showPaymentForm(environment: url)
-```
 
-OR
+@IBAction func clickedPay(_ sender: Any?) {
+    let url = URL(string: ...)
+        paymentController.showPaymentForm(environment: url)
+    }
+```
+La récupération du paramètre `url` se fera selon vos choix d'implementation. 
+Pour plus d'informations, veuillez vous référer à la documentation Payline en cliquant [ici](https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget)
+
 
 La méthode `showManageWallet` est utilisée pour afficher la page du porte-monnaie.
 
@@ -67,7 +74,7 @@ La méthode `showManageWallet` est utilisée pour afficher la page du porte-monn
 lazy var walletController: WalletController = {
     return WalletController(presentingViewController: self, delegate: self)
 }()
-walletController.manageWebWallet(environment: URL)
+walletController.manageWebWallet(environment: url)
 ```
 Ces deux méthodes requierent l'url de la page vers laquelle nous devons êtres redirigés.
 
