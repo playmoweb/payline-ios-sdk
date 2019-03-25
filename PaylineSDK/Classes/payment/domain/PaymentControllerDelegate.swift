@@ -27,8 +27,7 @@ public protocol PaymentControllerDelegate: class {
      * [PW - API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState)
-    
-    
+        
     /**
      * Appelée lorsque l'environnement est connu
      *

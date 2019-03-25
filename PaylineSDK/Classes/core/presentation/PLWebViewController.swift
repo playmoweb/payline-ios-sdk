@@ -38,8 +38,13 @@ class PLWebViewController: UIViewController {
         super.viewDidLoad()
         
         closeButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        closeButton!.setTitle("Close", for: .normal)
-        closeButton?.setTitleColor(.black, for: .normal)
+        let bundle = Bundle.init(for: self.classForCoder)
+        if let image = UIImage.init(named: "closeIcon", in: bundle, compatibleWith: nil) {
+            closeButton?.setImage(image, for: .normal)
+        }
+        
+//        closeButton!.setTitle("close", for: .normal)
+//        closeButton?.setTitleColor(.black, for: .normal)
         closeButton!.addTarget(self, action: #selector(close), for: .touchUpInside)
         
         self.view.addSubview(closeButton!)

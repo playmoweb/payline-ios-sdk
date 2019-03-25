@@ -31,9 +31,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PaylineSDK/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'PaylineSDK' => ['PaylineSDK/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'PaylineSDK' => ['PaylineSDK/Assets/*.xcassets']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 end
