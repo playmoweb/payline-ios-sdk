@@ -35,6 +35,7 @@ class TestDelegate: PaymentControllerDelegate {
         }
     }
     
+    
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
         self.didGetSandbox = didGetIsSandbox
     }
@@ -47,6 +48,16 @@ class TestDelegate: PaymentControllerDelegate {
 }
 
 class PaymentControllerTests: QuickSpec {
+    
+    func getWalletId() -> String {
+        let defaults = UserDefaults.standard
+        if let walletId = defaults.string(forKey: "WalletId"){
+            return walletId
+        }else{
+            defaults.set(UUID.init().uuidString, forKey:"WalletId")
+            return defaults.string(forKey: "WalletId")!
+        }
+    }
     
     override func spec() {
         
@@ -69,7 +80,7 @@ class PaymentControllerTests: QuickSpec {
             viewController.beginAppearanceTransition(true, animated: false)
             viewController.endAppearanceTransition()
             
-            params = FetchPaymentTokenParams.testPaymentParams(amout: 5)
+            params = FetchPaymentTokenParams.testPaymentParams(amout: 5, walletId: self.getWalletId())
      
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
@@ -111,7 +122,7 @@ class PaymentControllerTests: QuickSpec {
         }
         
         it("finishPaymentForm_failure") {
-            let params = FetchPaymentTokenParams.testPaymentFailureParams()
+            let params = FetchPaymentTokenParams.testPaymentFailureParams(walletId: self.getWalletId())
             
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
@@ -137,7 +148,7 @@ class PaymentControllerTests: QuickSpec {
         }
         
         it("finishPaymentForm_cancelled") {
-            let params = FetchPaymentTokenParams.testPaymentParams(amout: 5)
+            let params = FetchPaymentTokenParams.testPaymentParams(amout: 5, walletId: self.getWalletId())
             
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
