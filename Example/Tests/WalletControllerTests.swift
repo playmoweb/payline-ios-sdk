@@ -15,7 +15,7 @@ import UIKit
 class WalletTestDelegate: WalletControllerDelegate{
     
     var didShowWebWallet = false
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+    func walletControllerDidShowWebWallet(_ walletController: WalletController) {
         didShowWebWallet = true
     }
 }

@@ -32,7 +32,7 @@ pod 'PaylineSDK'
 
 ## Initialisation
 
-Pour l'initialisation du SDK, il faut tout d'abord instancier un  `PaymentController()` et un  `WalletController()` ainsi que leu delegates associés :
+Pour l'initialisation du SDK, il faut tout d'abord instancier un  `PaymentController()` et un  `WalletController()` ainsi que leurs delegates associés :
 
 ```swift
 lazy var paymentController: PaymentController = {
@@ -159,14 +159,9 @@ extension ViewController: PaymentControllerDelegate {
         //Gérer l'action ici
     }
 
-    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        //Gérer l'action ici
-    }
-
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
         //Gérer le WidgetState ici
     }
-
 
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
         //Gérer l'action ici

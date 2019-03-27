@@ -102,7 +102,7 @@
 <h1 id='utilisation' class='heading'>Utilisation</h1>
 <h2 id='initialisation' class='heading'>Initialisation</h2>
 
-<p>Pour l&#39;initialisation du SDK, il faut tout d&#39;abord instancier un  <code>PaymentController()</code> et un  <code>WalletController()</code> ainsi que leu delegates associés :</p>
+<p>Pour l&#39;initialisation du SDK, il faut tout d&#39;abord instancier un  <code>PaymentController()</code> et un  <code>WalletController()</code> ainsi que leurs delegates associés :</p>
 <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span> <span class="o">=</span> <span class="p">{</span>
     <span class="k">return</span> <span class="kt">PaymentController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">PaymentControllerDelegate</span><span class="p">)</span>
 <span class="p">}()</span>
@@ -202,14 +202,9 @@ extension ViewController: PaymentControllerDelegate {
         //Gérer l'action ici
     }
 
-    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        //Gérer l'action ici
-    }
-
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
         //Gérer le WidgetState ici
     }
-
 
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
         //Gérer l'action ici

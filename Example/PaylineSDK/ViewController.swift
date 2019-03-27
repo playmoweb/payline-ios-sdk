@@ -127,7 +127,7 @@ extension ViewController: PaymentControllerDelegate {
 }
 
 extension ViewController: WalletControllerDelegate {
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+    func walletControllerDidShowWebWallet(_ walletController: WalletController) {
         debugPrint("didShowManageWallet")
     }
     
