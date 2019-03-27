@@ -9,20 +9,25 @@
 
 Le SDK Payline est un kit de développement qui va permettre d'intéragir avec le service Payline afin d'effectuer un paiement ou de voir le porte-monnaie.
 
-## Example
+## Exemple
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+Pour lancer le projet d'exemple, il vous suffit de cloner ce repo, puis d'executer la commande  `pod install` dans le dossier Example
 
 ## Installation
 
-PaylineSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+PaylineSDK est disponible via [CocoaPods](https://cocoapods.org).
 
-```ruby
+Pour l'installer:
+
+1. Dans votre Podfile, ajoutez la ligne suivante:
+ 
+ ```ruby 
 pod 'PaylineSDK'
-```
+ ```
+ 
+ 2. Executez la commande suivante à la racine de votre projet:
+  `pod install` 
+
 # Utilisation
 
 ## Initialisation
@@ -48,28 +53,63 @@ Pour que votre UIViewController agisse comme un delegate, vous devez implementer
 class ViewController: UIViewController, PaymentControllerDelegate, WalletControllerDelegate
 ```
 
-## Configuration
+## Réaliser un paiement
 
 La méthode `showPaymentForm` est utilisée pour afficher la page des moyens de paiement.
 
 ```swift
-lazy var paymentController: PaymentController = {
-    return PaymentController(presentingViewController: self, delegate: self)
-}()
-paymentController.showPaymentForm(environment: url)
-```
 
-OR
+@IBAction func clickedPay(_ sender: Any?) {
+    let url = URL(string: ...)
+    paymentController.showPaymentForm(environment: url)
+}
+```
+La récupération du paramètre `url` se fera selon vos choix d'implementation. 
+Pour plus d'informations, veuillez vous référer à la documentation Payline en cliquant [ici](https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget)
+
+
+## Accéder au portefeuille
+
 
 La méthode `showManageWallet` est utilisée pour afficher la page du porte-monnaie.
 
 ```swift
-lazy var walletController: WalletController = {
-    return WalletController(presentingViewController: self, delegate: self)
-}()
-walletController.manageWebWallet(environment: URL)
+@IBAction func clickedManageWallet(_ sender: Any?) {
+    let url = URL(string: ...) {
+    walletController.manageWebWallet(environment: url)
+}
 ```
-Ces deux méthodes requierent l'url de la page vers laquelle nous devons êtres redirigés.
+Comme pour la réaisation d'un paiement, la récupération du paramètre `url` se fera selon vos choix d'implementation. 
+Pour plus d'informations, veuillez vous référer à la documentation Payline en cliquant [ici](https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget)
+
+## Implémentation des delegates
+
+### PaymentControllerDelegate
+
+Le PaymentControllerDelegate est une interface qui définit la communication entre l'application et le PaymentController.
+
+Ce dernier nécessite l'implémentation de cinq methodes:
+
+- `paymentControllerDidShowPaymentForm(_:)` : Méthode appelé lorsque la liste des moyens de paiement a été afichée.
+
+-  `paymentControllerDidFinishPaymentForm(_:withState:)`: Méthode appelé lorsque le paiement est terminé. Cette méthode prends en paramètre un objet de type `WidgetState` qui est une énumération des différents valeurs possible pour la propriété state retourné par les fonctions callback du widget.
+
+- `paymentController(_:didGetIsSandbox:)`: Méthode appelé lorsque l'environnement de paiement est connu(environnement de test ou de production).
+
+- `paymentController(_:didGetLanguage:)`: Méthode appelé lorsque la langue du widget est connue.
+
+- `paymentController(_:didGetContextInfo:)`: Méthode appelé à la récupération d'une information sur le contexte de paiement.
+
+
+### WalletControllerDelegate
+
+Le WalletControllerDelegate est une interface qui définit la communication entre le WalletController et l'application.
+
+Ce dernier nécessite l'implémentation d'une méthode:
+
+`walletControllerDidShowWebWebWallet(_:)`: Méthode appelé lorsque la page de gestion du portefeuille a été affichée
+
+
 
 ## Exemple d'utilisation
 
@@ -89,34 +129,55 @@ lazy var walletController: WalletController = {
 
 ```
 
+### Effectuer un paiement
+
+```swift
+
+@IBAction func clickedPay(_ sender: Any?) {
+    let url = URL(string: ...)
+    //On appelle la méthode showPaymentForm avec l'url du tunnel de paiement récupéré en fonction de votre implémentation
+    paymentController.showPaymentForm(environment: url)
+}
+
+```
+
+### Affichage du Wallet 
+
+```@IBAction func clickedManageWallet(_ sender: Any?) {
+    let url = URL(string: ...)
+    //On appelle la méthode manageWebWallet avec l'url du wallet récupéré en fonction de votre implémentation.
+    paymentController.manageWebWallet(environment: url)
+}
+```
+
 ### Implementation des delegates
 ```swift
 
 extension ViewController: PaymentControllerDelegate {
 
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
-        //handle the action
+        //Gérer l'action ici
     }
 
     func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
-        //handle the action
+        //Gérer l'action ici
     }
 
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
-        //handle the WidgetState 
+        //Gérer le WidgetState ici
     }
 
 
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
-        //handle the action
+        //Gérer l'action ici
     }
 
     func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
-        //handle the action
+        //Gérer l'action ici
     }
 
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {  
-        //handle the action
+        //Gérer l'action ici
     }
 
 }
@@ -124,7 +185,7 @@ extension ViewController: PaymentControllerDelegate {
 extension ViewController: WalletControllerDelegate {
 
     func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
-        //handle the action
+        //Gérer l'action ici
     }
 
 }

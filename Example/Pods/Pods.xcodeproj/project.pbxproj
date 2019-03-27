@@ -12,9 +12,9 @@
 		05D6872E1E4C28423550C859B6E03820 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D6D2F7DEC65836C64E8D63713571BE /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075311A9B30D68479A7D7404A99B2FB1 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A02DD5495FA450F82A0545BB14712 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0999B997CDAC772A41A7F70CEF4A1D49 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3C38DE159062C42C269ECF8463157 /* BeginWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		09B30C2C426DF25AA57393F1CF6171B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */; };
+		0A5C7756C1E872DE3572E30BB660A5A7 /* ContextInfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514AAC0E2145E9C7D0FC1BF69B4EF68B /* ContextInfoResult.swift */; };
+		0E3DEABB22B69E32442081AB75145649 /* PLWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478F23BECCBA5434E422B69443C285 /* PLWebViewController.swift */; };
 		0E606AAC4E3163FFE3C3D0D580752F62 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A27C595E85983B6049C1776FFB182C75 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EBB18E07B6923BF179DB7F3439A9108 /* PaylineSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0176D5EC294C1AF6C7AAFDA14242343 /* PaylineSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F31FA39DE65E4B1F239F8D4DC999A8A /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98A57C25FCB14F5E968AEF9745ACB8C /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		13FBB20EA4647EA46F0CB2E7254A5F50 /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7905A496F5B0D6E944ACA4B54F4795 /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		19E3C39749B00ACB6FF988EFDA11566A /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E97D57B00B155F3F5BF7DB0305326 /* ErrorUtility.swift */; };
@@ -24,23 +24,20 @@
 		1FA0DEC9E883929115DD91352F570F3B /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFA386331E06F0598A349A458D4EDA7 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FE34D093AFA6707A6E3CD36D4FA8E88 /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A74D4BD74871DDF5C87114E3CE81EEAB /* Quick-dummy.m */; };
 		24AD9C69B1A899FA7DB0CA4D346319C5 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EEB9B54B1FC424AD61893359900A12 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		25A0CC9D70E7E4A622A69DC781009625 /* PaylineSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDF868DD7BDC17077314E51448F50E /* PaylineSDK-dummy.m */; };
 		261DC96213CBC65D14C75C845CA743DB /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0569B48E4F493DBDD2BF04365D0F /* QuickTestSuite.swift */; };
 		277F4C903F3AB759C21812438819506A /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662FC40B2EAAFB916269ED0538FD7A9D /* ExampleMetadata.swift */; };
 		27B179ABAD50497E57079E35EB8A77ED /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36BCE29D2919E1F634ECCF43777659 /* Callsite.swift */; };
-		2AA8E5AA4EE324DFB9E0C4A857418519 /* PaymentControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A010E5E249EB0635525CBBE452E94B /* PaymentControllerDelegate.swift */; };
-		2CF7B239162FFB2908D5E0C9F73ED8F0 /* ContextInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BFD9A5DC5D79C71CAB4DB815AE2C62 /* ContextInfoKey.swift */; };
 		2FE87736A082AA02A69D271BE596CB5D /* Pods-PaylineSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B7157D004A4126946D4A4A653B43CC /* Pods-PaylineSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30966E26266F62432C8E914340871113 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E824AA11D5A3B34AF3D2EDF9287BC7 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3101D8F2678E107351E1179C14FC7BF5 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C718FE0CA15C30146720A70B312BA5C /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		31DCC4FEA92A71A9FE8D881B73FC7426 /* CwlDarwinDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98842AD3DBE2E7DFB5AD686434B48B93 /* CwlDarwinDefinitions.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		328CBB53BF5236042DF4CB4B751EA062 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAA356105FF741033E3CCFC62422F5 /* Contain.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		3423D01DBBA4DFC3DDC8E77BC5276FB8 /* PLWebViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27829728BC306A8FD69D1E8FFBB73FB /* PLWebViewControllerDelegate.swift */; };
 		35087B8F6AC4F000C85B8D672760AFAA /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E266C6E7D3F500F1C9FE58C51864A95 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3537F7CBFBE04113D495FF50BC3D6672 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8967B7FD81D569D6ED2D6BCA8899B /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		373C57D757D6DFAC77450763C6BFA620 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB16CDC961BB0A6F89C4274A5C417BF9 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		38FEA25D16ACC1E6F5C696CD95B41A69 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 10CCDA008C9D923845561A4D19DD98E3 /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		392B6696BC59BDCD988D7C5DF3E3E1C5 /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8889B79E19BE3AC0DB28FA654FC275 /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		3A3354FA3C5BE7CA9C45529449793560 /* ScriptHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388B0F6ED010234FD488DB0A1DC1C52D /* ScriptHandler.swift */; };
 		3FB2A8B837E04FFE42C3B9A9105D48AD /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F7CCDFC00F325FA9F24F7ACEC48F2 /* World.swift */; };
 		408D4A2E08F9AF1718EA8B561979A165 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F319BEBE050D66DA9613FF40FE8FE773 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
 		43E95567704203A2DE95E07947BDF70E /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565900DEAFB2D07897B341FBDBFCE365 /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -48,11 +45,8 @@
 		466710F25CFC918F8F27BB14D6B27A77 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D876A300780522872BE55647A7E497B3 /* SuiteHooks.swift */; };
 		4AD337ECB90EA73C26BCF67E7072F47A /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D7D50DF22E1F94222B46D288ABBF5C /* NSBundle+CurrentTestBundle.swift */; };
 		4B5D5841285803935270BB284548DCBA /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 489C0E451A8F0475EA377483F13F9CB8 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C5CB29262A9640B160D5398A3F82800 /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A177A7946BF50EF4C32CD587EC7E8 /* PaymentController.swift */; };
-		4C6B3D1A556D5B3C9AA604AF3781556D /* PLWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BACE8BF6A477A39D5BE38141DBD6A /* PLWebViewController.swift */; };
 		4E70FE29FB2BAD7E5427532B5D2FCF26 /* XCTestObservationCenter+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4860F1C3FE82AB81AC5D2C2536619 /* XCTestObservationCenter+Register.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4FB199E7CBC75AFBC578F65D437366D3 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD64BB24C72DDBDE937B057A2CD8AD /* Filter.swift */; };
-		5755CB4967B12E72CDE9B4529E8F08B9 /* WalletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB50E2578670A770A98994F7B0BDA01 /* WalletController.swift */; };
 		57FDF2284A30321A0C9CFBEF3C5CA8D5 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04B54C0C0A46D23B7386B61A85677C /* World+DSL.swift */; };
 		5EE9A149DC17D1C91FE1F03080871B36 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95F808779B7DED9715113C718475F5 /* Behavior.swift */; };
 		5F154C985B9DE1085A993CF9AB332BF2 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62078EB525AE9E10F12E299358D2E1D6 /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -63,13 +57,14 @@
 		6FEED545E2A7E574E4CC2DA9B4338A59 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4DDA9307FD73E7DADFC6647073B9E /* DSL.swift */; };
 		73AF0A6464C4E22C20CD6C0CFBB02F40 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731A2DDAFEDDBD240080BAC78C79A2C4 /* Closures.swift */; };
 		7403EBDEC592DF5F4AA19EEFED35AC5A /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E61B87640F2204D0B594D22DCAEEDA /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		74630030359E81A663F0A894DDF9793B /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7528D72D102A7D378389F396EAF7D06C /* WebController.swift */; };
 		74C4A30A55AC7DB057CE14BCA15299C4 /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AE579079610197A2DC50C9FD40C091 /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75BCAEDCDD7C3D0B940197760D6559A9 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1452C93AC0A948D9DC5E55F247DA186F /* QuickConfiguration.m */; };
 		784DC54B4603FF9B368122FCD7D1D897 /* ElementsEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4351E11D6AF1227F6658BA75B9D1854 /* ElementsEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		7AA21A2A7686580BEF335C12D3D7AB81 /* Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E47F3442BD1226861FCA578B669BB44 /* Await.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		7C14A616DD30328F895587FA298DBA4C /* PaymentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB06CE202FD6925E42DE516F90EA50 /* PaymentAction.swift */; };
 		7FA411A969F1D1A7AD517C3E7B739AA6 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0281107AD16AD860EE715654CDB53D0 /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		821E129022491104009D30B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */; };
+		821E129122491106009D30B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */; };
+		821E129222491107009D30B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */; };
 		82607C525BEE07050E18F0BFCF0AEA52 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984EB3C619E1734DD75732BFB885747 /* DSL.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		836B968E1EA15BA9CB9B2705638A2679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */; };
 		83E49C3B8280FEEAE4F2A81F64A549B4 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3854A9058664A7F5C2B8F0668BD14E0 /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -77,10 +72,12 @@
 		870471424FE3C6BA3E33C949BEF04D50 /* ToSucceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B003C6069993949BDD6703C9F71B464 /* ToSucceed.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8784230CBBBC7267F29611E0E1DC961E /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282FA19F8CB4FCC52AE97EF26603841 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		888B88EF8BDEBCB1702F8BB33BCBC3B2 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E38F6D3F809A7E4795FD63D44A24E0A /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		88A75398D5F35AD41275DB8E8E2CADB8 /* WalletControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91B3BB0429D7E09A672F3309E83106 /* WalletControllerDelegate.swift */; };
 		89A206D51752309E13BD5C427C35A090 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0097DC19D7E9A8376301DA6F5CCCC /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		89D30C28183DF9BFC6C940211DA889D7 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61B2A846AC9381ACC494B5C8B09B3A /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8FE8DB7CB4138D0AC219520C5B92F50D /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CCD713770884A93983706123545546 /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		942BF2177FEFD80939E1769C59180D57 /* ScriptEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A9D76B58262BF3EE3745DE6A1971F /* ScriptEvent.swift */; };
+		9057744E7DDB3C04229CBEC08798EA4C /* WidgetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9A082C37BA6B935310CCF222EBAE48 /* WidgetState.swift */; };
+		93AF2DDCEDD2A879688BC0342D07ABF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */; };
 		94B484BA06FFCCE527FEF9F0631B0A33 /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB1B150C723A14EAE8E21DAF953177C /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94C84E6DFA71C70DF521E9D995C1505F /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C482F761E543FE1E2E4D09821C5DD8D /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		966FBB84C847F2BCAED02AA147A2CFAB /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACF5BC72FE739988A93FB34C95FD59B /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -88,27 +85,30 @@
 		9DB1E08337AC3FF955539F4E0D1074D2 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CFB6957153E19C9056465CE5706CF2 /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9E2D4DF8B0E28AD0B516BDCEBBCF2A3D /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = DE008AAE31097395CFAF187CEA74FEAA /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EEF9E84E580920E11E06170D25F65C3 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCF41B2889793B97D1535A2BB3CBDD3 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A40DD06325136E648F0DAD5D3E4BFF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */; };
 		A4B6197170839BA97DE105AA9D1FAD7D /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA637E42D89BCAECE128FCF308B0EA /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A51570857887E8E40B39F91C35358E2D /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86071BFA01872A1E0EDCB829015FAA96 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A74CEEC58BDEB1F9A37685FCA3376746 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A930A8C025F3621E6783F7FC351EA21 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A9F93A9C40771906414564A30333FDB9 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53899502077A5F034748CE793F892661 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AC26B8C4461E89CC285F1D3273A659BC /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485287546D2B320DD5ACCE975E67754 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B01344A2BCC65C8B33C65448E7EABE74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */; };
+		B02C69985700D29DAC5E64091BC5F509 /* PaylineSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B4ECDD9B45930E77C194E2EC57B40 /* PaylineSDK-dummy.m */; };
 		B117254B49CA300628DE2047604A2CBA /* Pods-PaylineSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B61DD1AF6568787849D84662A72F7A /* Pods-PaylineSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1C1C9B6D8D1065F3384EA6EFE4418F6 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FB82497A82F4D0F95B0E3EC654D5A1 /* QuickSpecBase.m */; };
-		B2ABE1829504CCC80FD22FCDC74E692F /* PLWebViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F97F5BA0C9DE025979FDA3B2C34443 /* PLWebViewControllerDelegate.swift */; };
-		B3BD0A92E4EB9DE1762E918592F5787B /* WalletControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994710A9BF354891E0EBB23A90521FB8 /* WalletControllerDelegate.swift */; };
+		B3FD4B13F124818E94677C383AB502D0 /* PaymentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4253EE688B25A14531B116A4A1C66FA9 /* PaymentAction.swift */; };
 		B836AB3DB63144FE21C715D2944AEA07 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B388A4C90C49126B05C3D7F8C6BB95 /* NMBExceptionCapture.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B99C3D5D8CFA7680F80A961BB3D891C8 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BC9A3B67B87FE4A75A67DC59072FC /* Example.swift */; };
 		BBE9C996C1F4013365B5A0EB306F5BB2 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E4B9F4496EF2AFCEA304A8E1E2375B /* QuickSpec.m */; };
 		C0367D0510CE9E409A33E9B356422017 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF65B283C0E1AFCD37C98D1645E614CA /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A01953CC6FEAE179299D701B8EAD9B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FBAE2F1C3133CB2E9864BF29AAB0C /* Configuration.swift */; };
+		C438B97B31455773EBAC7DF893A048CF /* PaylineSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B03242F03F50B7B9E7105E34D95AF3 /* PaylineSDK.bundle */; };
 		C56CE025F6E708D6F5F11DB4EA23728C /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324EB649A2D69F1D0EBCAC6BC016B6E2 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C5808A46FC4C07F235753E2AE4A7511A /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F695BFB585BF83371E415570821D805 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C7B9D1E45DDA944F4C7E372D3A20999C /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E8B8FC558365E32B6C139A471BC3D /* Stringers.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		CC6E27B08C55A4933D0788DD600F11F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD98DB8C1AA8E2390412D61DB64864D /* XCTest.framework */; };
+		CDEE5F1FC5AA0C51966FC613C95C7F4B /* ScriptEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220A86445D52EC0BCA800425CC4FC23F /* ScriptEvent.swift */; };
 		D0117BC10CB96CA7F32536A69C085C49 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E53306307DFD81C5455ED758376E3 /* Expression.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		D149CCA6DB2E25A8D4B91B8F497E46D2 /* WidgetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAE3881CEB07AC431A2C40F26A36E /* WidgetState.swift */; };
+		D038A8A416F44C4D40546AEFB72A37B1 /* ScriptHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07111C415AF2C57AC0F51E870EFC070 /* ScriptHandler.swift */; };
 		D1A4A1DD617C96759F7B2AB2A6AEB0E1 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6984AE0511C39A1CEF09719B7943D /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		D1FD91581D2DC0A42C9134862F569C83 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CFFDC299148A7C4E3BF2FEA01F083 /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		D28A3991A143FC6734021E5BE6B73E73 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11B175845896DABF5802944FC6CE969 /* NSString+C99ExtendedIdentifier.swift */; };
@@ -122,17 +122,22 @@
 		DE41036F5CDFE75D351DEAC46ECD9FA9 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F111B2D2E55314F929FB10B6B5A603B /* Nimble-dummy.m */; };
 		DE54DDE5C5B6283DE5ADBBDAA91ED589 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2BEB8FBAA698511FC013C98F1A4FC /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		DF50C201EB25B9BDDD6363698ADE639C /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D556C03D6C646F9FFDF2C01D0F854DDC /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		DFC64F5A47BCB4A3DFF150ECDED66E16 /* PaylineSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B99A1B82ECEB19BCBE93D015F895C2 /* PaylineSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B80ABAE073DDB457E4A84240AF03F1 /* ScriptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AB8675135DEC684CCADBFA25792744 /* ScriptAction.swift */; };
 		E1C5AE23F3288A2E8A13489165FD3FF2 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 493F7739861B9F29C070344B9DD5E99F /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E270BEC543C78DD07E227E3098CE0F4C /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3658FA122C9BB75108B640E505503FF /* PaymentController.swift */; };
 		E40A6E85823CE585BF269D1DF4EF5E04 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C91C1753ACFF9224BC95CFA014C8F /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E421CC9222B4DCD92124CA45FBA6A247 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7818D36EC39550562E72D3CA1D2EB55E /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E74C63A506330D4E6E1DC8F3894BDC22 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2BA90FA6C356E2D1ACDBE736F40672 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		E78652FE5651066A32D357B0B91E0871 /* PaymentControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D086AAD0654C279F4B21A61E2C08E /* PaymentControllerDelegate.swift */; };
 		E80F2F25B622EBC3F1CACD1AFD851A11 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505CFB5CDFCA7C6D7B521B5DD5C2591 /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E90FD4A4D4CF0D404F746F1B5B273BDF /* Pods-PaylineSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDCC33C11495958561C3783EE043F46 /* Pods-PaylineSDK_Example-dummy.m */; };
-		EA098512AE4B7671496E550F1342DEBB /* ScriptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF85676466AB0157537A00E297A9D88 /* ScriptAction.swift */; };
 		EB062EA45D4A3859C6CEA85DAC1ED237 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08083544A1C43F3F7C1CA638D1FD8BE8 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		EF0288B9D7163B7AE4A29D97A31C38D1 /* WalletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0AD408EAE4BBB386FD5D3CC7B1CCF /* WalletController.swift */; };
 		F5090F52CF4E6B768D0FB5F676B61AE9 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D496C0DB62DF3A906836F3969A17BF7 /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F596D6BBE5BAD012376F7CB73D44CE6B /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3130267C914079915AB0054EC5C90 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		FB962249F2E6FA8F9A7180874432652B /* ContextInfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2BCC9AF77993785CF506936357C0A /* ContextInfoResult.swift */; };
+		F68B4C130272478628C59AB7C1D03D09 /* ContextInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76190FC918CFD6CAD018DC319E735DF6 /* ContextInfoKey.swift */; };
+		FA707A27008A78BDABBFE33E672A816C /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAD761B59EB88BCAB4F383E05BC1A7A /* WebController.swift */; };
 		FC62A84989E032DA8A79BAFCFF845630 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */; };
 		FC66C0A9293FE47875C7B42548D8B624 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0359C436BCF4476926E7E8967A98E /* HooksPhase.swift */; };
 		FDAF31AF823A6401A6E8C0336B45B0DD /* Pods-PaylineSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5F432A989FE8B966E29292BE4C2CD4 /* Pods-PaylineSDK_Tests-dummy.m */; };
@@ -158,8 +163,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 701B77B75F451A58F62F1813EFAEB460;
+			remoteGlobalIDString = 33F296AEE737B27A78BDB9B2299E157E;
 			remoteInfo = PaylineSDK;
+		};
+		CB1089AB99768C425D7C351C9ECE5407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91B8F92681097625B24941BFC9E892E4;
+			remoteInfo = "PaylineSDK-PaylineSDK";
 		};
 		DA6FF988AAB6212F779247886E276DB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -185,38 +197,41 @@
 		10CCDA008C9D923845561A4D19DD98E3 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		1382E9D537A0A6C71991ED8EED227FDC /* ContainElementSatisfying.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainElementSatisfying.swift; path = Sources/Nimble/Matchers/ContainElementSatisfying.swift; sourceTree = "<group>"; };
 		138DB4DC05A72EF3AB1D94BC26BF335C /* Pods-PaylineSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaylineSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		13AB8675135DEC684CCADBFA25792744 /* ScriptAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptAction.swift; sourceTree = "<group>"; };
 		1452C93AC0A948D9DC5E55F247DA186F /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
 		14B388A4C90C49126B05C3D7F8C6BB95 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		14DCD52745FCF0521FADC00EE768DE85 /* CwlBadInstructionException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlBadInstructionException.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlBadInstructionException.swift; sourceTree = "<group>"; };
 		15AA637E42D89BCAECE128FCF308B0EA /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
-		16A010E5E249EB0635525CBBE452E94B /* PaymentControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentControllerDelegate.swift; sourceTree = "<group>"; };
-		17029198EF93456CCAA270DB8ABE0D52 /* PaylineSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PaylineSDK.modulemap; sourceTree = "<group>"; };
+		1A7C3054304A1D11C7D03216D388BFCB /* Pods_PaylineSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaylineSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE221BD11A385A58CA78DA2549E72 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Matchers/Async.swift; sourceTree = "<group>"; };
-		1D7BACE8BF6A477A39D5BE38141DBD6A /* PLWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PLWebViewController.swift; sourceTree = "<group>"; };
 		1E266C6E7D3F500F1C9FE58C51864A95 /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
 		1F34E97E55E991F5EA93EEEEAB5A6A07 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
+		1F53DAA5E836F98949B4E96742A71A6F /* PaylineSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PaylineSDK-Info.plist"; sourceTree = "<group>"; };
+		1FFF3490A2FB365B88DB9113C3E825D3 /* PaylineSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PaylineSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		220A86445D52EC0BCA800425CC4FC23F /* ScriptEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptEvent.swift; sourceTree = "<group>"; };
 		22CCD713770884A93983706123545546 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		24B3E5B3B6E4BE8908DC9DE06B22AFB2 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		2505CFB5CDFCA7C6D7B521B5DD5C2591 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
 		2A5F432A989FE8B966E29292BE4C2CD4 /* Pods-PaylineSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaylineSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		2A91BCF98A6F6A0CC7A9CB6C11D206D6 /* PaylineSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PaylineSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2ABB3232ED553A44E63C849DEA64054C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2C6D086AAD0654C279F4B21A61E2C08E /* PaymentControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentControllerDelegate.swift; sourceTree = "<group>"; };
 		2C8889B79E19BE3AC0DB28FA654FC275 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		2CFA386331E06F0598A349A458D4EDA7 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		2E04B54C0C0A46D23B7386B61A85677C /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Sources/Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
-		2E91F6D86D8A0D1E5FD0D581A1C9E2FA /* PaylineSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PaylineSDK-Info.plist"; sourceTree = "<group>"; };
+		2E4DDEE6645C6015AAB196DCF7D0B11C /* PaylineSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PaylineSDK.modulemap; sourceTree = "<group>"; };
 		2F3945CC8F3F0410B8ADFA89B0541FA6 /* Pods-PaylineSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaylineSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		30B61DD1AF6568787849D84662A72F7A /* Pods-PaylineSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaylineSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		324EB649A2D69F1D0EBCAC6BC016B6E2 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		32AE579079610197A2DC50C9FD40C091 /* NMBStringify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBStringify.h; path = Sources/NimbleObjectiveC/NMBStringify.h; sourceTree = "<group>"; };
 		32E3C38DE159062C42C269ECF8463157 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
+		351872A411F7721D77D5F9381F24E357 /* PaylineSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaylineSDK-prefix.pch"; sourceTree = "<group>"; };
 		38056AF580BD37BF286B8348B194B2C7 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
-		388B0F6ED010234FD488DB0A1DC1C52D /* ScriptHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptHandler.swift; sourceTree = "<group>"; };
 		38C03AB0F7B180D6D6164672B2FEEEF0 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		3984EB3C619E1734DD75732BFB885747 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		3A95F808779B7DED9715113C718475F5 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Quick/Behavior.swift; sourceTree = "<group>"; };
-		3F695BFB585BF83371E415570821D805 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
+		3D8357CD943C9F860BB7EC4B16CE2E4D /* Pods_PaylineSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaylineSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F695BFB585BF83371E415570821D805 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		40D7D50DF22E1F94222B46D288ABBF5C /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+CurrentTestBundle.swift"; path = "Sources/Quick/NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
+		4253EE688B25A14531B116A4A1C66FA9 /* PaymentAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentAction.swift; sourceTree = "<group>"; };
 		45D7535BD6AD44F6A9FC4B71358C6C26 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		486E97D57B00B155F3F5BF7DB0305326 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		489C0E451A8F0475EA377483F13F9CB8 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
@@ -227,9 +242,9 @@
 		4C482F761E543FE1E2E4D09821C5DD8D /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		4C718FE0CA15C30146720A70B312BA5C /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		4D83F3BDA32F3D51157B5B9DFBAA56F3 /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/QuickObjectiveC/DSL/QCKDSL.m; sourceTree = "<group>"; };
+		514AAC0E2145E9C7D0FC1BF69B4EF68B /* ContextInfoResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoResult.swift; sourceTree = "<group>"; };
 		5282FA19F8CB4FCC52AE97EF26603841 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
 		53899502077A5F034748CE793F892661 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
-		53B78769D8E22C9FF0338DCDACC2A36F /* PaylineSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PaylineSDK.xcconfig; sourceTree = "<group>"; };
 		565900DEAFB2D07897B341FBDBFCE365 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		5DB1B150C723A14EAE8E21DAF953177C /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		5DE0097DC19D7E9A8376301DA6F5CCCC /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
@@ -237,40 +252,37 @@
 		629CFFDC299148A7C4E3BF2FEA01F083 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		662FC40B2EAAFB916269ED0538FD7A9D /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		66EEB9B54B1FC424AD61893359900A12 /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
-		68BFD9A5DC5D79C71CAB4DB815AE2C62 /* ContextInfoKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoKey.swift; sourceTree = "<group>"; };
 		6B786BC8797260B143FE3F7660FCD1DA /* Pods-PaylineSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaylineSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6FD98DB8C1AA8E2390412D61DB64864D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		701C38FA0DC2BC3899CC6D251D63399A /* Pods-PaylineSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaylineSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7040926B69AD1ACC39E832DA4202B38E /* Pods-PaylineSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaylineSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		70D99B4DB4B84FEC6FB7BC4F8230D288 /* Pods-PaylineSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaylineSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		71CE7BE529E1FBC3EAAB30A2476B5B90 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		731A2DDAFEDDBD240080BAC78C79A2C4 /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		731D6947B23B8C2CADAF990E14768B1A /* SatisfyAllOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAllOf.swift; path = Sources/Nimble/Matchers/SatisfyAllOf.swift; sourceTree = "<group>"; };
-		7528D72D102A7D378389F396EAF7D06C /* WebController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		75CF1F53ABA0565B3C53C8B9F520D7A3 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
+		76190FC918CFD6CAD018DC319E735DF6 /* ContextInfoKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoKey.swift; sourceTree = "<group>"; };
 		7818D36EC39550562E72D3CA1D2EB55E /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Sources/Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
 		7A930A8C025F3621E6783F7FC351EA21 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
-		7BEF7F83B2FF4E0837434F1A265F3EED /* Pods_PaylineSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaylineSDK_Tests.framework; path = "Pods-PaylineSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C36BCE29D2919E1F634ECCF43777659 /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Sources/Quick/Callsite.swift; sourceTree = "<group>"; };
 		7E2EA6B22B608F434AFBFE6D2CF79C0F /* ExampleHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleHooks.swift; path = Sources/Quick/Hooks/ExampleHooks.swift; sourceTree = "<group>"; };
-		81ABAE3881CEB07AC431A2C40F26A36E /* WidgetState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetState.swift; sourceTree = "<group>"; };
+		7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PaylineSDK.xcconfig; sourceTree = "<group>"; };
 		837DB9AD2D61070DE0BA973B4A0158A5 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/Nimble/Utils/Errors.swift; sourceTree = "<group>"; };
+		83D557E55FCD5761B9C41BD547374746 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B99A1B82ECEB19BCBE93D015F895C2 /* PaylineSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaylineSDK-umbrella.h"; sourceTree = "<group>"; };
 		855A9CFC20252FCA8156C98E1E53356A /* URL+FileName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+FileName.swift"; path = "Sources/Quick/URL+FileName.swift"; sourceTree = "<group>"; };
-		85D2BCC9AF77993785CF506936357C0A /* ContextInfoResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextInfoResult.swift; sourceTree = "<group>"; };
-		85FDF868DD7BDC17077314E51448F50E /* PaylineSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PaylineSDK-dummy.m"; sourceTree = "<group>"; };
 		86071BFA01872A1E0EDCB829015FAA96 /* Predicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Predicate.swift; path = Sources/Nimble/Matchers/Predicate.swift; sourceTree = "<group>"; };
 		8AB0359C436BCF4476926E7E8967A98E /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
 		8F0D40CA10F0A34DFB9BA258273F421A /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		90E61B87640F2204D0B594D22DCAEEDA /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
+		93B03242F03F50B7B9E7105E34D95AF3 /* PaylineSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylineSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485287546D2B320DD5ACCE975E67754 /* ThrowAssertion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowAssertion.swift; path = Sources/Nimble/Matchers/ThrowAssertion.swift; sourceTree = "<group>"; };
-		959A177A7946BF50EF4C32CD587EC7E8 /* PaymentController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
+		95478F23BECCBA5434E422B69443C285 /* PLWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PLWebViewController.swift; sourceTree = "<group>"; };
 		95D6D2F7DEC65836C64E8D63713571BE /* CwlMachBadInstructionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlMachBadInstructionHandler.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h; sourceTree = "<group>"; };
 		98842AD3DBE2E7DFB5AD686434B48B93 /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
-		994710A9BF354891E0EBB23A90521FB8 /* WalletControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletControllerDelegate.swift; sourceTree = "<group>"; };
 		99A7338B92E0687F059AB2F9A528C096 /* Pods-PaylineSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaylineSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9B003C6069993949BDD6703C9F71B464 /* ToSucceed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToSucceed.swift; path = Sources/Nimble/Matchers/ToSucceed.swift; sourceTree = "<group>"; };
 		9D496C0DB62DF3A906836F3969A17BF7 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Sources/Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E47F3442BD1226861FCA578B669BB44 /* Await.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Await.swift; path = Sources/Nimble/Utils/Await.swift; sourceTree = "<group>"; };
 		9F111B2D2E55314F929FB10B6B5A603B /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		A0C3BBA8DAA6D32F89AC1E495086B6A1 /* Pods-PaylineSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaylineSDK_Example.modulemap"; sourceTree = "<group>"; };
@@ -288,7 +300,6 @@
 		AD69E0A37379BB8288939C17AD34DA83 /* Quick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Quick-Info.plist"; sourceTree = "<group>"; };
 		ADDAA356105FF741033E3CCFC62422F5 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		B11B175845896DABF5802944FC6CE969 /* NSString+C99ExtendedIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSString+C99ExtendedIdentifier.swift"; path = "Sources/Quick/NSString+C99ExtendedIdentifier.swift"; sourceTree = "<group>"; };
-		B1AA7FB42F0DBD51A5147B5C7BA204A6 /* PaylineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PaylineSDK.framework; path = PaylineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B7157D004A4126946D4A4A653B43CC /* Pods-PaylineSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaylineSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B23F7CCDFC00F325FA9F24F7ACEC48F2 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		B4351E11D6AF1227F6658BA75B9D1854 /* ElementsEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementsEqual.swift; path = Sources/Nimble/Matchers/ElementsEqual.swift; sourceTree = "<group>"; };
@@ -296,41 +307,45 @@
 		BBCF41B2889793B97D1535A2BB3CBDD3 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		BBDCC33C11495958561C3783EE043F46 /* Pods-PaylineSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaylineSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		BFB6984AE0511C39A1CEF09719B7943D /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
+		C055492738355370F96ED1109412A015 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C07111C415AF2C57AC0F51E870EFC070 /* ScriptHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptHandler.swift; sourceTree = "<group>"; };
 		C40FBAE2F1C3133CB2E9864BF29AAB0C /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
 		C483A6C2B150DC63219083860FAF3CA9 /* Pods-PaylineSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PaylineSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C54C61B95938349BB9588E0A4D539DB3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93EF4BD6085D9D4DD5CD87DAF73D16C /* Pods_PaylineSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaylineSDK_Example.framework; path = "Pods-PaylineSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C79A3C46B5DF5B213D330E00B1BE2C69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CBD0AD408EAE4BBB386FD5D3CC7B1CCF /* WalletController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletController.swift; sourceTree = "<group>"; };
 		CDE92ABC2F7B9A21F56722990F2D34E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CF61B2A846AC9381ACC494B5C8B09B3A /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Sources/Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
-		D24A9D76B58262BF3EE3745DE6A1971F /* ScriptEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptEvent.swift; sourceTree = "<group>"; };
 		D556C03D6C646F9FFDF2C01D0F854DDC /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
 		D60E53306307DFD81C5455ED758376E3 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		D75BC9A3B67B87FE4A75A67DC59072FC /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
+		D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PaylineSDK/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		D876A300780522872BE55647A7E497B3 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		D8F4860F1C3FE82AB81AC5D2C2536619 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
-		DB2E6364E45FAE045AF58F443C325890 /* PaylineSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaylineSDK-prefix.pch"; sourceTree = "<group>"; };
-		DDF85676466AB0157537A00E297A9D88 /* ScriptAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScriptAction.swift; sourceTree = "<group>"; };
+		D9A811578E75AF218654785CBFB52EF7 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA2A0B98D459D625889E35717B08BE4 /* ResourceBundle-PaylineSDK-PaylineSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PaylineSDK-PaylineSDK-Info.plist"; sourceTree = "<group>"; };
+		DDAD761B59EB88BCAB4F383E05BC1A7A /* WebController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		DE008AAE31097395CFAF187CEA74FEAA /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Sources/QuickObjectiveC/Quick.h; sourceTree = "<group>"; };
 		DEC2BEB8FBAA698511FC013C98F1A4FC /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		DF65B283C0E1AFCD37C98D1645E614CA /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
-		DFEB06CE202FD6925E42DE516F90EA50 /* PaymentAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentAction.swift; sourceTree = "<group>"; };
-		E3F97F5BA0C9DE025979FDA3B2C34443 /* PLWebViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PLWebViewControllerDelegate.swift; sourceTree = "<group>"; };
+		DF9A082C37BA6B935310CCF222EBAE48 /* WidgetState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetState.swift; sourceTree = "<group>"; };
+		E27829728BC306A8FD69D1E8FFBB73FB /* PLWebViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PLWebViewControllerDelegate.swift; sourceTree = "<group>"; };
+		E3658FA122C9BB75108B640E505503FF /* PaymentController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
 		E4A8967B7FD81D569D6ED2D6BCA8899B /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		E8A3130267C914079915AB0054EC5C90 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
+		EA91B3BB0429D7E09A672F3309E83106 /* WalletControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletControllerDelegate.swift; sourceTree = "<group>"; };
 		EC948262651D96EA726A923E19FD5D88 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		ECD59DF5CA8BDE11EFAA767CDDF740B8 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickSpecBase/include/QuickSpecBase.h; sourceTree = "<group>"; };
-		F0176D5EC294C1AF6C7AAFDA14242343 /* PaylineSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaylineSDK-umbrella.h"; sourceTree = "<group>"; };
+		EF9B4ECDD9B45930E77C194E2EC57B40 /* PaylineSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PaylineSDK-dummy.m"; sourceTree = "<group>"; };
 		F0281107AD16AD860EE715654CDB53D0 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		F0E824AA11D5A3B34AF3D2EDF9287BC7 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
+		F0EF9938B0074764B0C0C29DDF6E0DDA /* PaylineSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaylineSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F319BEBE050D66DA9613FF40FE8FE773 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		F358B13B107ACB92FE7D370580EEF68C /* Pods-PaylineSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaylineSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F6D33E5E5A3968B0B842A6D33704582C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		F70C91C1753ACFF9224BC95CFA014C8F /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
 		F98A57C25FCB14F5E968AEF9745ACB8C /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		F9D789ABEBC89C7C82B76C1CD225DD13 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		FA2BA90FA6C356E2D1ACDBE736F40672 /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
 		FB207B7CDDD0CF6F69438BA60249DDDA /* CwlCatchBadInstruction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchBadInstruction.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlCatchBadInstruction.swift; sourceTree = "<group>"; };
-		FBB50E2578670A770A98994F7B0BDA01 /* WalletController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletController.swift; sourceTree = "<group>"; };
 		FD5BD0F918D2BAF58ECF8F68950EB748 /* Pods-PaylineSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaylineSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -352,11 +367,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F3FB1844C2CDADC9A749EB25F633742 /* Frameworks */ = {
+		31909AC0602EA3228EDE429449AB47C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09B30C2C426DF25AA57393F1CF6171B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E14B5BADF6F10865EF3DACC45A16E76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AF2DDCEDD2A879688BC0342D07ABF9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,16 +401,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E7F8361795C2C3A9697EA41A1136D58 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				F6D33E5E5A3968B0B842A6D33704582C /* LICENSE */,
-				2A91BCF98A6F6A0CC7A9CB6C11D206D6 /* PaylineSDK.podspec */,
-				2ABB3232ED553A44E63C849DEA64054C /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,66 +409,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1AF746FE436CFD82E00DCF3338CDFC55 /* wallet */ = {
+		422BC3273F900C01834EE85DB808EB8B /* PaylineSDK */ = {
 			isa = PBXGroup;
 			children = (
-				3582E1CC11759B5D95CB16EBF8922F7C /* domain */,
+				CEE2E8CB04B033668D91DA25323F0414 /* core */,
+				F1588E4B2C7DF1DFDDAC7EC0E14EB782 /* payment */,
+				99E5A836B3C4727A7CD19C4F514F630F /* Pod */,
+				FD430E3E19393829BE85ECB444959822 /* Resources */,
+				F2A47010F287963DC148DB5C2EFA8F2D /* Support Files */,
+				DDDD05D2EB67C96B4B41BF113B00F59D /* wallet */,
 			);
-			name = wallet;
-			path = PaylineSDK/Classes/wallet;
+			name = PaylineSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		200BC89732ADF9C7B53AA1C44DC479B2 /* core */ = {
+		787660104CAAA444D875796FB5EB0F35 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F34D81E0577D9723F3446326FE944279 /* domain */,
-				D56FE71597E2D3E4A62B51D807A3CB94 /* presentation */,
-			);
-			name = core;
-			path = PaylineSDK/Classes/core;
-			sourceTree = "<group>";
-		};
-		3582E1CC11759B5D95CB16EBF8922F7C /* domain */ = {
-			isa = PBXGroup;
-			children = (
-				FBB50E2578670A770A98994F7B0BDA01 /* WalletController.swift */,
-				994710A9BF354891E0EBB23A90521FB8 /* WalletControllerDelegate.swift */,
-			);
-			name = domain;
-			path = domain;
-			sourceTree = "<group>";
-		};
-		37788FB4FE7764B9A1DA061D79AE4D29 /* domain */ = {
-			isa = PBXGroup;
-			children = (
-				68BFD9A5DC5D79C71CAB4DB815AE2C62 /* ContextInfoKey.swift */,
-				85D2BCC9AF77993785CF506936357C0A /* ContextInfoResult.swift */,
-				DFEB06CE202FD6925E42DE516F90EA50 /* PaymentAction.swift */,
-				959A177A7946BF50EF4C32CD587EC7E8 /* PaymentController.swift */,
-				16A010E5E249EB0635525CBBE452E94B /* PaymentControllerDelegate.swift */,
-			);
-			name = domain;
-			path = domain;
-			sourceTree = "<group>";
-		};
-		4715C149626903DEA33160128C654340 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C4CF48A51B5AA284431F772C987F74EB /* PaylineSDK */,
+				422BC3273F900C01834EE85DB808EB8B /* PaylineSDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		4C63FC03A5B19ECBAE76A78981EC8589 /* Products */ = {
+		7F65BEE54E6376FF8F4CC4A892DB9CAE /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				71CE7BE529E1FBC3EAAB30A2476B5B90 /* Nimble.framework */,
-				B1AA7FB42F0DBD51A5147B5C7BA204A6 /* PaylineSDK.framework */,
-				C93EF4BD6085D9D4DD5CD87DAF73D16C /* Pods_PaylineSDK_Example.framework */,
-				7BEF7F83B2FF4E0837434F1A265F3EED /* Pods_PaylineSDK_Tests.framework */,
-				C54C61B95938349BB9588E0A4D539DB3 /* Quick.framework */,
+				CBD0AD408EAE4BBB386FD5D3CC7B1CCF /* WalletController.swift */,
+				EA91B3BB0429D7E09A672F3309E83106 /* WalletControllerDelegate.swift */,
 			);
-			name = Products;
+			path = domain;
 			sourceTree = "<group>";
 		};
 		86C6C328DF4C27746EF737F411604F1E /* Targets Support Files */ = {
@@ -496,13 +477,14 @@
 			path = "../Target Support Files/Nimble";
 			sourceTree = "<group>";
 		};
-		A5E3B0A7635A521D44C1D11BF1F0EB24 /* payment */ = {
+		99E5A836B3C4727A7CD19C4F514F630F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				37788FB4FE7764B9A1DA061D79AE4D29 /* domain */,
+				C79A3C46B5DF5B213D330E00B1BE2C69 /* LICENSE */,
+				1FFF3490A2FB365B88DB9113C3E825D3 /* PaylineSDK.podspec */,
+				C055492738355370F96ED1109412A015 /* README.md */,
 			);
-			name = payment;
-			path = PaylineSDK/Classes/payment;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		B4A20DE51C57CCE6549A26D79F664F86 /* iOS */ = {
@@ -575,21 +557,16 @@
 				F319BEBE050D66DA9613FF40FE8FE773 /* XCTestSuite+QuickTestSuiteBuilder.m */,
 				8CA0D51E0A6C9C96934383CB820E03FC /* Support Files */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
-		C4CF48A51B5AA284431F772C987F74EB /* PaylineSDK */ = {
+		C4388BDF09AE5368DF0A26A8F226C374 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				200BC89732ADF9C7B53AA1C44DC479B2 /* core */,
-				A5E3B0A7635A521D44C1D11BF1F0EB24 /* payment */,
-				0E7F8361795C2C3A9697EA41A1136D58 /* Pod */,
-				E4B39CE0080AD704AAC7ED58BC9CB354 /* Support Files */,
-				1AF746FE436CFD82E00DCF3338CDFC55 /* wallet */,
+				95478F23BECCBA5434E422B69443C285 /* PLWebViewController.swift */,
+				E27829728BC306A8FD69D1E8FFBB73FB /* PLWebViewControllerDelegate.swift */,
 			);
-			name = PaylineSDK;
-			path = ../..;
+			path = presentation;
 			sourceTree = "<group>";
 		};
 		CA624F57E5DEC150FB8704099F8C7C8B /* Nimble */ = {
@@ -667,18 +644,27 @@
 				D8F4860F1C3FE82AB81AC5D2C2536619 /* XCTestObservationCenter+Register.m */,
 				8F836AD1510BA40D259E6EB9BF67A0C8 /* Support Files */,
 			);
-			name = Nimble;
 			path = Nimble;
+			sourceTree = "<group>";
+		};
+		CEE2E8CB04B033668D91DA25323F0414 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				F5AB7446C0CEBD5A5DA9935102108CF3 /* domain */,
+				C4388BDF09AE5368DF0A26A8F226C374 /* presentation */,
+			);
+			name = core;
+			path = PaylineSDK/Classes/core;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				4715C149626903DEA33160128C654340 /* Development Pods */,
+				787660104CAAA444D875796FB5EB0F35 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				BD2F1A6FE68DC5AF3C94418A88BB7E29 /* Pods */,
-				4C63FC03A5B19ECBAE76A78981EC8589 /* Products */,
+				D822A40040952AE7CC2231C5A11C8E35 /* Products */,
 				86C6C328DF4C27746EF737F411604F1E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -700,41 +686,82 @@
 			path = "Target Support Files/Pods-PaylineSDK_Example";
 			sourceTree = "<group>";
 		};
-		D56FE71597E2D3E4A62B51D807A3CB94 /* presentation */ = {
+		D822A40040952AE7CC2231C5A11C8E35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D7BACE8BF6A477A39D5BE38141DBD6A /* PLWebViewController.swift */,
-				E3F97F5BA0C9DE025979FDA3B2C34443 /* PLWebViewControllerDelegate.swift */,
+				83D557E55FCD5761B9C41BD547374746 /* Nimble.framework */,
+				93B03242F03F50B7B9E7105E34D95AF3 /* PaylineSDK.bundle */,
+				F0EF9938B0074764B0C0C29DDF6E0DDA /* PaylineSDK.framework */,
+				3D8357CD943C9F860BB7EC4B16CE2E4D /* Pods_PaylineSDK_Example.framework */,
+				1A7C3054304A1D11C7D03216D388BFCB /* Pods_PaylineSDK_Tests.framework */,
+				D9A811578E75AF218654785CBFB52EF7 /* Quick.framework */,
 			);
-			name = presentation;
-			path = presentation;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		E4B39CE0080AD704AAC7ED58BC9CB354 /* Support Files */ = {
+		DDDD05D2EB67C96B4B41BF113B00F59D /* wallet */ = {
 			isa = PBXGroup;
 			children = (
-				17029198EF93456CCAA270DB8ABE0D52 /* PaylineSDK.modulemap */,
-				53B78769D8E22C9FF0338DCDACC2A36F /* PaylineSDK.xcconfig */,
-				85FDF868DD7BDC17077314E51448F50E /* PaylineSDK-dummy.m */,
-				2E91F6D86D8A0D1E5FD0D581A1C9E2FA /* PaylineSDK-Info.plist */,
-				DB2E6364E45FAE045AF58F443C325890 /* PaylineSDK-prefix.pch */,
-				F0176D5EC294C1AF6C7AAFDA14242343 /* PaylineSDK-umbrella.h */,
+				7F65BEE54E6376FF8F4CC4A892DB9CAE /* domain */,
+			);
+			name = wallet;
+			path = PaylineSDK/Classes/wallet;
+			sourceTree = "<group>";
+		};
+		F1588E4B2C7DF1DFDDAC7EC0E14EB782 /* payment */ = {
+			isa = PBXGroup;
+			children = (
+				F4C9B7DD8B590DC1643CC1106398B00D /* domain */,
+			);
+			name = payment;
+			path = PaylineSDK/Classes/payment;
+			sourceTree = "<group>";
+		};
+		F2A47010F287963DC148DB5C2EFA8F2D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E4DDEE6645C6015AAB196DCF7D0B11C /* PaylineSDK.modulemap */,
+				7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */,
+				EF9B4ECDD9B45930E77C194E2EC57B40 /* PaylineSDK-dummy.m */,
+				1F53DAA5E836F98949B4E96742A71A6F /* PaylineSDK-Info.plist */,
+				351872A411F7721D77D5F9381F24E357 /* PaylineSDK-prefix.pch */,
+				84B99A1B82ECEB19BCBE93D015F895C2 /* PaylineSDK-umbrella.h */,
+				DDA2A0B98D459D625889E35717B08BE4 /* ResourceBundle-PaylineSDK-PaylineSDK-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/PaylineSDK";
 			sourceTree = "<group>";
 		};
-		F34D81E0577D9723F3446326FE944279 /* domain */ = {
+		F4C9B7DD8B590DC1643CC1106398B00D /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				DDF85676466AB0157537A00E297A9D88 /* ScriptAction.swift */,
-				D24A9D76B58262BF3EE3745DE6A1971F /* ScriptEvent.swift */,
-				388B0F6ED010234FD488DB0A1DC1C52D /* ScriptHandler.swift */,
-				7528D72D102A7D378389F396EAF7D06C /* WebController.swift */,
-				81ABAE3881CEB07AC431A2C40F26A36E /* WidgetState.swift */,
+				76190FC918CFD6CAD018DC319E735DF6 /* ContextInfoKey.swift */,
+				514AAC0E2145E9C7D0FC1BF69B4EF68B /* ContextInfoResult.swift */,
+				4253EE688B25A14531B116A4A1C66FA9 /* PaymentAction.swift */,
+				E3658FA122C9BB75108B640E505503FF /* PaymentController.swift */,
+				2C6D086AAD0654C279F4B21A61E2C08E /* PaymentControllerDelegate.swift */,
 			);
-			name = domain;
 			path = domain;
+			sourceTree = "<group>";
+		};
+		F5AB7446C0CEBD5A5DA9935102108CF3 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				13AB8675135DEC684CCADBFA25792744 /* ScriptAction.swift */,
+				220A86445D52EC0BCA800425CC4FC23F /* ScriptEvent.swift */,
+				C07111C415AF2C57AC0F51E870EFC070 /* ScriptHandler.swift */,
+				DDAD761B59EB88BCAB4F383E05BC1A7A /* WebController.swift */,
+				DF9A082C37BA6B935310CCF222EBAE48 /* WidgetState.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		FD430E3E19393829BE85ECB444959822 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7FECC0E499C534A140953E05E229174 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,6 +796,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4046247F0AC2477609BABDFE21AF78C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFC64F5A47BCB4A3DFF150ECDED66E16 /* PaylineSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F684E10CDA60BAC918A92251A0A1968A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -782,14 +817,6 @@
 				1FA0DEC9E883929115DD91352F570F3B /* Nimble.h in Headers */,
 				30966E26266F62432C8E914340871113 /* NMBExceptionCapture.h in Headers */,
 				74C4A30A55AC7DB057CE14BCA15299C4 /* NMBStringify.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFFAB960BFA264C1FE34E50A415AECB4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EBB18E07B6923BF179DB7F3439A9108 /* PaylineSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,26 +838,44 @@
 			);
 			name = Quick;
 			productName = Quick;
-			productReference = C54C61B95938349BB9588E0A4D539DB3 /* Quick.framework */;
+			productReference = D9A811578E75AF218654785CBFB52EF7 /* Quick.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		701B77B75F451A58F62F1813EFAEB460 /* PaylineSDK */ = {
+		33F296AEE737B27A78BDB9B2299E157E /* PaylineSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 803832346E854D515775CC8839D8C24B /* Build configuration list for PBXNativeTarget "PaylineSDK" */;
+			buildConfigurationList = 4A6E4226A8545A47BB97493D260FB80C /* Build configuration list for PBXNativeTarget "PaylineSDK" */;
 			buildPhases = (
-				FFFAB960BFA264C1FE34E50A415AECB4 /* Headers */,
-				DACAB92EF861EE817718325F402E9ADA /* Sources */,
-				4F3FB1844C2CDADC9A749EB25F633742 /* Frameworks */,
-				2B4AA2BF7948108BFFAC3E27F70BADD9 /* Resources */,
+				D4046247F0AC2477609BABDFE21AF78C /* Headers */,
+				8263851940A45014CED6EE72EAFAF9F4 /* Sources */,
+				6E14B5BADF6F10865EF3DACC45A16E76 /* Frameworks */,
+				7E4BCCB3A838CD658F7CD76BE94AA10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D375DF22577934D4612357FC1D71B8CB /* PBXTargetDependency */,
+			);
+			name = PaylineSDK;
+			productName = PaylineSDK;
+			productReference = F0EF9938B0074764B0C0C29DDF6E0DDA /* PaylineSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91B8F92681097625B24941BFC9E892E4 /* PaylineSDK-PaylineSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF3F9B0EE81BC8E95EE9A26F92554DA /* Build configuration list for PBXNativeTarget "PaylineSDK-PaylineSDK" */;
+			buildPhases = (
+				636B5A49E17A5F77ECEA173E8C19FD7D /* Sources */,
+				31909AC0602EA3228EDE429449AB47C6 /* Frameworks */,
+				BB216CF54F1F534EAB09C12C076863A8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PaylineSDK;
-			productName = PaylineSDK;
-			productReference = B1AA7FB42F0DBD51A5147B5C7BA204A6 /* PaylineSDK.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "PaylineSDK-PaylineSDK";
+			productName = "PaylineSDK-PaylineSDK";
+			productReference = 93B03242F03F50B7B9E7105E34D95AF3 /* PaylineSDK.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		B4AB06E2251427FAFE357BB44A0CAC1B /* Pods-PaylineSDK_Tests */ = {
 			isa = PBXNativeTarget;
@@ -850,7 +895,7 @@
 			);
 			name = "Pods-PaylineSDK_Tests";
 			productName = "Pods-PaylineSDK_Tests";
-			productReference = 7BEF7F83B2FF4E0837434F1A265F3EED /* Pods_PaylineSDK_Tests.framework */;
+			productReference = 1A7C3054304A1D11C7D03216D388BFCB /* Pods_PaylineSDK_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D8A30A9430C37A6ADAD72C2033DDE2E1 /* Pods-PaylineSDK_Example */ = {
@@ -869,7 +914,7 @@
 			);
 			name = "Pods-PaylineSDK_Example";
 			productName = "Pods-PaylineSDK_Example";
-			productReference = C93EF4BD6085D9D4DD5CD87DAF73D16C /* Pods_PaylineSDK_Example.framework */;
+			productReference = 3D8357CD943C9F860BB7EC4B16CE2E4D /* Pods_PaylineSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F554EA343D656E7FB0C1ACC045EB2666 /* Nimble */ = {
@@ -887,7 +932,7 @@
 			);
 			name = Nimble;
 			productName = Nimble;
-			productReference = 71CE7BE529E1FBC3EAAB30A2476B5B90 /* Nimble.framework */;
+			productReference = 83D557E55FCD5761B9C41BD547374746 /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -907,12 +952,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 4C63FC03A5B19ECBAE76A78981EC8589 /* Products */;
+			productRefGroup = D822A40040952AE7CC2231C5A11C8E35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F554EA343D656E7FB0C1ACC045EB2666 /* Nimble */,
-				701B77B75F451A58F62F1813EFAEB460 /* PaylineSDK */,
+				33F296AEE737B27A78BDB9B2299E157E /* PaylineSDK */,
+				91B8F92681097625B24941BFC9E892E4 /* PaylineSDK-PaylineSDK */,
 				D8A30A9430C37A6ADAD72C2033DDE2E1 /* Pods-PaylineSDK_Example */,
 				B4AB06E2251427FAFE357BB44A0CAC1B /* Pods-PaylineSDK_Tests */,
 				21601EF550F1EC90783FB15568103C4F /* Quick */,
@@ -921,13 +967,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2B4AA2BF7948108BFFAC3E27F70BADD9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E7E83A15C779DECEFC94CEA9FC34F63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -935,10 +974,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E4BCCB3A838CD658F7CD76BE94AA10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821E129022491104009D30B7 /* Assets.xcassets in Resources */,
+				C438B97B31455773EBAC7DF893A048CF /* PaylineSDK.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A10453DC1AD19665B54A53747B184EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821E129122491106009D30B7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,10 +998,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB216CF54F1F534EAB09C12C076863A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40DD06325136E648F0DAD5D3E4BFF5F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D834738F9A8358D31C7F58B37EFBD099 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821E129222491107009D30B7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,6 +1063,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAF31AF823A6401A6E8C0336B45B0DD /* Pods-PaylineSDK_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B5A49E17A5F77ECEA173E8C19FD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8263851940A45014CED6EE72EAFAF9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68B4C130272478628C59AB7C1D03D09 /* ContextInfoKey.swift in Sources */,
+				0A5C7756C1E872DE3572E30BB660A5A7 /* ContextInfoResult.swift in Sources */,
+				B02C69985700D29DAC5E64091BC5F509 /* PaylineSDK-dummy.m in Sources */,
+				B3FD4B13F124818E94677C383AB502D0 /* PaymentAction.swift in Sources */,
+				E270BEC543C78DD07E227E3098CE0F4C /* PaymentController.swift in Sources */,
+				E78652FE5651066A32D357B0B91E0871 /* PaymentControllerDelegate.swift in Sources */,
+				0E3DEABB22B69E32442081AB75145649 /* PLWebViewController.swift in Sources */,
+				3423D01DBBA4DFC3DDC8E77BC5276FB8 /* PLWebViewControllerDelegate.swift in Sources */,
+				E1B80ABAE073DDB457E4A84240AF03F1 /* ScriptAction.swift in Sources */,
+				CDEE5F1FC5AA0C51966FC613C95C7F4B /* ScriptEvent.swift in Sources */,
+				D038A8A416F44C4D40546AEFB72A37B1 /* ScriptHandler.swift in Sources */,
+				EF0288B9D7163B7AE4A29D97A31C38D1 /* WalletController.swift in Sources */,
+				88A75398D5F35AD41275DB8E8E2CADB8 /* WalletControllerDelegate.swift in Sources */,
+				FA707A27008A78BDABBFE33E672A816C /* WebController.swift in Sources */,
+				9057744E7DDB3C04229CBEC08798EA4C /* WidgetState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,28 +1165,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DACAB92EF861EE817718325F402E9ADA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CF7B239162FFB2908D5E0C9F73ED8F0 /* ContextInfoKey.swift in Sources */,
-				FB962249F2E6FA8F9A7180874432652B /* ContextInfoResult.swift in Sources */,
-				25A0CC9D70E7E4A622A69DC781009625 /* PaylineSDK-dummy.m in Sources */,
-				7C14A616DD30328F895587FA298DBA4C /* PaymentAction.swift in Sources */,
-				4C5CB29262A9640B160D5398A3F82800 /* PaymentController.swift in Sources */,
-				2AA8E5AA4EE324DFB9E0C4A857418519 /* PaymentControllerDelegate.swift in Sources */,
-				4C6B3D1A556D5B3C9AA604AF3781556D /* PLWebViewController.swift in Sources */,
-				B2ABE1829504CCC80FD22FCDC74E692F /* PLWebViewControllerDelegate.swift in Sources */,
-				EA098512AE4B7671496E550F1342DEBB /* ScriptAction.swift in Sources */,
-				942BF2177FEFD80939E1769C59180D57 /* ScriptEvent.swift in Sources */,
-				3A3354FA3C5BE7CA9C45529449793560 /* ScriptHandler.swift in Sources */,
-				5755CB4967B12E72CDE9B4529E8F08B9 /* WalletController.swift in Sources */,
-				B3BD0A92E4EB9DE1762E918592F5787B /* WalletControllerDelegate.swift in Sources */,
-				74630030359E81A663F0A894DDF9793B /* WebController.swift in Sources */,
-				D149CCA6DB2E25A8D4B91B8F497E46D2 /* WidgetState.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1118,8 +1183,14 @@
 		626584B7E134384621541F80F94C796D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PaylineSDK;
-			target = 701B77B75F451A58F62F1813EFAEB460 /* PaylineSDK */;
+			target = 33F296AEE737B27A78BDB9B2299E157E /* PaylineSDK */;
 			targetProxy = C5950BAFB4F0FF8980D769907F030C3A /* PBXContainerItemProxy */;
+		};
+		D375DF22577934D4612357FC1D71B8CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PaylineSDK-PaylineSDK";
+			target = 91B8F92681097625B24941BFC9E892E4 /* PaylineSDK-PaylineSDK */;
+			targetProxy = CB1089AB99768C425D7C351C9ECE5407 /* PBXContainerItemProxy */;
 		};
 		DBDF9460B03B9D8B95DCB45D9ACF05E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1130,6 +1201,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		56789C1F7BA6851BC7B925DE98F0D1A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PaylineSDK";
+				INFOPLIST_FILE = "Target Support Files/PaylineSDK/ResourceBundle-PaylineSDK-PaylineSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PaylineSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		6A4548A061714B033706F70D2A73A033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B786BC8797260B143FE3F7660FCD1DA /* Pods-PaylineSDK_Example.debug.xcconfig */;
@@ -1286,75 +1373,9 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		B3973AF88C41A62980239A8C2D8A6530 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53B78769D8E22C9FF0338DCDACC2A36F /* PaylineSDK.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PaylineSDK/PaylineSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PaylineSDK/PaylineSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
-				PRODUCT_MODULE_NAME = PaylineSDK;
-				PRODUCT_NAME = PaylineSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B3BABEC5948FCDCA63D2D3314293B649 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53B78769D8E22C9FF0338DCDACC2A36F /* PaylineSDK.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PaylineSDK/PaylineSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PaylineSDK/PaylineSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
-				PRODUCT_MODULE_NAME = PaylineSDK;
-				PRODUCT_NAME = PaylineSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1421,6 +1442,39 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		C529DA74CACB33BE405C47EE91FDDE67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PaylineSDK/PaylineSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PaylineSDK/PaylineSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
+				PRODUCT_MODULE_NAME = PaylineSDK;
+				PRODUCT_NAME = PaylineSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		C78285AE7657C756404885109C5198CF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1520,6 +1574,22 @@
 			};
 			name = Debug;
 		};
+		E4F57A34C6D4E9591A530801C0C83FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PaylineSDK";
+				INFOPLIST_FILE = "Target Support Files/PaylineSDK/ResourceBundle-PaylineSDK-PaylineSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PaylineSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		EB1AF6C96B25F0CBCBA3300313CEEFAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 701C38FA0DC2BC3899CC6D251D63399A /* Pods-PaylineSDK_Tests.debug.xcconfig */;
@@ -1591,6 +1661,38 @@
 			};
 			name = Release;
 		};
+		FA9577322133E3AE488F61CD8E31633B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3752687505736A1E6CC46E379AA41C /* PaylineSDK.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PaylineSDK/PaylineSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PaylineSDK/PaylineSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PaylineSDK/PaylineSDK.modulemap";
+				PRODUCT_MODULE_NAME = PaylineSDK;
+				PRODUCT_NAME = PaylineSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1612,20 +1714,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4A6E4226A8545A47BB97493D260FB80C /* Build configuration list for PBXNativeTarget "PaylineSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA9577322133E3AE488F61CD8E31633B /* Debug */,
+				C529DA74CACB33BE405C47EE91FDDE67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF3F9B0EE81BC8E95EE9A26F92554DA /* Build configuration list for PBXNativeTarget "PaylineSDK-PaylineSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56789C1F7BA6851BC7B925DE98F0D1A4 /* Debug */,
+				E4F57A34C6D4E9591A530801C0C83FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72820C290CC101D8186B2F9817B3A42A /* Build configuration list for PBXNativeTarget "Quick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1E0723D09DEAA3146180EE36A5C2552 /* Debug */,
 				D16276B87375EBDA043A82928370A5CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		803832346E854D515775CC8839D8C24B /* Build configuration list for PBXNativeTarget "PaylineSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3973AF88C41A62980239A8C2D8A6530 /* Debug */,
-				B3BABEC5948FCDCA63D2D3314293B649 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

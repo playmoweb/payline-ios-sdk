@@ -17,17 +17,48 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
     let amount: Double
     let currencyCode: String
     let languageCode: String
-    //    let buyer: Buyer
-    //    let items: [CartItem]
+    let buyer: Buyer
     
-    public static func testPaymentParams(amout: Double) -> FetchPaymentTokenParams {
+    public static func testPaymentParams(amout: Double, walletId: String) -> FetchPaymentTokenParams {
         let orderRef = UUID.init().uuidString
-        return FetchPaymentTokenParams(orderRef: orderRef, amount: amout , currencyCode: "EUR", languageCode: "FR")
+        let buyer = Buyer(
+        firstname: "John",
+        lastname: "Doe",
+        email: "John.Doe@gmail.com",
+        mobilePhone: "0123456789",
+        shippingAddress: Address(
+        firstname: "John",
+        lastname: "Doe",
+        street1: "1 rue de Rue",
+        city: "Aix-en-Provence",
+        zipCode: 13100,
+        country: "FR",
+        phone: "0123456789"
+        ),
+        walletId: walletId
+        )
+        return FetchPaymentTokenParams(orderRef: orderRef, amount: amout , currencyCode: "EUR", languageCode: "FR", buyer: buyer)
     }
     
-    public static func testPaymentFailureParams() -> FetchPaymentTokenParams {
+    public static func testPaymentFailureParams(walletId: String) -> FetchPaymentTokenParams {
         let orderRef = UUID.init().uuidString
-        return FetchPaymentTokenParams(orderRef: orderRef, amount: 33314 , currencyCode: "EUR", languageCode: "FR")
+        let buyer = Buyer(
+            firstname: "John",
+            lastname: "Doe",
+            email: "John.Doe@gmail.com",
+            mobilePhone: "0123456789",
+            shippingAddress: Address(
+                firstname: "John",
+                lastname: "Doe",
+                street1: "1 rue de Rue",
+                city: "Aix-en-Provence",
+                zipCode: 13100,
+                country: "FR",
+                phone: "0123456789"
+            ),
+            walletId: walletId
+        )
+        return FetchPaymentTokenParams(orderRef: orderRef, amount: 33314 , currencyCode: "EUR", languageCode: "FR", buyer: buyer)
     }
 }
 
@@ -37,7 +68,7 @@ public struct FetchWalletTokenParams: FetchTokenParams {
     let languageCode: String
     
     
-  public static func testWalletParams() -> FetchWalletTokenParams{
+  public static func testWalletParams(walletId: String) -> FetchWalletTokenParams{
         return FetchWalletTokenParams(
             buyer: Buyer(
                 firstname: "John",
@@ -53,7 +84,7 @@ public struct FetchWalletTokenParams: FetchTokenParams {
                     country: "FR",
                     phone: "0123456789"
                 ),
-                walletId: "12342414-DFD-13434141"
+                walletId: walletId
             ),
             updatePersonalDetails: false,
             languageCode: "EN"
@@ -74,7 +105,6 @@ public struct Address: Encodable {
     let firstname: String
     let lastname: String
     let street1: String
-    //    let street2: String
     let city: String
     let zipCode: Int
     let country: String
