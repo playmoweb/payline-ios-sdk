@@ -18,7 +18,6 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
     let currencyCode: String
     let languageCode: String
     let buyer: Buyer
-    //    let items: [CartItem]
     
     public static func testPaymentParams(amout: Double, walletId: String) -> FetchPaymentTokenParams {
         let orderRef = UUID.init().uuidString
@@ -106,7 +105,6 @@ public struct Address: Encodable {
     let firstname: String
     let lastname: String
     let street1: String
-    //    let street2: String
     let city: String
     let zipCode: Int
     let country: String

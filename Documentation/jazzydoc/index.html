@@ -13,7 +13,7 @@
     <a title="PaylineSDK  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">PaylineSDK Docs</a> (41% documented)</p>
+        <p><a href="index.html">PaylineSDK Docs</a> (43% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -80,16 +80,25 @@
 <h1 id='description' class='heading'>Description</h1>
 
 <p>Le SDK Payline est un kit de développement qui va permettre d&#39;intéragir avec le service Payline afin d&#39;effectuer un paiement ou de voir le porte-monnaie.</p>
-<h2 id='example' class='heading'>Example</h2>
+<h2 id='exemple' class='heading'>Exemple</h2>
 
-<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
-<h2 id='requirements' class='heading'>Requirements</h2>
+<p>Pour lancer le projet d&#39;exemple, il vous suffit de cloner ce repo, puis d&#39;executer la commande  <code>pod install</code> dans le dossier Example</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>PaylineSDK is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
-it, simply add the following line to your Podfile:</p>
+<p>PaylineSDK est disponible via <a href="https://cocoapods.org">CocoaPods</a>.</p>
+
+<p>Pour l&#39;installer:</p>
+
+<ol>
+<li>Dans votre Podfile, ajoutez la ligne suivante:</li>
+</ol>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'PaylineSDK'</span>
 </code></pre>
+
+<ol>
+<li>Executez la commande suivante à la racine de votre projet:
+<code>pod install</code></li>
+</ol>
 <h1 id='utilisation' class='heading'>Utilisation</h1>
 <h2 id='initialisation' class='heading'>Initialisation</h2>
 
@@ -109,25 +118,50 @@ La méthode d&#39;initialisation du porte-monnaie requiert deux paramètres: un 
 <p>Pour que votre UIViewController agisse comme un delegate, vous devez implementer les protocol <code><a href="Protocols/PaymentControllerDelegate.html">PaymentControllerDelegate</a></code> et <code><a href="Protocols/WalletControllerDelegate.html">WalletControllerDelegate</a></code>:</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">PaymentControllerDelegate</span><span class="p">,</span> <span class="kt">WalletControllerDelegate</span>
 </code></pre>
-<h2 id='configuration' class='heading'>Configuration</h2>
+<h2 id='r-aliser-un-paiement' class='heading'>Réaliser un paiement</h2>
 
 <p>La méthode <code>showPaymentForm</code> est utilisée pour afficher la page des moyens de paiement.</p>
-<pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="kt">PaymentController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-<span class="p">}()</span>
-<span class="n">paymentController</span><span class="o">.</span><span class="nf">showPaymentForm</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<pre class="highlight swift"><code>
+<span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">clickedPay</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+    <span class="n">paymentController</span><span class="o">.</span><span class="nf">showPaymentForm</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
-<p>OR</p>
+<p>La récupération du paramètre <code>url</code> se fera selon vos choix d&#39;implementation. 
+Pour plus d&#39;informations, veuillez vous référer à la documentation Payline en cliquant <a href="https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget">ici</a></p>
+<h2 id='acc-der-au-portefeuille' class='heading'>Accéder au portefeuille</h2>
 
 <p>La méthode <code>showManageWallet</code> est utilisée pour afficher la page du porte-monnaie.</p>
-<pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="kt">WalletController</span><span class="p">(</span><span class="nv">presentingViewController</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-<span class="p">}()</span>
-<span class="n">walletController</span><span class="o">.</span><span class="nf">manageWebWallet</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">clickedManageWallet</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">walletController</span><span class="o">.</span><span class="nf">manageWebWallet</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
-<p>Ces deux méthodes requierent l&#39;url de la page vers laquelle nous devons êtres redirigés.</p>
+<p>Comme pour la réaisation d&#39;un paiement, la récupération du paramètre <code>url</code> se fera selon vos choix d&#39;implementation. 
+Pour plus d&#39;informations, veuillez vous référer à la documentation Payline en cliquant <a href="https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget">ici</a></p>
+<h2 id='impl-mentation-des-delegates' class='heading'>Implémentation des delegates</h2>
+<h3 id='paymentcontrollerdelegate' class='heading'>PaymentControllerDelegate</h3>
+
+<p>Le PaymentControllerDelegate est une interface qui définit la communication entre l&#39;application et le PaymentController.</p>
+
+<p>Ce dernier nécessite l&#39;implémentation de cinq methodes:</p>
+
+<ul>
+<li><p><code>paymentControllerDidShowPaymentForm(_:)</code> : Méthode appelé lorsque la liste des moyens de paiement a été afichée.</p></li>
+<li><p><code>paymentControllerDidFinishPaymentForm(_:withState:)</code>: Méthode appelé lorsque le paiement est terminé. Cette méthode prends en paramètre un objet de type <code><a href="Enums/WidgetState.html">WidgetState</a></code> qui est une énumération des différents valeurs possible pour la propriété state retourné par les fonctions callback du widget.</p></li>
+<li><p><code>paymentController(_:didGetIsSandbox:)</code>: Méthode appelé lorsque l&#39;environnement de paiement est connu(environnement de test ou de production).</p></li>
+<li><p><code>paymentController(_:didGetLanguage:)</code>: Méthode appelé lorsque la langue du widget est connue.</p></li>
+<li><p><code>paymentController(_:didGetContextInfo:)</code>: Méthode appelé à la récupération d&#39;une information sur le contexte de paiement.</p></li>
+</ul>
+<h3 id='walletcontrollerdelegate' class='heading'>WalletControllerDelegate</h3>
+
+<p>Le WalletControllerDelegate est une interface qui définit la communication entre le WalletController et l&#39;application.</p>
+
+<p>Ce dernier nécessite l&#39;implémentation d&#39;une méthode:</p>
+
+<p><code>walletControllerDidShowWebWebWallet(_:)</code>: Méthode appelé lorsque la page de gestion du portefeuille a été affichée</p>
 <h2 id='exemple-d-39-utilisation' class='heading'>Exemple d&#39;utilisation</h2>
 <h3 id='initialisation' class='heading'>Initialisation</h3>
 <pre class="highlight swift"><code>
@@ -142,44 +176,62 @@ La méthode d&#39;initialisation du porte-monnaie requiert deux paramètres: un 
 <span class="p">}()</span>
 
 </code></pre>
-<h3 id='implementation-des-delegates' class='heading'>Implementation des delegates</h3>
+<h3 id='effectuer-un-paiement' class='heading'>Effectuer un paiement</h3>
 <pre class="highlight swift"><code>
-<span class="kd">extension</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">PaymentControllerDelegate</span> <span class="p">{</span>
-
-    <span class="kd">func</span> <span class="nf">paymentControllerDidShowPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
-
-    <span class="kd">func</span> <span class="nf">paymentControllerDidCancelPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
-
-    <span class="kd">func</span> <span class="nf">paymentControllerDidFinishPaymentForm</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="n">withState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">WidgetState</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the WidgetState </span>
-    <span class="p">}</span>
-
-
-    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetIsSandbox</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
-
-    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetLanguage</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
-
-    <span class="kd">func</span> <span class="nf">paymentController</span><span class="p">(</span><span class="n">_</span> <span class="nv">paymentController</span><span class="p">:</span> <span class="kt">PaymentController</span><span class="p">,</span> <span class="nv">didGetContextInfo</span><span class="p">:</span> <span class="kt">ContextInfoResult</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
-
+<span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">clickedPay</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+    <span class="c1">//On appelle la méthode showPaymentForm avec l'url du tunnel de paiement récupéré en fonction de votre implémentation</span>
+    <span class="n">paymentController</span><span class="o">.</span><span class="nf">showPaymentForm</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">extension</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">WalletControllerDelegate</span> <span class="p">{</span>
+</code></pre>
+<h3 id='affichage-du-wallet' class='heading'>Affichage du Wallet</h3>
 
-    <span class="kd">func</span> <span class="nf">walletControllerDidShowWebWebWallet</span><span class="p">(</span><span class="n">_</span> <span class="nv">walletController</span><span class="p">:</span> <span class="kt">WalletController</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//handle the action</span>
-    <span class="p">}</span>
+<p>&ldquo;`@IBAction func clickedManageWallet(_ sender: Any?) {
+    let url = URL(string: &hellip;)
+    //On appelle la méthode manageWebWallet avec l&#39;url du wallet récupéré en fonction de votre implémentation.
+    paymentController.manageWebWallet(environment: url)
+}</p>
+<pre class="highlight plaintext"><code>
+### Implementation des delegates
+```swift
 
-<span class="p">}</span>
+extension ViewController: PaymentControllerDelegate {
+
+    func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
+        //Gérer l'action ici
+    }
+
+    func paymentControllerDidCancelPaymentForm(_ paymentController: PaymentController) {
+        //Gérer l'action ici
+    }
+
+    func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState) {
+        //Gérer le WidgetState ici
+    }
+
+
+    func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
+        //Gérer l'action ici
+    }
+
+    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
+        //Gérer l'action ici
+    }
+
+    func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {  
+        //Gérer l'action ici
+    }
+
+}
+
+extension ViewController: WalletControllerDelegate {
+
+    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+        //Gérer l'action ici
+    }
+
+}
 </code></pre>
 <h1 id='documentation-payline' class='heading'>Documentation Payline</h1>
 
@@ -196,7 +248,7 @@ La méthode d&#39;initialisation du porte-monnaie requiert deux paramètres: un 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/" target="_blank" rel="external">payline</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>&copy; 2019 <a class="link" href="https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/" target="_blank" rel="external">payline</a>. All rights reserved. (Last updated: 2019-03-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

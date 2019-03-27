@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ Le PaymentControllerDelegate est une interface qui définit la communication entre l'application et le PaymentController.
+ Il tient l'application au courant des événements du tunnel de paiement (finalisation, annulation) aussi bien que les résultats des fonctions JavaScript.
+ */
+
 public protocol PaymentControllerDelegate: class {
     /**
      * Appelée lorsque la liste des moyens de paiement a été affichée
