@@ -19,13 +19,13 @@ PaylineSDK est disponible via [CocoaPods](https://cocoapods.org).
 
 Pour l'installer:
 
-1. Dans votre Podfile, ajoutez la ligne suivante:
+1. Dans votre Podfile, ajoutez la ligne suivante :
  
  ```ruby 
 pod 'PaylineSDK'
  ```
  
- 2. Executez la commande suivante à la racine de votre projet:
+ 2. Executez la commande suivante à la racine de votre projet :
   `pod install` 
 
 # Utilisation
@@ -43,8 +43,8 @@ lazy var walletController: WalletController = {
     return WalletController(presentingViewController: UIViewController, delegate: WalletControllerDelegate)
 }()
 ```
-La méthode d'initialisation du paiement requiert deux paramètres: un "PaymentControllerDelegate" et un UIViewController
-La méthode d'initialisation du porte-monnaie requiert deux paramètres: un "WalletControllerDelegate" et un UIViewController
+La méthode d'initialisation du paiement requiert deux paramètres : un `PaymentControllerDelegate` et un `UIViewController`
+La méthode d'initialisation du porte-monnaie requiert deux paramètres : un `WalletContrllerDelegate` et un `UIViewController`
 
 
 Pour que votre UIViewController agisse comme un delegate, vous devez implementer les protocol `PaymentControllerDelegate` et `WalletControllerDelegate`:
@@ -88,26 +88,26 @@ Pour plus d'informations, veuillez vous référer à la documentation Payline en
 
 Le PaymentControllerDelegate est une interface qui définit la communication entre l'application et le PaymentController.
 
-Ce dernier nécessite l'implémentation de cinq methodes:
+Ce dernier nécessite l'implémentation de cinq methodes :
 
 - `paymentControllerDidShowPaymentForm(_:)` : Méthode appelé lorsque la liste des moyens de paiement a été afichée.
 
--  `paymentControllerDidFinishPaymentForm(_:withState:)`: Méthode appelé lorsque le paiement est terminé. Cette méthode prends en paramètre un objet de type `WidgetState` qui est une énumération des différents valeurs possible pour la propriété state retourné par les fonctions callback du widget.
+-  `paymentControllerDidFinishPaymentForm(_:withState:)` : Méthode appelé lorsque le paiement est terminé. Cette méthode prends en paramètre un objet de type `WidgetState` qui est une énumération des différents valeurs possible pour la propriété state retourné par les fonctions callback du widget.
 
-- `paymentController(_:didGetIsSandbox:)`: Méthode appelé lorsque l'environnement de paiement est connu(environnement de test ou de production).
+- `paymentController(_:didGetIsSandbox:)` : Méthode appelé lorsque l'environnement de paiement est connu(environnement de test ou de production).
 
-- `paymentController(_:didGetLanguage:)`: Méthode appelé lorsque la langue du widget est connue.
+- `paymentController(_:didGetLanguage:)` : Méthode appelé lorsque la langue du widget est connue.
 
-- `paymentController(_:didGetContextInfo:)`: Méthode appelé à la récupération d'une information sur le contexte de paiement.
+- `paymentController(_:didGetContextInfo:)` : Méthode appelé à la récupération d'une information sur le contexte de paiement.
 
 
 ### WalletControllerDelegate
 
 Le WalletControllerDelegate est une interface qui définit la communication entre le WalletController et l'application.
 
-Ce dernier nécessite l'implémentation d'une méthode:
+Ce dernier nécessite l'implémentation d'une méthode :
 
-`walletControllerDidShowWebWebWallet(_:)`: Méthode appelé lorsque la page de gestion du portefeuille a été affichée
+`walletControllerDidShowWebWebWallet(_:)` : Méthode appelé lorsque la page de gestion du portefeuille a été affichée
 
 
 
@@ -143,7 +143,8 @@ lazy var walletController: WalletController = {
 
 ### Affichage du Wallet 
 
-```@IBAction func clickedManageWallet(_ sender: Any?) {
+```swift
+@IBAction func clickedManageWallet(_ sender: Any?) {
     let url = URL(string: ...)
     //On appelle la méthode manageWebWallet avec l'url du wallet récupéré en fonction de votre implémentation.
     paymentController.manageWebWallet(environment: url)

@@ -8,18 +8,18 @@ Pour l'initialisation du SDK, il faut tout d'abord instancier un  `PaymentContro
 
 ```swift
 lazy var paymentController: PaymentController = {
-return PaymentController(presentingViewController: UIViewController, delegate: PaymentControllerDelegate)
+    return PaymentController(presentingViewController: UIViewController, delegate: PaymentControllerDelegate)
 }()
 
 lazy var walletController: WalletController = {
-return WalletController(presentingViewController: UIViewController, delegate: WalletControllerDelegate)
+    return WalletController(presentingViewController: UIViewController, delegate: WalletControllerDelegate)
 }()
 ```
-La méthode d'initialisation du paiement requiert deux paramètres: un "PaymentControllerDelegate" et un UIViewController
-La méthode d'initialisation du portefeuille requiert deux paramètres: un "WalletControllerDelegate" et un UIViewController
+La méthode d'initialisation du paiement requiert deux paramètres: un `PaymentControllerDelegate` et un `UIViewController`
+La méthode d'initialisation du portefeuille requiert deux paramètres: un `WalletControllerDelegate` et un `UIViewController`
 
 
-Pour que votre UIViewController agisse comme un delegate, vous devez implementer les protocol `PaymentControllerDelegate` et `WalletControllerDelegate`:
+Pour que votre `UIViewController` agisse comme un delegate, vous devez implementer les protocol `PaymentControllerDelegate` et `WalletControllerDelegate` :
 
 ```swift
 class ViewController: UIViewController, PaymentControllerDelegate, WalletControllerDelegate
@@ -34,8 +34,8 @@ La méthode `showPaymentForm` est utilisée pour afficher la page des moyens de 
 ```swift
 
 @IBAction func clickedPay(_ sender: Any?) {
-let url = URL(string: ...)
-paymentController.showPaymentForm(environment: url)
+    let url = URL(string: ...)
+    paymentController.showPaymentForm(environment: url)
 }
 ```
 La récupération du paramètre `url` se fera selon vos choix d'implementation. 
@@ -48,8 +48,8 @@ La méthode `showManageWallet` est utilisée pour afficher la page du portefeuil
 
 ```swift
 @IBAction func clickedManageWallet(_ sender: Any?) {
-let url = URL(string: ...) {
-walletController.manageWebWallet(environment: url)
+    let url = URL(string: ...) {
+    walletController.manageWebWallet(environment: url)
 }
 ```
 Comme pour la réaisation d'un paiement, la récupération du paramètre `url` se fera selon vos choix d'implementation. 
@@ -57,7 +57,7 @@ Pour plus d'informations, veuillez vous référer à la documentation Payline en
 
 ### PaymentController
 
-Une fois que la page des moyens de paiement a été affichée, plusieurs méthodes sont accessibles:
+Une fois que la page des moyens de paiement a été affichée, plusieurs méthodes sont accessibles :
 
 ```swift
 public func updateWebPaymentData(_ webPaymentData: String)
@@ -87,7 +87,7 @@ public func getLanguage()
 public func getContextInfo(key: ContextInfoKey)
 ```
 `getContextInfo` permet de connaitre l'information dont la clé est passée en paramètre.
-Les différentes clés disponibles pour cette fonction sont les suivantes:
+Les différentes clés disponibles pour cette fonction sont les suivantes :
 
 ```swift
 
@@ -118,7 +118,7 @@ public enum ContextInfoKey: String {
 ```
 ### PaymentControllerDelegate
 
-Le `PaymentControllerDelegate` est une interface qui définit la communication entre l'application et le PaymentController. Il va permettre d'avertir la classe qui l'implémente lorsque des données ou des actions sont reçues. Il contient différentes méthodes:
+Le `PaymentControllerDelegate` est une interface qui définit la communication entre l'application et le PaymentController. Il va permettre d'avertir la classe qui l'implémente lorsque des données ou des actions sont reçues. Il contient différentes méthodes :
 
 ```swift
 func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController)
@@ -129,7 +129,7 @@ func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController)
 ```swift
 func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState)
 ```
-`paymentControllerDidFinishPaymentForm(_:withState:)` est la méthode appelée lorsque le paiement a été terminé. Elle reçoit en paramètre un objet de type  `widgetState` qui correspond aux différents états possible lors de la fin du paiement. Cet objet peut prendre les valeurs suivantes:
+`paymentControllerDidFinishPaymentForm(_:withState:)` est la méthode appelée lorsque le paiement a été terminé. Elle reçoit en paramètre un objet de type  `widgetState` qui correspond aux différents états possible lors de la fin du paiement. Cet objet peut prendre les valeurs suivantes :
 
 ```swift
 public enum WidgetState: String {
@@ -168,7 +168,8 @@ func paymentController(_ paymentController: PaymentController, didGetLanguage: S
 func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult)
 ```
 `paymentController(_:didGetContextInfo:)` est la méthode appelée lorsque l'information du contexte est connue.
-Le paramètre `didGetContextInfo`est de type `ContextInfoResult`. Il s'agit d'une enum qui va être utilisée pour traiter le résultat obtenu par la wevView. Trois types de données pourront être reçus: 
+Le paramètre `didGetContextInfo`est de type `ContextInfoResult`. Il s'agit d'une énumération qui va être utilisée pour traiter le résultat obtenu par la wevView. Trois types de données pourront être reçus : 
+
 ```swift
 
 public enum ContextInfoResult {
@@ -182,7 +183,7 @@ public enum ContextInfoResult {
 
 ### WalletControllerDelegate
 
-Le `WalletControllerDelegate` est une interface qui définit la communication entre l'application et le WalletController. Il va permettre d'avertir la classe qui l'implémente lorsque des données ou des actions sont reçues. Il contient une méthode:
+Le `WalletControllerDelegate` est une interface qui définit la communication entre l'application et le WalletController. Il va permettre d'avertir la classe qui l'implémente lorsque des données ou des actions sont reçues. Il contient une méthode :
 
 ```swift
 func walletControllerDidShowWebWallet(_ walletController: WalletController)
