@@ -107,7 +107,7 @@ Le WalletControllerDelegate est une interface qui définit la communication entr
 
 Ce dernier nécessite l'implémentation d'une méthode :
 
-`walletControllerDidShowWebWebWallet(_:)` : Méthode appelé lorsque la page de gestion du portefeuille a été affichée
+`walletControllerDidShowWebWallet(_:)` : Méthode appelé lorsque la page de gestion du portefeuille a été affichée
 
 
 
@@ -180,7 +180,7 @@ extension ViewController: PaymentControllerDelegate {
 
 extension ViewController: WalletControllerDelegate {
 
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+    func walletControllerDidShowWebWallet(_ walletController: WalletController) {
         //Gérer l'action ici
     }
 

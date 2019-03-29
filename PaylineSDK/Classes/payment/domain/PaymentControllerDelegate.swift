@@ -56,7 +56,7 @@ public protocol PaymentControllerDelegate: class {
      
      * [PW - API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String)
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode: String)
     
     /**
      * Appelée lorsque l'information du contexte est connue
