@@ -96,7 +96,7 @@ Ce dernier nécessite l'implémentation de cinq methodes :
 
 - `paymentController(_:didGetIsSandbox:)` : Méthode appelé lorsque l'environnement de paiement est connu(environnement de test ou de production).
 
-- `paymentController(_:didGetLanguage:)` : Méthode appelé lorsque la langue du widget est connue.
+- `paymentController(_:didGetLanguageCode:)` : Méthode appelé lorsque la langue du widget est connue.
 
 - `paymentController(_:didGetContextInfo:)` : Méthode appelé à la récupération d'une information sur le contexte de paiement.
 
@@ -168,7 +168,7 @@ extension ViewController: PaymentControllerDelegate {
         //Gérer l'action ici
     }
 
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode: String) {
         //Gérer l'action ici
     }
 

@@ -18,6 +18,7 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
     let currencyCode: String
     let languageCode: String
     let buyer: Buyer
+    let customPaymentPageCode: String
     
     public static func testPaymentParams(amout: Double, walletId: String) -> FetchPaymentTokenParams {
         let orderRef = UUID.init().uuidString
@@ -37,7 +38,8 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
         ),
         walletId: walletId
         )
-        return FetchPaymentTokenParams(orderRef: orderRef, amount: amout , currencyCode: "EUR", languageCode: "FR", buyer: buyer)
+        let template = "TEMPLATE_Gx74VpEkJts"
+        return FetchPaymentTokenParams(orderRef: orderRef, amount: amout , currencyCode: "EUR", languageCode: "FR", buyer: buyer, customPaymentPageCode: template)
     }
     
     public static func testPaymentFailureParams(walletId: String) -> FetchPaymentTokenParams {
@@ -58,7 +60,8 @@ public struct FetchPaymentTokenParams: FetchTokenParams {
             ),
             walletId: walletId
         )
-        return FetchPaymentTokenParams(orderRef: orderRef, amount: 33314 , currencyCode: "EUR", languageCode: "FR", buyer: buyer)
+        let template  = "TEMPLATE_Gx74VpEkJts"
+        return FetchPaymentTokenParams(orderRef: orderRef, amount: 33314 , currencyCode: "EUR", languageCode: "FR", buyer: buyer, customPaymentPageCode: template)
     }
 }
 
@@ -66,6 +69,7 @@ public struct FetchWalletTokenParams: FetchTokenParams {
     let buyer: Buyer
     let updatePersonalDetails: Bool
     let languageCode: String
+    let customPaymentPageCode: String
     
     
   public static func testWalletParams(walletId: String) -> FetchWalletTokenParams{
@@ -87,7 +91,8 @@ public struct FetchWalletTokenParams: FetchTokenParams {
                 walletId: walletId
             ),
             updatePersonalDetails: false,
-            languageCode: "EN"
+            languageCode: "EN",
+            customPaymentPageCode: "TEMPLATE_tjrDPqClvLp"
         )
     }
 }

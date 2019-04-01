@@ -19,7 +19,7 @@ class TestDelegate: PaymentControllerDelegate {
     var didCancelPaymentForm = false
     var didFinishPaymentForm = false
     var didGetSandbox: Bool? = nil
-    var didGetLanguage: String? = nil
+    var didGetLanguageCode: String? = nil
     var didGetContextInfo = false
     
     
@@ -39,8 +39,8 @@ class TestDelegate: PaymentControllerDelegate {
     func paymentController(_ paymentController: PaymentController, didGetIsSandbox: Bool) {
         self.didGetSandbox = didGetIsSandbox
     }
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
-        self.didGetLanguage = didGetLanguage
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode: String) {
+        self.didGetLanguageCode = didGetLanguageCode
     }
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {
         self.didGetContextInfo = true
@@ -192,9 +192,9 @@ class PaymentControllerTests: QuickSpec {
 
             paymentController.showPaymentForm(environment: url!)
              expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
-            paymentController.getLanguage()
+            paymentController.getLanguageCode()
 
-            expect(testDelegate.didGetLanguage).toNotEventually(beNil(), timeout: 20, pollInterval: 1, description: nil)
+            expect(testDelegate.didGetLanguageCode).toNotEventually(beNil(), timeout: 20, pollInterval: 1, description: nil)
         }
 
         describe("getContextInfo") {

@@ -86,7 +86,7 @@ class ViewController: UIViewController {
 extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
-        self.paymentController.getLanguage()
+        self.paymentController.getLanguageCode()
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyCode)
@@ -108,8 +108,8 @@ extension ViewController: PaymentControllerDelegate {
         debugPrint(didGetIsSandbox)
     }
     
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
-        debugPrint(didGetLanguage)
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode didGetLanguageCode: String) {
+        debugPrint(didGetLanguageCode)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {

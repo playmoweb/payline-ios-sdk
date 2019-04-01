@@ -52,7 +52,7 @@ public protocol PaymentControllerDelegate: class {
      
      * - Parameters:
      *   - paymentController: Le paymentController qui appel la méthode du delegate
-     *   - didGetLanguage: didGetLanguage correspond à la langue du widget
+     *   - didGetLanguageCode: didGetLanguageCode correspond à la langue du widget
      
      * [PW - API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
