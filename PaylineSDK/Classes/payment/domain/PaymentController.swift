@@ -88,11 +88,11 @@ public final class PaymentController: WebController {
      *
      * [PW-API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
-    public func getLanguage() {
+    public func getLanguageCode() {
         scriptHandler.execute(action: PaymentAction.getLanguage, in: webViewController.webView) { [weak self] (result, _) in
             guard let strongSelf = self else { return }
             guard let language = result as? String else { return }
-            self?.delegate?.paymentController(strongSelf, didGetLanguage: language)
+            self?.delegate?.paymentController(strongSelf, didGetLanguageCode: language)
         }
     }
     

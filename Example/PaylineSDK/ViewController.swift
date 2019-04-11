@@ -36,9 +36,20 @@ class ViewController: UIViewController {
         walletButton.isEnabled = false
     }
     
+    func getWalletId() -> String {
+        let defaults = UserDefaults.standard
+        if let walletId = defaults.string(forKey: "WalletId"){
+            return walletId
+        }else{
+            defaults.set(UUID.init().uuidString, forKey:"WalletId")
+            return defaults.string(forKey: "WalletId")!
+        }
+    }
+    
     @IBAction func clickedGeneratePaymentToken(_ sender: Any?) {
         self.payButton.isEnabled = false
-        let params = FetchPaymentTokenParams.testPaymentParams(amout: Double(amoutTextField.text!) ?? 5 )
+        let walletId = getWalletId()
+        let params = FetchPaymentTokenParams.testPaymentParams(amout: Double(amoutTextField.text!) ?? 5, walletId: walletId )
 
         TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
             self?.testData = URL(string: response.redirectUrl )!
@@ -47,8 +58,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedGenerateWalletToken(_ sender: Any) {
-        
-        let params = FetchWalletTokenParams.testWalletParams()
+        let walletId = getWalletId()
+        let params = FetchWalletTokenParams.testWalletParams(walletId: walletId)
         
         TokenFetcher.execute(path: "/init-manage-wallet", params: params, callback: { [weak self] response in
             self?.walletData = (URL(string: response.redirectUrl )!)
@@ -58,6 +69,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedPay(_ sender: Any?) {
+        payButton.isEnabled = false
         if let data = testData {
             paymentController.showPaymentForm(environment: data)
         }
@@ -74,7 +86,7 @@ class ViewController: UIViewController {
 extension ViewController: PaymentControllerDelegate {
     
     func paymentControllerDidShowPaymentForm(_ paymentController: PaymentController) {
-        self.paymentController.getLanguage()
+        self.paymentController.getLanguageCode()
         self.paymentController.getIsSandbox()
         self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyDigits)
         self.paymentController.getContextInfo(key: ContextInfoKey.paylineCurrencyCode)
@@ -96,8 +108,8 @@ extension ViewController: PaymentControllerDelegate {
         debugPrint(didGetIsSandbox)
     }
     
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String) {
-        debugPrint(didGetLanguage)
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode didGetLanguageCode: String) {
+        debugPrint(didGetLanguageCode)
     }
     
     func paymentController(_ paymentController: PaymentController, didGetContextInfo: ContextInfoResult) {
@@ -115,7 +127,7 @@ extension ViewController: PaymentControllerDelegate {
 }
 
 extension ViewController: WalletControllerDelegate {
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+    func walletControllerDidShowWebWallet(_ walletController: WalletController) {
         debugPrint("didShowManageWallet")
     }
     

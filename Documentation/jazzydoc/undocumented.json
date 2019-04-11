@@ -237,13 +237,6 @@
       "symbol": "ContextInfoKey.paylineOrderDetails",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios/PaylineSDK/Classes/payment/domain/PaymentControllerDelegate.swift",
-      "line": 10,
-      "symbol": "PaymentControllerDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/rayanmehdi/Documents/Dev/paylinesdk-ios"

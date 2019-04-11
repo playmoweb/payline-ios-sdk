@@ -15,12 +15,22 @@ import UIKit
 class WalletTestDelegate: WalletControllerDelegate{
     
     var didShowWebWallet = false
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController) {
+    func walletControllerDidShowWebWallet(_ walletController: WalletController) {
         didShowWebWallet = true
     }
 }
 
 class WalletControllerTests: QuickSpec {
+    
+    func getWalletId() -> String {
+        let defaults = UserDefaults.standard
+        if let walletId = defaults.string(forKey: "WalletId"){
+            return walletId
+        }else{
+            defaults.set(UUID.init().uuidString, forKey:"WalletId")
+            return defaults.string(forKey: "WalletId")!
+        }
+    }
     
     override func spec() {
         
@@ -42,7 +52,7 @@ class WalletControllerTests: QuickSpec {
             viewController.beginAppearanceTransition(true, animated: false)
             viewController.endAppearanceTransition()
             
-           let params = FetchWalletTokenParams.testWalletParams()
+            let params = FetchWalletTokenParams.testWalletParams(walletId: self.getWalletId())
 
             waitUntil(timeout: 5) { done in
                 TokenFetcher.execute(path: "/init-manage-wallet", params: params, callback: { [weak self] response in

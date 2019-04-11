@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ Le PaymentControllerDelegate est une interface qui définit la communication entre l'application et le PaymentController.
+ Il tient l'application au courant des événements du tunnel de paiement (finalisation, annulation) aussi bien que les résultats des fonctions JavaScript.
+ */
+
 public protocol PaymentControllerDelegate: class {
     /**
      * Appelée lorsque la liste des moyens de paiement a été affichée
@@ -27,8 +32,7 @@ public protocol PaymentControllerDelegate: class {
      * [PW - API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
     func paymentControllerDidFinishPaymentForm(_ paymentController: PaymentController, withState state: WidgetState)
-    
-    
+        
     /**
      * Appelée lorsque l'environnement est connu
      *
@@ -48,11 +52,11 @@ public protocol PaymentControllerDelegate: class {
      
      * - Parameters:
      *   - paymentController: Le paymentController qui appel la méthode du delegate
-     *   - didGetLanguage: didGetLanguage correspond à la langue du widget
+     *   - didGetLanguageCode: didGetLanguageCode correspond à la langue du widget
      
      * [PW - API JavaScript](https://support.payline.com/hc/fr/articles/360017949833-PW-API-JavaScript)
      */
-    func paymentController(_ paymentController: PaymentController, didGetLanguage: String)
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode: String)
     
     /**
      * Appelée lorsque l'information du contexte est connue

@@ -18,5 +18,5 @@ public protocol WalletControllerDelegate: class {
      *
      * - Parameter walletController: Le walletController qui appel la méthode du delegate
      */
-    func walletControllerDidShowWebWebWallet(_ walletController: WalletController)
+    func walletControllerDidShowWebWallet(_ walletController: WalletController)
 }
