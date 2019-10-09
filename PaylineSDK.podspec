@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'PaylineSDK'
-  s.version          = '0.4.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of PaylineSDK.'
 
 # This description is used to generate tags and improve search results.

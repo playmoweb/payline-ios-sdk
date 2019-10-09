@@ -10,7 +10,10 @@ import UIKit
 import WebKit
 
 /**
- Le PaymentController dirige le tunnel de paiement. Il expose des fonctionnes natives pour démarrer et arrêter le tunnel de paiement, aussi bien que des fonctions javascript pour interroger et modifier le paiement en cours. Finalement, il communique les événements de la procédure via son delegate
+ Le PaymentController dirige le tunnel de paiement.
+ Il expose des fonctionnes natives pour démarrer et arrêter le tunnel de paiement,
+ aussi bien que des fonctions javascript pour interroger et modifier le paiement en cours.
+ Finalement, il communique les événements de la procédure via son delegate
  */
 public final class PaymentController: WebController {
     
@@ -55,7 +58,6 @@ public final class PaymentController: WebController {
         scriptHandler.execute(action: PaymentAction.updateWebPaymentData(data: webPaymentData), in: webViewController.webView, callback: nil)
     }
     
-    
     /**
      * Permet de connaitre l’environnement : production ou homologation. La fonction retourne true ou false.
      *
@@ -95,7 +97,6 @@ public final class PaymentController: WebController {
             self?.delegate?.paymentController(strongSelf, didGetLanguageCode: language)
         }
     }
-    
     
     /**
      * Renvoie une information du contexte grâce à sa clé

@@ -1,6 +1,6 @@
 {
   "name": "PaylineSDK",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "summary": "A short description of PaylineSDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://bitbucket.org/mld_mobile/paylinesdk-ios/src/master/",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://bitbucket.org/mld_mobile/paylinesdk-ios.git",
-    "tag": "0.2.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "8.0"
@@ -23,5 +23,7 @@
     "PaylineSDK": [
       "PaylineSDK/Assets/*.xcassets"
     ]
-  }
+  },
+  "swift_versions": "5.1",
+  "swift_version": "5.1"
 }

@@ -108,7 +108,7 @@ extension ViewController: PaymentControllerDelegate {
         debugPrint(didGetIsSandbox)
     }
     
-    func paymentController(_ paymentController: PaymentController, didGetLanguageCode didGetLanguageCode: String) {
+    func paymentController(_ paymentController: PaymentController, didGetLanguageCode: String) {
         debugPrint(didGetLanguageCode)
     }
     
