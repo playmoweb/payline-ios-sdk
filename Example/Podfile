@@ -5,6 +5,7 @@ use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
 target 'PaylineSDK_Example' do
+
   pod 'PaylineSDK', :path => '../'
 
   target 'PaylineSDK_Tests' do
@@ -13,4 +14,5 @@ target 'PaylineSDK_Example' do
     pod 'Quick'
     pod 'Nimble'
   end
+  
 end

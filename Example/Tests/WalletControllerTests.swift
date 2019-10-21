@@ -55,7 +55,7 @@ class WalletControllerTests: QuickSpec {
             let params = FetchWalletTokenParams.testWalletParams(walletId: self.getWalletId())
 
             waitUntil(timeout: 5) { done in
-                TokenFetcher.execute(path: "/init-manage-wallet", params: params, callback: { [weak self] response in
+                TokenFetcher.execute(path: "/init-manage-wallet", params: params, callback: { response in
                     tokenResponse = response
                     done()
                 })

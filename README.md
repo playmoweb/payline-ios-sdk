@@ -20,13 +20,13 @@ PaylineSDK est disponible via [CocoaPods](https://cocoapods.org).
 Pour l'installer:
 
 1. Dans votre Podfile, ajoutez la ligne suivante :
- 
- ```ruby 
+
+ ```ruby
 pod 'PaylineSDK'
  ```
- 
+
  2. Executez la commande suivante à la racine de votre projet :
-  `pod install` 
+  `pod install`
 
 # Utilisation
 
@@ -64,7 +64,7 @@ La méthode `showPaymentForm` est utilisée pour afficher la page des moyens de 
     paymentController.showPaymentForm(environment: url)
 }
 ```
-La récupération du paramètre `url` se fera selon vos choix d'implementation. 
+La récupération du paramètre `url` se fera selon vos choix d'implementation.
 Pour plus d'informations, veuillez vous référer à la documentation Payline en cliquant [ici](https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget)
 
 
@@ -79,7 +79,7 @@ La méthode `showManageWallet` est utilisée pour afficher la page du porte-monn
     walletController.manageWebWallet(environment: url)
 }
 ```
-Comme pour la réaisation d'un paiement, la récupération du paramètre `url` se fera selon vos choix d'implementation. 
+Comme pour la réaisation d'un paiement, la récupération du paramètre `url` se fera selon vos choix d'implementation.
 Pour plus d'informations, veuillez vous référer à la documentation Payline en cliquant [ici](https://support.payline.com/hc/fr/articles/360000844007-PW-Int%C3%A9gration-Widget)
 
 ## Implémentation des delegates
@@ -141,7 +141,7 @@ lazy var walletController: WalletController = {
 
 ```
 
-### Affichage du Wallet 
+### Affichage du Wallet
 
 ```swift
 @IBAction func clickedManageWallet(_ sender: Any?) {
@@ -200,6 +200,3 @@ Payline, support@payline.com
 ## License
 
 PaylineSDK is available under the MIT license. See the LICENSE file for more info.
-
-
-

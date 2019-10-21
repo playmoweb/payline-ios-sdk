@@ -83,7 +83,7 @@ class PaymentControllerTests: QuickSpec {
             params = FetchPaymentTokenParams.testPaymentParams(amout: 5, walletId: self.getWalletId())
      
             waitUntil(timeout: 5) { done in
-                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { response in
                     tokenResponse = response
                     done()
                 })
@@ -125,7 +125,7 @@ class PaymentControllerTests: QuickSpec {
             let params = FetchPaymentTokenParams.testPaymentFailureParams(walletId: self.getWalletId())
             
             waitUntil(timeout: 5) { done in
-                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { response in
                     tokenResponse = response
                     done()
                 })
@@ -151,7 +151,7 @@ class PaymentControllerTests: QuickSpec {
             let params = FetchPaymentTokenParams.testPaymentParams(amout: 5, walletId: self.getWalletId())
             
             waitUntil(timeout: 5) { done in
-                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { [weak self] response in
+                TokenFetcher.execute(path: "/init-web-pay", params: params, callback: { response in
                     tokenResponse = response
                     done()
                 })
