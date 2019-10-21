@@ -199,4 +199,4 @@ Payline, support@payline.com
 
 ## License
 
-PaylineSDK is available under the MIT license. See the LICENSE file for more info.
+PaylineSDK is available under the GPL license. See the LICENSE file for more info.
