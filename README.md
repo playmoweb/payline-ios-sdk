@@ -1,6 +1,6 @@
 # PaylineSDK
 
-[![CI Status](https://img.shields.io/travis/therealmyluckyday/PaylineSDK.svg?style=flat)](https://travis-ci.org/therealmyluckyday/PaylineSDK)
+[![CI Status](https://img.shields.io/travis/PaylineByMonext/PaylineSDK.svg?style=flat)](https://travis-ci.org/PaylineByMonext/PaylineSDK)
 [![Version](https://img.shields.io/cocoapods/v/PaylineSDK.svg?style=flat)](https://cocoapods.org/pods/PaylineSDK)
 [![License](https://img.shields.io/cocoapods/l/PaylineSDK.svg?style=flat)](https://cocoapods.org/pods/PaylineSDK)
 [![Platform](https://img.shields.io/cocoapods/p/PaylineSDK.svg?style=flat)](https://cocoapods.org/pods/PaylineSDK)
