@@ -10,7 +10,9 @@ Pod::Spec.new do |s|
 
   s.name             = 'PaylineSDK'
   s.version          = '1.0.0'
-  s.summary          = "This SDK features Payline's Mobile SDK, which allows a merchant's mobile application to use Payline services to realize an online payment or manage the wallet."
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+
+  s.summary          = "This SDK features Payline's Mobile SDK, which allows a merchant's mobile application to use Payline services."
 
   s.description      = <<-DESC
   This integration allows the process with a WebView, a native integration of the iOS and Android and a compatibility with the 3DS v2. The use of Payline Widget allows each merchant to integrate the payment functions directly into their website without any break with their purchase flow, while having the constraints PCI-DSS SAQ A. The payment form can be included in a global form containing specific fields (address of deliveries, vouchers, etc ...). In a single integration, the merchant benefits by simple setting of:
