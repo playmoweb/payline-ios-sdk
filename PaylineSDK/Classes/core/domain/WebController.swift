@@ -22,7 +22,7 @@ public class WebController: PLWebViewControllerDelegate {
     
     lazy var webViewController: PLWebViewController = {
         let wvc = PLWebViewController()
-        wvc.delegate = self
+        wvc.webViewDelegate = self
         wvc.listenForEventNames(scriptHandler.handledEvents)
         return wvc
     }()

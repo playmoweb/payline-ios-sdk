@@ -41,7 +41,7 @@ public final class PaymentController: WebController {
      */
     
     public func showPaymentForm(environment: URL) {
-        presentingViewController.present(webViewController, animated: true, completion: nil)
+        presentingViewController.present(UINavigationController(rootViewController: webViewController), animated: true, completion: nil)
         webViewController.loadUrl(environment)
     }
     
@@ -153,7 +153,7 @@ public final class PaymentController: WebController {
     weak var delegate: PaymentControllerDelegate?
     
     override func plWebViewControllerDidFinishLoadingWithSuccess(_ plWebViewController: PLWebViewController) {
-      //  delegate?.paymentControllerDidShowPaymentForm(self)
+        //delegate?.paymentControllerDidShowPaymentForm(self)
     }
     
     override func plWebViewControllerDidRequestClose(_ plWebViewController: PLWebViewController) {
@@ -181,10 +181,10 @@ public final class PaymentController: WebController {
         case .paymentMethodsList,
              .manageWebWallet:
             delegate?.paymentControllerDidShowPaymentForm(self)
-             self.webViewController.closeButton?.isHidden = false
+            self.webViewController.closeButton?.isEnabled = true
             
         case .paymentRedirectNoResponse:
-            self.webViewController.closeButton?.isHidden = true
+            self.webViewController.closeButton?.isEnabled = true
             print(state.rawValue)
             
         case .paymentFailureWithRetry,
@@ -201,7 +201,7 @@ public final class PaymentController: WebController {
     
     private func handleFinalStateHasBeenReached(state: WidgetState) {
             finishPayment(state: state)
-            self.webViewController.closeButton?.isHidden = false
+            self.webViewController.closeButton?.isEnabled = true
     }
     
     private func finishPayment(state: WidgetState) {

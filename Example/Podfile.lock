@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
 
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
-  PaylineSDK: 2631d6f5cac520224735ed7451398bd40ed18a29
+  PaylineSDK: 21e0979ae4a07081a7c275501b6c21faff35bada
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: 6721b72e8836c59b0f5801777530ad42bd37c319
+PODFILE CHECKSUM: c8497e0ebab404f321de2f7669cc612f8825d995
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

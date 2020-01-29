@@ -103,7 +103,7 @@ class PaymentControllerTests: QuickSpec {
             paymentController.showPaymentForm(environment: url!)
             expect(testDelegate.didShowPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
 
-            paymentController.webViewController.closeButton?.sendActions(for: .touchUpInside)
+            _ = paymentController.webViewController.closeButton?.target?.perform(paymentController.webViewController.closeButton?.action)
             expect(testDelegate.didCancelPaymentForm).toEventually(beTruthy(), timeout: 20, pollInterval: 1, description: nil)
         }
         

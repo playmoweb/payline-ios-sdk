@@ -35,7 +35,7 @@ public final class WalletController: WebController {
      */
     
     public func manageWebWallet(environment: URL) {
-        presentingViewController.present(webViewController, animated: true, completion: nil)
+        presentingViewController.present(UINavigationController(rootViewController:webViewController), animated: true, completion: nil)
         webViewController.loadUrl(environment)
     }
     
