@@ -41,7 +41,12 @@ public final class PaymentController: WebController {
      */
     
     public func showPaymentForm(environment: URL) {
-        presentingViewController.present(UINavigationController(rootViewController: webViewController), animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: webViewController)
+        navigationController.modalPresentationStyle = PLTheme.shared.modalPresentationStyle
+        if #available(iOS 13.0, *) {
+            navigationController.isModalInPresentation = PLTheme.shared.isModalInPresentation
+        }
+        presentingViewController.present(navigationController, animated: true, completion: nil)
         webViewController.loadUrl(environment)
     }
     

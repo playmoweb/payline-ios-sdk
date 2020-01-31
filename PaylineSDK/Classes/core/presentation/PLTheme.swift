@@ -15,4 +15,7 @@ public class PLTheme {
     public var secondaryColor: UIColor = .black
     public var bottomSafeAreaColor: UIColor = .white
     public var statusBarStyle: UIStatusBarStyle = .default
+    public var modalPresentationStyle: UIModalPresentationStyle = .fullScreen
+    //For iOS 13 new modal style
+    public var isModalInPresentation: Bool = true
 }
